@@ -10,7 +10,6 @@
 MULTICORE		:= n
 DEBUG			:= y
 OPTIM			:= O2
-RESULTS			:= solo
 C0_BENCH_APP	:= statemate
 C0_FPM			:= n
 BUS_PRIO		:= n
