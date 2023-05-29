@@ -1,0 +1,3 @@
+[submodule "src/lib/tpa_mech"]
+	path = src/lib/tpa_mech
+	url = https://github.com/danielRep/mcu-tpa-mech

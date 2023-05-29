@@ -44,7 +44,6 @@ CORE0_DIR	:= $(APP_DIR)/core0
 CORE1_DIR	:= $(APP_DIR)/core1
 ARCH_DIR	:= $(SRC_DIR)/arch
 PLAT_DIR	:= $(SRC_DIR)/platform/$(PLATFORM)
-RES_DIR		:= $(CUR_DIR)/results
 
 BIN_DIR		:= $(CUR_DIR)/bin/$(PLATFORM)
 BUILD_DIR	:= $(CUR_DIR)/build/$(PLATFORM)
@@ -89,7 +88,7 @@ export
 
 ################################################################################
 # Default Makefile Rules
-.PHONY: clean flash erase results
+.PHONY: clean flash erase
 
 all: linkerfile
 	@echo "Building core0 app..."
@@ -116,10 +115,6 @@ endif
 erase:
 	@echo "Erasing $(PLATFORM) memory..."
 	@$(FLASHTOOL) erase --mass $(FLASHOPTS)
-
-results:
-	@echo "Generating results for $(PLATFORM)/$(TESTID)..."
-	@python3 $(RES_DIR)/graphs.py -i $(RES_DIR)/$(PLATFORM)/$(TESTID).csv -o $(RES_DIR)/$(PLATFORM)/$(TESTID) -t $(RESULTS)
 
 linkerfile:
 	@echo "Creating LD defines..."
