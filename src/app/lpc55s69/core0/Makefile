@@ -34,6 +34,13 @@ objs-y += $(addprefix $(ARCH_DIR)/, $(arch-objs-y))
 objs-y += $(addprefix $(PLAT_DIR)/, $(plat-objs-y))
 objs-y += $(addprefix $(LIBC_DIR)/, $(libc-objs-y))
 objs-y += $(addprefix $(EMBE_DIR)/, $(embe-objs-y))
+
+ifeq ($(TPA), prof)
+	tpa-objs-y += tpa_prof.o
+else ifeq ($(TPA), mech)
+	tpa-objs-y += tpa_mech.o
+endif
+tpa-objs-y += cyc_cnt.o
 objs-y += $(addprefix $(TPA_DIR)/, $(tpa-objs-y))
 
 # Dependencies
