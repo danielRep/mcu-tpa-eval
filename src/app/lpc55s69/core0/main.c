@@ -16,17 +16,9 @@
 #include "config.h"
 #include "support.h"
 #include "dma_driver.h"
+#include "tpa_prof.h"
 
-uint32_t cycles[N_SAMPLES];
-
-void print_cycles(uint32_t t_cyc[])
-{
-    for (size_t i = 0; i < N_SAMPLES; i++)
-    {
-        printf(BLUE"%lu\n", t_cyc[i]);
-    }
-    return;
-}
+#define N_MBBS 4
 
 int main(void)
 {
@@ -38,10 +30,8 @@ int main(void)
     platform_init();
 
     printf(RED "Ready to start running "TESTID" compiled at "__TIME__":\n");
-    printf(YELLOW "\t- Start measuring "BENCHAPP" benchmark\n");
+    printf(YELLOW "\t- App: "BENCHAPP" benchmark\n");
     printf(YELLOW "\t- Start address 0x%.8X\n", (unsigned int)&__text_start);
-
-    dwt_unlock();
 
     printf(GREEN "\nPress any key to start...\n");
     getchar();
@@ -59,25 +49,28 @@ int main(void)
 
         for(it = 0; it < N_SAMPLES; it++)
         {
-            dwt_enable_counters();
-            dwt_reset_cycnt();
+            #ifdef TPA_PROF
+            tpa_start_ref();
+            #else
+            #endif
             result = benchmark_body(1);
-            cycles[it] = dwt_read_cycnt();
-
-            #ifdef C0_STATS
-            printf(BLUE "%lu\n", cycles[it]);
+            #ifdef TPA_PROF
+            tpa_stop_ref();
+            #else
             #endif
         }
+
+        #ifdef TPA_PROF
+        tpa_print_tmg_ref();
+        printf("---------------------------------\r\n");
+        tpa_print_tmg_full();
+        #endif
 
         #ifdef C0_DMA0
         dma0_ch_disable();
         #endif
         #ifdef C0_DMA1
         dma1_ch_disable();
-        #endif
-
-        #ifndef C0_STATS
-        print_cycles(cycles);
         #endif
 
         if(verify_benchmark (result))

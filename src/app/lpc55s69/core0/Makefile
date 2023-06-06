@@ -21,8 +21,9 @@ LIBC_DIR  := $(LIB_DIR)/libc/newlib
 EMBE_DIR  := $(LIB_DIR)/embench
 MEM_DIR   := $(CFG_DIR)/$(PLATFORM)
 BENCH_DIR := $(CFG_DIR)/$(PLATFORM)/$(TESTID)
+TPA_DIR   := $(LIB_DIR)/tpa_mech/src
 
-SRC_DIRS  := $(CORE0_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR)
+SRC_DIRS  := $(CORE0_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR) $(TPA_DIR)
 INC_DIRS  := $(addsuffix /inc, $(SRC_DIRS)) $(MEM_DIR) $(BENCH_DIR)
 
 # Source Files
@@ -33,6 +34,7 @@ objs-y += $(addprefix $(ARCH_DIR)/, $(arch-objs-y))
 objs-y += $(addprefix $(PLAT_DIR)/, $(plat-objs-y))
 objs-y += $(addprefix $(LIBC_DIR)/, $(libc-objs-y))
 objs-y += $(addprefix $(EMBE_DIR)/, $(embe-objs-y))
+objs-y += $(addprefix $(TPA_DIR)/, $(tpa-objs-y))
 
 # Dependencies
 deps   += $(patsubst %.o,%.d,$(objs-y))
@@ -114,9 +116,16 @@ ifeq ($(C0_DMA1), y)
 CFLAGS += -DC0_DMA1
 endif
 
+ifeq ($(TPA), prof)
+CFLAGS += -DTPA_PROF
+else ifeq ($(TPA), mech)
+CFLAGS += -DTPA_MECH
+endif
+
 # LD Flags
 LDFLAGS  += -T$(LDSCRIPT) -L$(BENCH_DIR)
 LDFLAGS  += -Xlinker -Map=$(basename $(TARGET)).map -Wl,--gc-sections
+LDFLAGS  += -lm
 ################################################################################
 # Default Makefile Rules
 EMPTYTARGETS := clean
@@ -128,7 +137,7 @@ all: $(TARGET)
 # Rule to create final binaries
 $(TARGET): $(gens) $(objs-y)
 	@echo "\nGenerating elf		$(patsubst $(CUR_DIR)/%, %, $@)"
-	@$(CC) $(CFLAGS) $(objs-y) -lm $(LDFLAGS) -o $@
+	@$(CC) $(CFLAGS) $(objs-y) $(LDFLAGS) -o $@
 	@echo "Generating hex		$(patsubst $(CUR_DIR)/%, %, $(basename $@).hex)"
 	@$(OBJCOPY) -O ihex $@ $(basename $@).hex
 	@echo "Generating binary	$(patsubst $(CUR_DIR)/%, %, $(basename $@).bin)"
