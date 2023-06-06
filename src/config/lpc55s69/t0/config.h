@@ -3,7 +3,7 @@
 
 #include "mem_defs.h"
 
-#define N_SAMPLES                           1000
+#define N_SAMPLES                           10
 #define WARMUP_HEAT                         100
 
 /* t0:
