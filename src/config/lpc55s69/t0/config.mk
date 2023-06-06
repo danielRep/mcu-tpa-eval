@@ -13,3 +13,4 @@ OPTIM			:= O2
 C0_BENCH_APP	:= statemate
 C0_FPM			:= n
 BUS_PRIO		:= n
+TPA				:= prof
