@@ -33,7 +33,6 @@ extern "C"
 /** Peripheral SYSCON base address */
 #define SYSCON_BASE                                 (0x40000000u)
 /** Peripheral SYSCON base pointer */
-#define SYSCON                                      ((SYSCON_type *)SYSCON_BASE)
 #define SYSCON_CPUCFG_CPU1ENABLE_MASK               (0x4U)
 #define SYSCON_CPUCFG_CPU1ENABLE_SHIFT              (2U)
 #define SYSCON_CPUCTRL_CPU1CLKEN_MASK               (0x8U)
