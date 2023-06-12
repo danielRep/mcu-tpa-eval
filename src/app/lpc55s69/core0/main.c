@@ -18,8 +18,6 @@
 #include "dma_driver.h"
 #include "tpa_prof.h"
 
-#define N_MBBS 4
-
 int main(void)
 {
     int it=0;
@@ -47,15 +45,20 @@ int main(void)
         dma1_start();
         #endif
 
+        #ifdef TPA_PROF
+        tpa_init_prof();
+        #else
+        #endif
+
         for(it = 0; it < N_SAMPLES; it++)
         {
             #ifdef TPA_PROF
-            tpa_start_ref();
+            tpa_start_prof();
             #else
             #endif
             result = benchmark_body(1);
             #ifdef TPA_PROF
-            tpa_stop_ref();
+            tpa_stop_prof();
             #else
             #endif
         }
