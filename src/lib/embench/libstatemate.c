@@ -1347,22 +1347,22 @@ benchmark_body(int rpt)
     {
         memset(Bitlist, 0, 64 * sizeof(Bitlist[0]));
         #ifdef TPA_PROF
-        tpa_sample_mbb();
+        tpa_sample_mbb(0);
         #else
         #endif
         init();
          #ifdef TPA_PROF
-        tpa_sample_mbb();
+        tpa_sample_mbb(1);
         #else
         #endif
         interface();
          #ifdef TPA_PROF
-        tpa_sample_mbb();
+        tpa_sample_mbb(2);
         #else
         #endif
         FH_DU();
          #ifdef TPA_PROF
-        tpa_sample_mbb();
+        tpa_sample_mbb(3);
         #else
         #endif
     }
