@@ -56,13 +56,15 @@ int main(void)
             tpa_start_prof();
             #else
             #endif
+            printf("test\r\n");
             result = benchmark_body(1);
+            printf("test\r\n");
             #ifdef TPA_PROF
             tpa_stop_prof();
             #else
             #endif
         }
-
+        printf("test2\r\n");
         #ifdef TPA_PROF
         tpa_print_tmg_ref();
         printf("---------------------------------\r\n");
