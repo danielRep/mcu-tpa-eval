@@ -32,9 +32,9 @@ int main(void)
     printf(YELLOW "\t- Start address 0x%.8X\n", (unsigned int)&__text_start);
 
     printf(GREEN "\nPress any key to start...\n");
-    getchar();
+    //getchar();
     initialise_benchmark ();
-    printf(GREEN "Running...\n");
+    printf(GREEN "Sampling %dx. Running...\n", N_SAMPLES);
 
     while(1)
     {
@@ -45,30 +45,20 @@ int main(void)
         dma1_start();
         #endif
 
-        #ifdef TPA_PROF
-        tpa_init_prof();
-        #else
-        #endif
-
         for(it = 0; it < N_SAMPLES; it++)
         {
             #ifdef TPA_PROF
             tpa_start_prof();
             #else
             #endif
-            printf("test\r\n");
             result = benchmark_body(1);
-            printf("test\r\n");
             #ifdef TPA_PROF
             tpa_stop_prof();
             #else
             #endif
         }
-        printf("test2\r\n");
         #ifdef TPA_PROF
-        tpa_print_tmg_ref();
-        printf("---------------------------------\r\n");
-        tpa_print_tmg_full();
+        tpa_print_tmg();
         #endif
 
         #ifdef C0_DMA0
