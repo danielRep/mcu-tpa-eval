@@ -25,7 +25,7 @@ TPA_DIR   := $(LIB_DIR)/tpa_mech/src
 ARTF_DIR  := $(LIB_DIR)/libartifapps
 
 SRC_DIRS  := $(CORE0_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR) $(TPA_DIR) $(ARTF_DIR)
-INC_DIRS  := $(addsuffix /inc, $(SRC_DIRS)) $(MEM_DIR) $(BENCH_DIR) $(ARTF_DIR)
+INC_DIRS  := $(addsuffix /inc, $(SRC_DIRS)) $(MEM_DIR) $(BENCH_DIR)
 
 # Source Files
 -include $(addsuffix /objects.mk , $(SRC_DIRS))

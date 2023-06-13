@@ -4,7 +4,7 @@
 #include "mem_defs.h"
 
 #define N_SAMPLES                           10
-#define N_MBBS                              4
+#define N_MBBS                              4 /* MBBs */ + 1 /* Entry Point */
 #define WARMUP_HEAT                         100
 
 /* t0:
