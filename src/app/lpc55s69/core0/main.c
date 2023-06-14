@@ -17,6 +17,7 @@
 #include "support.h"
 #include "dma_driver.h"
 #include "tpa_prof.h"
+#include "tpa_mech.h"
 
 int main(void)
 {
@@ -45,16 +46,23 @@ int main(void)
         dma1_start();
         #endif
 
+        #ifdef TPA_PROF
+        #elif defined(TPA_MECH)
+        tpa_mech_init();
+        #endif
+
         for(it = 0; it < N_SAMPLES; it++)
         {
             #ifdef TPA_PROF
             tpa_start_prof();
-            #else
+            #elif defined(TPA_MECH)
+            tpa_mech_start();
             #endif
             result = benchmark_body(1);
             #ifdef TPA_PROF
             tpa_stop_prof();
-            #else
+            #elif defined(TPA_MECH)
+            tpa_mech_stop();
             #endif
         }
         #ifdef TPA_PROF

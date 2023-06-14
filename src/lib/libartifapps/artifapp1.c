@@ -1,4 +1,5 @@
 #include "tpa_prof.h"
+#include "tpa_mech.h"
 
 #define IT 10
 #define N_INSTR 10
@@ -27,7 +28,8 @@ static inline void func1(void)
 {
     #ifdef TPA_PROF
     tpa_sample_mbb(1);
-    #else
+    #elif defined(TPA_MECH)
+    tpa_mech_check_tpi(1);
     #endif
 
     /* some code */
@@ -38,7 +40,8 @@ static inline void func2(void)
 {
     #ifdef TPA_PROF
     tpa_sample_mbb(2);
-    #else
+    #elif defined(TPA_MECH)
+    tpa_mech_check_tpi(2);
     #endif
 
     /* some code */
@@ -49,7 +52,8 @@ static inline void func3(void)
 {
     #ifdef TPA_PROF
     tpa_sample_mbb(3);
-    #else
+    #elif defined(TPA_MECH)
+    tpa_mech_check_tpi(3);
     #endif
 
     /* some code */
@@ -60,7 +64,8 @@ static inline void func4(void)
 {
     #ifdef TPA_PROF
     tpa_sample_mbb(4);
-    #else
+    #elif defined(TPA_MECH)
+    tpa_mech_check_tpi(4);
     #endif
 
     /* some code */
@@ -71,7 +76,8 @@ static inline void func5(void)
 {
     #ifdef TPA_PROF
     tpa_sample_mbb(5);
-    #else
+    #elif defined(TPA_MECH)
+    tpa_mech_check_tpi(5);
     #endif
 
     /* some code */
