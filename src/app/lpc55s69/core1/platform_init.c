@@ -122,12 +122,19 @@ int _write(int file, const uint8_t *ptr, int len)
     return -1;
 }
 
+void mailbox_init(void)
+{
+    /* Enable NVIC IRQ */
+    EnableIRQ(MAILBOX_IRQn);
+}
+
 int platform_init(void)
 {
     if(!(uart_init()))
         return -1;
 
     pins_init();
+    mailbox_init();
 
     printf(CLEAR);
 

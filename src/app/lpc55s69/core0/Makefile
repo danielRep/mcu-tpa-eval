@@ -41,6 +41,7 @@ ifeq ($(TPA), prof)
 	tpa-objs-y += tpa_prof.o
 else ifeq ($(TPA), mech)
 	tpa-objs-y += tpa_mech.o
+	tpa-objs-y += ipi.o
 endif
 tpa-objs-y += cyc_cnt.o
 objs-y += $(addprefix $(TPA_DIR)/, $(tpa-objs-y))
@@ -75,6 +76,10 @@ CFLAGS += -DTESTID=\"$(TESTID)\"
 
 ifeq ($(DEBUG), y)
 CFLAGS += -g
+endif
+
+ifeq ($(LOGGING), y)
+CFLAGS += -DLOGGING
 endif
 
 ifeq ($(MULTICORE), y)

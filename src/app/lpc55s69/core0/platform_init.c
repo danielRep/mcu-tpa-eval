@@ -86,6 +86,18 @@ void pins_init(void)
     IOCON_PinMuxSet(IOCON, 0U, 30U, port0_pin30_config);
 }
 
+void mailbox_init(void)
+{
+    /* Enable clock for inter CPU communication */
+    CLOCK_EnableClock(kCLOCK_Mailbox);
+
+    /* Reset mailbox peripheral */
+    RESET_PeripheralReset(kMAILBOX_RST_SHIFT_RSTn);
+
+    /* Enable NVIC IRQ */
+    EnableIRQ(MAILBOX_IRQn);
+}
+
 int _read(int file, char *ptr, int len)
 {
     int n_chars = 0;
@@ -132,6 +144,7 @@ int platform_init(void)
     }
 
     pins_init();
+    mailbox_init();
 
     printf(CLEAR);
 

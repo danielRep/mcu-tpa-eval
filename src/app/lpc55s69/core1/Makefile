@@ -21,8 +21,9 @@ LIBC_DIR  := $(LIB_DIR)/libc/newlib
 EMBE_DIR  := $(LIB_DIR)/embench
 MEM_DIR   := $(CFG_DIR)/$(PLATFORM)
 BENCH_DIR := $(CFG_DIR)/$(PLATFORM)/$(TESTID)
+TPA_DIR   := $(LIB_DIR)/tpa_mech/src
 
-SRC_DIRS  := $(CORE1_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR)
+SRC_DIRS  := $(CORE1_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR) $(TPA_DIR)
 INC_DIRS  := $(addsuffix /inc, $(SRC_DIRS)) $(MEM_DIR) $(BENCH_DIR)
 
 # Source Files
@@ -62,6 +63,10 @@ CFLAGS += -fcommon --specs=nano.specs -ffunction-sections -fdata-sections
 
 ifeq ($(DEBUG), y)
 CFLAGS += -g
+endif
+
+ifeq ($(LOGGING), y)
+CFLAGS += -DLOGGING
 endif
 
 ifeq ($(C1_IC), y)
