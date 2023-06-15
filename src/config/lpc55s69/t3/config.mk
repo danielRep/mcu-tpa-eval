@@ -15,3 +15,4 @@ C0_FPM			:= n
 BUS_PRIO		:= n
 C1_INTRF_APP	:= ifi
 TPA				:= mech
+LOGGING			:= y
