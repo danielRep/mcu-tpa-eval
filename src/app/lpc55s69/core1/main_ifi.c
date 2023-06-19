@@ -27,14 +27,16 @@ void Interrupt31_Handler(void)  // IPI interrupt handler
         #ifdef LOGGING
         printf("TPA_MECH: Co-runner paused.\r\n");
         #endif
-        __WFI();
+        SCB->SCR |= SCB_SCR_SLEEPONEXIT_Msk;    //TODO: this is probably not the best way to pause the core since it does not work if we have more interrupts
     }
     else    //CORUNNER_RESUME
     {
         #ifdef LOGGING
         printf("TPA_MECH: Co-runner resumed.\r\n");
         #endif
+        SCB->SCR &= ~SCB_SCR_SLEEPONEXIT_Msk;
     }
+    __DSB();
 }
 
 int main(void)
@@ -53,9 +55,7 @@ int main(void)
 #ifdef C1_STATS
 
 #endif
-    #ifdef LOGGING
-    printf("TPA_MECH: Co-runner running.\r\n");
-    #endif
+    printf("Core1 running...\r\n");
     }
     return 0;
 }
