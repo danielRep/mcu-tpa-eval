@@ -18,6 +18,7 @@
 #include "dma_driver.h"
 #include "tpa_prof.h"
 #include "tpa_mech.h"
+#include "log.h"
 
 int main(void)
 {
@@ -55,19 +56,24 @@ int main(void)
         {
             #ifdef TPA_PROF
             tpa_start_prof();
-            #elif defined(TPA_MECH)
+            #endif
+            #ifdef TPA_MECH
             tpa_mech_start();
             #endif
             result = benchmark_body(1);
             #ifdef TPA_PROF
             tpa_stop_prof();
-            #elif defined(TPA_MECH)
-            tpa_mech_stop();
+            #endif
+            #ifdef TPA_MECH
+            tpa_mech_reset();
             #endif
         }
         #ifdef TPA_PROF
         tpa_print_tmg();
         #endif
+
+        LOG_PRINT_MBB_LOG();
+        LOG_RESET_MBB_LOG();
 
         #ifdef C0_DMA0
         dma0_ch_disable();

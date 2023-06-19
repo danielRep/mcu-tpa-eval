@@ -2,7 +2,7 @@
 #include "tpa_mech.h"
 
 #define IT 10
-#define N_INSTR 10
+#define N_INSTR 100000
 
 #define REPEAT_MOV_R0(count) \
     do { \
