@@ -13,11 +13,13 @@
 #include "dwt.h"
 #include "platform_config.h"
 #include "platform_base_addrs.h"
-#include "config.h"
 #include "support.h"
 #include "dma_driver.h"
+#include "config.h"
+
 #include "tpa_prof.h"
 #include "tpa_mech.h"
+#include "tpa_cfg.h"
 #include "log.h"
 
 int main(void)

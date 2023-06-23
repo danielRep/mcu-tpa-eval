@@ -6,9 +6,6 @@
 #define N_SAMPLES                           1000
 #define WARMUP_HEAT                         100
 
-/* TPA_MECH configuration */
-#define N_MBBS                              5 /* MBBs */ + 1 /* Entry Point */
-
 /* t2:
  * CORE0-CODE: FLASH_MEM
  * CORE0-DATA: SRAM0

@@ -101,7 +101,7 @@ clean:
 	@echo "Cleaning projects..."
 	@$(MAKE) -C $(CORE0_DIR) clean
 ifeq ($(MULTICORE), y)
-	$(MAKE) -C $(CORE1_DIR) clean
+	@$(MAKE) -C $(CORE1_DIR) clean
 endif
 
 flash:
