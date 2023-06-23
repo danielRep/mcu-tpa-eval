@@ -45,6 +45,7 @@ else ifeq ($(TPA), mech)
 endif
 tpa-objs-y += cyc_cnt.o
 objs-y += $(addprefix $(TPA_DIR)/, $(tpa-objs-y))
+objs-y += $(addprefix $(BENCH_DIR)/, tpa_cfg.o)
 
 # Dependencies
 deps   += $(patsubst %.o,%.d,$(objs-y))
