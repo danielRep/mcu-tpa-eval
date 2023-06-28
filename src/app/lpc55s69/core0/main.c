@@ -50,6 +50,7 @@ int main(void)
         #endif
 
         #ifdef TPA_PROF
+        tpa_prof_init();
         #elif defined(TPA_MECH)
         tpa_mech_init();
         #endif
@@ -57,14 +58,14 @@ int main(void)
         for(it = 0; it < N_SAMPLES; it++)
         {
             #ifdef TPA_PROF
-            tpa_start_prof();
+            tpa_prof_start();
             #endif
             #ifdef TPA_MECH
             tpa_mech_start();
             #endif
             result = benchmark_body(1);
             #ifdef TPA_PROF
-            tpa_stop_prof();
+            tpa_prof_stop();
             #endif
             #ifdef TPA_MECH
             tpa_mech_reset();
