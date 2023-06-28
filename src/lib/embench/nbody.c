@@ -161,7 +161,7 @@ initialise_benchmark (void)
 
 
 
-static int benchmark_body (int  rpt);
+int benchmark_body (int  rpt);
 
 void
 warm_caches (int  heat)
@@ -179,7 +179,7 @@ benchmark (void)
 }
 
 
-static int __attribute__ ((noinline))
+int __attribute__ ((noinline))
 benchmark_body (int rpt)
 {
   int j;
