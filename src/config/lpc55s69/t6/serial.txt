@@ -1,0 +1,1644 @@
+Ready to start running t6 compiled at 15:36:20:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 10x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 18) NTime(end): 25264750
+TPA_PROF: MBB = 1 | t_time = 221
+TPA_PROF: 	0->1 | n_time = 221
+TPA_PROF: MBB = 2 | t_time = 997
+TPA_PROF: 	1->2 | n_time = 776
+TPA_PROF: MBB = 3 | t_time = 1757
+TPA_PROF: 	2->3 | n_time = 760
+TPA_PROF: MBB = 4 | t_time = 14752
+TPA_PROF: 	3->4 | n_time = 12995
+TPA_PROF: MBB = 5 | t_time = 16368
+TPA_PROF: 	4->5 | n_time = 1616
+TPA_PROF: MBB = 6 | t_time = 17763
+TPA_PROF: 	5->6 | n_time = 1395
+TPA_PROF: MBB = 7 | t_time = 19203
+TPA_PROF: 	6->7 | n_time = 1440
+TPA_PROF: MBB = 8 | t_time = 20478
+TPA_PROF: 	7->8 | n_time = 1275
+TPA_PROF: MBB = 9 | t_time = 22548
+TPA_PROF: 	8->9 | n_time = 2070
+TPA_PROF: MBB = 10 | t_time = 47903
+TPA_PROF: 	9->10 | n_time = 165
+TPA_PROF: MBB = 11 | t_time = 49264
+TPA_PROF: 	10->11 | n_time = 1361
+TPA_PROF: MBB = 12 | t_time = 79157
+TPA_PROF: 	11->12 | n_time = 29893
+TPA_PROF: MBB = 13 | t_time = 149687
+TPA_PROF: 	12->13 | n_time = 70530
+TPA_PROF: MBB = 14 | t_time = 152322
+TPA_PROF: 	13->14 | n_time = 2635
+TPA_PROF: MBB = 15 | t_time = 2352418
+TPA_PROF: 	14->15 | n_time = 2200096
+TPA_PROF: MBB = 16 | t_time = 2403546
+TPA_PROF: 	15->16 | n_time = 51128
+TPA_PROF: MBB = 17 | t_time = 2403816
+TPA_PROF: 	16->17 | n_time = 270
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:41:46:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 10x. Running...
+TPA_MECH: MBB 1 	|cur_time=1174, slack=-953, slack_exp=0, r_n_time=221, hits=10, overhead=905
+TPA_MECH: MBB 2 	|cur_time=2965, slack=-1968, slack_exp=0, r_n_time=997, hits=10, overhead=201
+TPA_MECH: MBB 3 	|cur_time=3992, slack=-2235, slack_exp=0, r_n_time=1757, hits=10, overhead=201
+TPA_MECH: MBB 4 	|cur_time=17254, slack=-2502, slack_exp=0, r_n_time=14752, hits=10, overhead=201
+TPA_MECH: MBB 5 	|cur_time=19137, slack=-2769, slack_exp=0, r_n_time=16368, hits=10, overhead=201
+TPA_MECH: MBB 6 	|cur_time=20799, slack=-3036, slack_exp=0, r_n_time=17763, hits=10, overhead=201
+TPA_MECH: MBB 7 	|cur_time=22506, slack=-3303, slack_exp=0, r_n_time=19203, hits=10, overhead=201
+TPA_MECH: MBB 8 	|cur_time=24048, slack=-3570, slack_exp=0, r_n_time=20478, hits=10, overhead=201
+TPA_MECH: MBB 9 	|cur_time=26385, slack=-3837, slack_exp=0, r_n_time=22548, hits=10, overhead=201
+TPA_MECH: MBB 10 	|cur_time=86322, slack=-38419, slack_exp=-113500, r_n_time=161403, hits=680, overhead=211
+TPA_MECH: MBB 11 	|cur_time=87960, slack=-38696, slack_exp=-113500, r_n_time=162764, hits=10, overhead=201
+TPA_MECH: MBB 12 	|cur_time=118120, slack=-38963, slack_exp=-113500, r_n_time=192657, hits=10, overhead=201
+TPA_MECH: MBB 13 	|cur_time=188917, slack=-39230, slack_exp=-113500, r_n_time=263187, hits=10, overhead=201
+TPA_MECH: MBB 14 	|cur_time=191819, slack=-39497, slack_exp=-113500, r_n_time=265822, hits=10, overhead=201
+TPA_MECH: MBB 15 	|cur_time=2392182, slack=-39764, slack_exp=-113500, r_n_time=2465918, hits=10, overhead=201
+TPA_MECH: MBB 16 	|cur_time=2443577, slack=-40031, slack_exp=-113500, r_n_time=2517046, hits=10, overhead=201
+TPA_MECH: MBB 17 	|cur_time=2444114, slack=-40298, slack_exp=-113500, r_n_time=2517316, hits=10, overhead=201
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:41:46:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 10x. Running...
+TPA_MECH: MBB 1 	|cur_time=1174, slack=-953, slack_exp=0, r_n_time=221, hits=10, overhead=905
+TPA_MECH: MBB 2 	|cur_time=2965, slack=-1968, slack_exp=0, r_n_time=997, hits=10, overhead=201
+TPA_MECH: MBB 3 	|cur_time=3992, slack=-2235, slack_exp=0, r_n_time=1757, hits=10, overhead=201
+TPA_MECH: MBB 4 	|cur_time=17254, slack=-2502, slack_exp=0, r_n_time=14752, hits=10, overhead=201
+TPA_MECH: MBB 5 	|cur_time=19137, slack=-2769, slack_exp=0, r_n_time=16368, hits=10, overhead=201
+TPA_MECH: MBB 6 	|cur_time=20799, slack=-3036, slack_exp=0, r_n_time=17763, hits=10, overhead=201
+TPA_MECH: MBB 7 	|cur_time=22506, slack=-3303, slack_exp=0, r_n_time=19203, hits=10, overhead=201
+TPA_MECH: MBB 8 	|cur_time=24048, slack=-3570, slack_exp=0, r_n_time=20478, hits=10, overhead=201
+TPA_MECH: MBB 9 	|cur_time=26385, slack=-3837, slack_exp=0, r_n_time=22548, hits=10, overhead=201
+TPA_MECH: MBB 10 	|cur_time=86322, slack=-38419, slack_exp=-113500, r_n_time=161403, hits=680, overhead=211
+TPA_MECH: MBB 11 	|cur_time=87960, slack=-38696, slack_exp=-113500, r_n_time=162764, hits=10, overhead=201
+TPA_MECH: MBB 12 	|cur_time=118120, slack=-38963, slack_exp=-113500, r_n_time=192657, hits=10, overhead=201
+TPA_MECH: MBB 13 	|cur_time=188917, slack=-39230, slack_exp=-113500, r_n_time=263187, hits=10, overhead=201
+TPA_MECH: MBB 14 	|cur_time=191819, slack=-39497, slack_exp=-113500, r_n_time=265822, hits=10, overhead=201
+TPA_MECH: MBB 15 	|cur_time=2392182, slack=-39764, slack_exp=-113500, r_n_time=2465918, hits=10, overhead=201
+TPA_MECH: MBB 16 	|cur_time=2443577, slack=-40031, slack_exp=-113500, r_n_time=2517046, hits=10, overhead=201
+TPA_MECH: MBB 17 	|cur_time=2444114, slack=-40298, slack_exp=-113500, r_n_time=2517316, hits=10, overhead=201
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:43:23:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 10x. Running...
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already pauseCore1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:43:23:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 10x. Running...
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: MBB 1 	|cur_time=469, slack=-248, slack_exp=0, r_n_time=221, hits=10, overhead=391923
+TPA_MECH: MBB 2 	|cur_time=393229, slack=-392232, slack_exp=0, r_n_time=997, hits=10, overhead=381537
+TPA_MECH: MBB 3 	|cur_time=775587, slack=-773830, slack_exp=0, r_n_time=1757, hits=10, overhead=381582
+TPA_MECH: MBB 4 	|cur_time=1170225, slack=-1155473, slack_exp=0, r_n_time=14752, hits=10, overhead=381537
+TPA_MECH: MBB 5 	|cur_time=1553439, slack=-1537071, slack_exp=0, r_n_time=16368, hits=10, overhead=381522
+TPA_MECH: MBB 6 	|cur_time=1936417, slack=-1918654, slack_exp=0, r_n_time=17763, hits=10, overhead=381552
+TPA_MECH: MBB 7 	|cur_time=2319470, slack=-2300267, slack_exp=0, r_n_time=19203, hits=10, overhead=381507
+TPA_MECH: MBB 8 	|cur_time=2702313, slack=-2681835, slack_exp=0, r_n_time=20478, hits=10, overhead=381612
+TPA_MECH: MBB 9 	|cur_time=3086056, slack=-3063508, slack_exp=0, r_n_time=22548, hits=10, overhead=381537
+TPA_MECH: MBB 10 	|cur_time=29415692, slack=-29367789, slack_exp=-113500, r_n_time=161403, hits=680, overhead=386813
+TPA_MECH: MBB 11 	|cur_time=29803927, slack=-29754663, slack_exp=-113500, r_n_time=162764, hits=10, overhead=386778
+TPA_MECH: MBB 12 	|cur_time=30220659, slack=-30141502, slack_exp=-113500, r_n_time=192657, hits=10, overhead=386838
+TPA_MECH: MBB 13 	|cur_time=30678088, slack=-30528401, slack_exp=-113500, r_n_time=263187, hits=10, overhead=386793
+TPA_MECH: MBB 14 	|cur_time=31067577, slack=-30915255, slack_exp=-113500, r_n_time=265822, hits=10, overhead=386808
+TPA_MECH: MBB 15 	|cur_time=33654542, slack=-31302124, slack_exp=-113500, r_n_time=2465918, hits=10, overhead=386823
+TPA_MECH: MBB 16 	|cur_time=34092554, slack=-31689008, slack_exp=-113500, r_n_time=2517046, hits=10, overhead=386823
+TPA_MECH: MBB 17 	|cur_time=34479708, slack=-32075892, slack_exp=-113500, r_n_time=2517316, hits=10, overhead=386838
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:43:46:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: MBB 1 	|cur_time=1214, slack=-993, slack_exp=0, r_n_time=221, hits=1, overhead=365087
+TPA_MECH: MBB 2 	|cur_time=367138, slack=-366141, slack_exp=0, r_n_time=997, hits=1, overhead=381522
+TPA_MECH: MBB 3 	|cur_time=749481, slack=-747724, slack_exp=0, r_n_time=1757, hits=1, overhead=381552
+TPA_MECH: MBB 4 	|cur_time=1144089, slack=-1129337, slack_exp=0, r_n_time=14752, hits=1, overhead=381507
+TPA_MECH: MBB 5 	|cur_time=1527273, slack=-1510905, slack_exp=0, r_n_time=16368, hits=1, overhead=381552
+TPA_MECH: MBB 6 	|cur_time=1910281, slack=-1892518, slack_exp=0, r_n_time=17763, hits=1, overhead=381552
+TPA_MECH: MBB 7 	|cur_time=2293334, slack=-2274131, slack_exp=0, r_n_time=19203, hits=1, overhead=381507
+TPA_MECH: MBB 8 	|cur_time=2676177, slack=-2655699, slack_exp=0, r_n_time=20478, hits=1, overhead=381507
+TPA_MECH: MBB 9 	|cur_time=3059815, slack=-3037267, slack_exp=0, r_n_time=22548, hits=1, overhead=381522
+TPA_MECH: MBB 10 	|cur_time=29389751, slack=-29341848, slack_exp=-113500, r_n_time=161403, hits=68, overhead=386813
+TPA_MECH: MBB 11 	|cur_time=29777986, slack=-29728722, slack_exp=-113500, r_n_time=162764, hits=1, overhead=386778
+TPA_MECH: MBB 12 	|cur_time=30194718, slack=-30115561, slack_exp=-113500, r_n_time=192657, hits=1, overhead=386838
+TPA_MECH: MBB 13 	|cur_time=30652147, slack=-30502460, slack_exp=-113500, r_n_time=263187, hits=1, overhead=386793
+TPA_MECH: MBB 14 	|cur_time=31041636, slack=-30889314, slack_exp=-113500, r_n_time=265822, hits=1, overhead=386808
+TPA_MECH: MBB 15 	|cur_time=33628601, slack=-31276183, slack_exp=-113500, r_n_time=2465918, hits=1, overhead=386823
+TPA_MECH: MBB 16 	|cur_time=34066613, slack=-31663067, slack_exp=-113500, r_n_time=2517046, hits=1, overhead=386823
+TPA_MECH: MBB 17 	|cur_time=34453767, slack=-32049951, slack_exp=-113500, r_n_time=2517316, hits=1, overhead=386838
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:43:46:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: TPI violation detected at MBB 1 | Pause co-runners. 
+TPA_MECH: TPI violation detected at MBB 2 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 3 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 4 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 5 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 6 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 7 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 8 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 9 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 10 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 11 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 12 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 13 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 14 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 15 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 16 | Co-runners already paused 
+TPA_MECH: TPI violation detected at MBB 17 | Co-runners already paused 
+TPA_MECH: MBB 1 	|cur_time=1214, slack=-993, slack_exp=0, r_n_time=221, hits=1, overhead=364952
+TPA_MECH: MBB 2 	|cur_time=367003, slack=-366006, slack_exp=0, r_n_time=997, hits=1, overhead=381567
+TPA_MECH: MBB 3 	|cur_time=749391, slack=-747634, slack_exp=0, r_n_time=1757, hits=1, overhead=381582
+TPA_MECH: MBB 4 	|cur_time=1144029, slack=-1129277, slack_exp=0, r_n_time=14752, hits=1, overhead=381492
+TPA_MECH: MBB 5 	|cur_time=1527198, slack=-1510830, slack_exp=0, r_n_time=16368, hits=1, overhead=381567
+TPA_MECH: MBB 6 	|cur_time=1910221, slack=-1892458, slack_exp=0, r_n_time=17763, hits=1, overhead=381612
+TPA_MECH: MBB 7 	|cur_time=2293334, slack=-2274131, slack_exp=0, r_n_time=19203, hits=1, overhead=381507
+TPA_MECH: MBB 8 	|cur_time=2676177, slack=-2655699, slack_exp=0, r_n_time=20478, hits=1, overhead=381612
+TPA_MECH: MBB 9 	|cur_time=3059920, slack=-3037372, slack_exp=0, r_n_time=22548, hits=1, overhead=381537
+TPA_MECH: MBB 10 	|cur_time=29389556, slack=-29341653, slack_exp=-113500, r_n_time=161403, hits=68, overhead=386813
+TPA_MECH: MBB 11 	|cur_time=29777791, slack=-29728527, slack_exp=-113500, r_n_time=162764, hits=1, overhead=386778
+TPA_MECH: MBB 12 	|cur_time=30194523, slack=-30115366, slack_exp=-113500, r_n_time=192657, hits=1, overhead=386838
+TPA_MECH: MBB 13 	|cur_time=30651952, slack=-30502265, slack_exp=-113500, r_n_time=263187, hits=1, overhead=386793
+TPA_MECH: MBB 14 	|cur_time=31041441, slack=-30889119, slack_exp=-113500, r_n_time=265822, hits=1, overhead=386808
+TPA_MECH: MBB 15 	|cur_time=33628406, slack=-31275988, slack_exp=-113500, r_n_time=2465918, hits=1, overhead=386823
+TPA_MECH: MBB 16 	|cur_time=34066418, slack=-31662872, slack_exp=-113500, r_n_time=2517046, hits=1, overhead=386823
+TPA_MECH: MBB 17 	|cur_time=34453572, slack=-32049756, slack_exp=-113500, r_n_time=2517316, hits=1, overhead=386838
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:45:06:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB 1 	|cur_time=1214, slack=-993, slack_exp=0, r_n_time=221, hits=1, overhead=945
+TPA_MECH: MBB 2 	|cur_time=4014, slack=-3017, slack_exp=0, r_n_time=997, hits=1, overhead=335
+TPA_MECH: MBB 3 	|cur_time=5754, slack=-3997, slack_exp=0, r_n_time=1757, hits=1, overhead=335
+TPA_MECH: MBB 4 	|cur_time=26089, slack=-11337, slack_exp=0, r_n_time=14752, hits=1, overhead=335
+TPA_MECH: MBB 5 	|cur_time=28644, slack=-12276, slack_exp=0, r_n_time=16368, hits=1, overhead=380
+TPA_MECH: MBB 6 	|cur_time=31434, slack=-13671, slack_exp=0, r_n_time=17763, hits=1, overhead=335
+TPA_MECH: MBB 7 	|cur_time=33949, slack=-14746, slack_exp=0, r_n_time=19203, hits=1, overhead=335
+TPA_MECH: MBB 8 	|cur_time=36439, slack=-15961, slack_exp=0, r_n_time=20478, hits=1, overhead=420
+TPA_MECH: MBB 9 	|cur_time=39949, slack=-17401, slack_exp=0, r_n_time=22548, hits=1, overhead=335
+TPA_MECH: MBB 10 	|cur_time=111819, slack=-63916, slack_exp=-113500, r_n_time=161403, hits=68, overhead=415
+TPA_MECH: MBB 11 	|cur_time=114489, slack=-65225, slack_exp=-113500, r_n_time=162764, hits=1, overhead=335
+TPA_MECH: MBB 12 	|cur_time=168699, slack=-89542, slack_exp=-113500, r_n_time=192657, hits=1, overhead=335
+TPA_MECH: MBB 13 	|cur_time=245669, slack=-95982, slack_exp=-113500, r_n_time=263187, hits=1, overhead=201
+TPA_MECH: MBB 14 	|cur_time=248571, slack=-96249, slack_exp=-113500, r_n_time=265822, hits=1, overhead=201
+TPA_MECH: MBB 15 	|cur_time=2448934, slack=-96516, slack_exp=-113500, r_n_time=2465918, hits=1, overhead=201
+TPA_MECH: MBB 16 	|cur_time=2500329, slack=-96783, slack_exp=-113500, r_n_time=2517046, hits=1, overhead=201
+TPA_MECH: MBB 17 	|cur_time=2500866, slack=-97050, slack_exp=-113500, r_n_time=2517316, hits=1, overhead=201
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:45:06:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB 1 	|cur_time=1214, slack=-993, slack_exp=0, r_n_time=221, hits=1, overhead=945
+TPA_MECH: MBB 2 	|cur_time=3045, slack=-2048, slack_exp=0, r_n_time=997, hits=1, overhead=201
+TPA_MECH: MBB 3 	|cur_time=4072, slack=-2315, slack_exp=0, r_n_time=1757, hits=1, overhead=201
+TPA_MECH: MBB 4 	|cur_time=17334, slack=-2582, slack_exp=0, r_n_time=14752, hits=1, overhead=201
+TPA_MECH: MBB 5 	|cur_time=19217, slack=-2849, slack_exp=0, r_n_time=16368, hits=1, overhead=201
+TPA_MECH: MBB 6 	|cur_time=20879, slack=-3116, slack_exp=0, r_n_time=17763, hits=1, overhead=201
+TPA_MECH: MBB 7 	|cur_time=22586, slack=-3383, slack_exp=0, r_n_time=19203, hits=1, overhead=201
+TPA_MECH: MBB 8 	|cur_time=24128, slack=-3650, slack_exp=0, r_n_time=20478, hits=1, overhead=201
+TPA_MECH: MBB 9 	|cur_time=26465, slack=-3917, slack_exp=0, r_n_time=22548, hits=1, overhead=201
+TPA_MECH: MBB 10 	|cur_time=86937, slack=-39034, slack_exp=-113500, r_n_time=161403, hits=68, overhead=211
+TPA_MECH: MBB 11 	|cur_time=88575, slack=-39311, slack_exp=-113500, r_n_time=162764, hits=1, overhead=201
+TPA_MECH: MBB 12 	|cur_time=118735, slack=-39578, slack_exp=-113500, r_n_time=192657, hits=1, overhead=201
+TPA_MECH: MBB 13 	|cur_time=189532, slack=-39845, slack_exp=-113500, r_n_time=263187, hits=1, overhead=201
+TPA_MECH: MBB 14 	|cur_time=192434, slack=-40112, slack_exp=-113500, r_n_time=265822, hits=1, overhead=201
+TPA_MECH: MBB 15 	|cur_time=2392797, slack=-40379, slack_exp=-113500, r_n_time=2465918, hits=1, overhead=201
+TPA_MECH: MBB 16 	|cur_time=2444192, slack=-40646, slack_exp=-113500, r_n_time=2517046, hits=1, overhead=201
+TPA_MECH: MBB 17 	|cur_time=2444729, slack=-40913, slack_exp=-113500, r_n_time=2517316, hits=1, overhead=201
+qrduino benchmark exited with errors...
+Press any key to restart...
+Ready to start running t6 compiled at 15:45:52:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 18) NTime(end): 2533531
+TPA_PROF: MBB = 1 | t_time = 221
+TPA_PROF: 	0->1 | n_time = 221
+TPA_PROF: MBB = 2 | t_time = 997
+TPA_PROF: 	1->2 | n_time = 776
+TPA_PROF: MBB = 3 | t_time = 1757
+TPA_PROF: 	2->3 | n_time = 760
+TPA_PROF: MBB = 4 | t_time = 14752
+TPA_PROF: 	3->4 | n_time = 12995
+TPA_PROF: MBB = 5 | t_time = 16368
+TPA_PROF: 	4->5 | n_time = 1616
+TPA_PROF: MBB = 6 | t_time = 17763
+TPA_PROF: 	5->6 | n_time = 1395
+TPA_PROF: MBB = 7 | t_time = 19203
+TPA_PROF: 	6->7 | n_time = 1440
+TPA_PROF: MBB = 8 | t_time = 20478
+TPA_PROF: 	7->8 | n_time = 1275
+TPA_PROF: MBB = 9 | t_time = 22548
+TPA_PROF: 	8->9 | n_time = 2070
+TPA_PROF: MBB = 10 | t_time = 47903
+TPA_PROF: 	10->10 | n_time = 2195
+TPA_PROF: MBB = 11 | t_time = 49264
+TPA_PROF: 	10->11 | n_time = 1361
+TPA_PROF: MBB = 12 | t_time = 79157
+TPA_PROF: 	11->12 | n_time = 29893
+TPA_PROF: MBB = 13 | t_time = 149687
+TPA_PROF: 	12->13 | n_time = 70530
+TPA_PROF: MBB = 14 | t_time = 152322
+TPA_PROF: 	13->14 | n_time = 2635
+TPA_PROF: MBB = 15 | t_time = 2352418
+TPA_PROF: 	14->15 | n_time = 2200096
+TPA_PROF: MBB = 16 | t_time = 2403546
+TPA_PROF: 	15->16 | n_time = 51128
+TPA_PROF: MBB = 17 | t_time = 2403816
+TPA_PROF: 	16->17 | n_time = 270
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:46:29:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 18) NTime(end): 8009395
+TPA_PROF: MBB = 1 | t_time = 1220
+TPA_PROF: 	0->1 | n_time = 1220
+TPA_PROF: MBB = 2 | t_time = 5630
+TPA_PROF: 	1->2 | n_time = 4410
+TPA_PROF: MBB = 3 | t_time = 10175
+TPA_PROF: 	2->3 | n_time = 4545
+TPA_PROF: MBB = 4 | t_time = 53925
+TPA_PROF: 	3->4 | n_time = 43750
+TPA_PROF: MBB = 5 | t_time = 58095
+TPA_PROF: 	4->5 | n_time = 4170
+TPA_PROF: MBB = 6 | t_time = 63075
+TPA_PROF: 	5->6 | n_time = 4980
+TPA_PROF: MBB = 7 | t_time = 67755
+TPA_PROF: 	6->7 | n_time = 4680
+TPA_PROF: MBB = 8 | t_time = 71990
+TPA_PROF: 	7->8 | n_time = 4235
+TPA_PROF: MBB = 9 | t_time = 79205
+TPA_PROF: 	8->9 | n_time = 7215
+TPA_PROF: MBB = 10 | t_time = 176980
+TPA_PROF: 	10->10 | n_time = 7835
+TPA_PROF: MBB = 11 | t_time = 181775
+TPA_PROF: 	10->11 | n_time = 4795
+TPA_PROF: MBB = 12 | t_time = 321890
+TPA_PROF: 	11->12 | n_time = 140115
+TPA_PROF: MBB = 13 | t_time = 569750
+TPA_PROF: 	12->13 | n_time = 247860
+TPA_PROF: MBB = 14 | t_time = 580930
+TPA_PROF: 	13->14 | n_time = 11180
+TPA_PROF: MBB = 15 | t_time = 7516535
+TPA_PROF: 	14->15 | n_time = 6935605
+TPA_PROF: MBB = 16 | t_time = 7661595
+TPA_PROF: 	15->16 | n_time = 145060
+TPA_PROF: MBB = 17 | t_time = 7663010
+TPA_PROF: 	16->17 | n_time = 1415
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:46:29:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 18) NTime(end): 8009490
+TPA_PROF: MBB = 1 | t_time = 1220
+TPA_PROF: 	0->1 | n_time = 1220
+TPA_PROF: MBB = 2 | t_time = 5630
+TPA_PROF: 	1->2 | n_time = 4410
+TPA_PROF: MBB = 3 | t_time = 10175
+TPA_PROF: 	2->3 | n_time = 4545
+TPA_PROF: MBB = 4 | t_time = 53925
+TPA_PROF: 	3->4 | n_time = 43750
+TPA_PROF: MBB = 5 | t_time = 58095
+TPA_PROF: 	4->5 | n_time = 4170
+TPA_PROF: MBB = 6 | t_time = 63170
+TPA_PROF: 	5->6 | n_time = 5075
+TPA_PROF: MBB = 7 | t_time = 67850
+TPA_PROF: 	6->7 | n_time = 4680
+TPA_PROF: MBB = 8 | t_time = 72085
+TPA_PROF: 	7->8 | n_time = 4235
+TPA_PROF: MBB = 9 | t_time = 79300
+TPA_PROF: 	8->9 | n_time = 7215
+TPA_PROF: MBB = 10 | t_time = 177235
+TPA_PROF: 	10->10 | n_time = 7835
+TPA_PROF: MBB = 11 | t_time = 182030
+TPA_PROF: 	10->11 | n_time = 4795
+TPA_PROF: MBB = 12 | t_time = 322050
+TPA_PROF: 	11->12 | n_time = 140020
+TPA_PROF: MBB = 13 | t_time = 569910
+TPA_PROF: 	12->13 | n_time = 247860
+TPA_PROF: MBB = 14 | t_time = 581090
+TPA_PROF: 	13->14 | n_time = 11180
+TPA_PROF: MBB = 15 | t_time = 7516695
+TPA_PROF: 	14->15 | n_time = 6935605
+TPA_PROF: MBB = 16 | t_time = 7661755
+TPA_PROF: 	15->16 | n_time = 145060
+TPA_PROF: MBB = 17 | t_time = 7663170
+TPA_PROF: 	16->17 | n_time = 1415
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:47:12:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB 1 	|cur_time=1214, slack=-993, slack_exp=0, r_n_time=221, hits=1, overhead=945
+TPA_MECH: MBB 2 	|cur_time=3045, slack=-2048, slack_exp=0, r_n_time=997, hits=1, overhead=201
+TPA_MECH: MBB 3 	|cur_time=4072, slack=-2315, slack_exp=0, r_n_time=1757, hits=1, overhead=201
+TPA_MECH: MBB 4 	|cur_time=17334, slack=-2582, slack_exp=0, r_n_time=14752, hits=1, overhead=201
+TPA_MECH: MBB 5 	|cur_time=19217, slack=-2849, slack_exp=0, r_n_time=16368, hits=1, overhead=201
+TPA_MECH: MBB 6 	|cur_time=20879, slack=-3116, slack_exp=0, r_n_time=17763, hits=1, overhead=201
+TPA_MECH: MBB 7 	|cur_time=22586, slack=-3383, slack_exp=0, r_n_time=19203, hits=1, overhead=201
+TPA_MECH: MBB 8 	|cur_time=24128, slack=-3650, slack_exp=0, r_n_time=20478, hits=1, overhead=201
+TPA_MECH: MBB 9 	|cur_time=26465, slack=-3917, slack_exp=0, r_n_time=22548, hits=1, overhead=201
+TPA_MECH: MBB 10 	|cur_time=86937, slack=-39034, slack_exp=-113500, r_n_time=161403, hits=68, overhead=211
+TPA_MECH: MBB 11 	|cur_time=88575, slack=-39311, slack_exp=-113500, r_n_time=162764, hits=1, overhead=201
+TPA_MECH: MBB 12 	|cur_time=118735, slack=-39578, slack_exp=-113500, r_n_time=192657, hits=1, overhead=201
+TPA_MECH: MBB 13 	|cur_time=189532, slack=-39845, slack_exp=-113500, r_n_time=263187, hits=1, overhead=201
+TPA_MECH: MBB 14 	|cur_time=192434, slack=-40112, slack_exp=-113500, r_n_time=265822, hits=1, overhead=201
+TPA_MECH: MBB 15 	|cur_time=2392797, slack=-40379, slack_exp=-113500, r_n_time=2465918, hits=1, overhead=201
+TPA_MECH: MBB 16 	|cur_time=2444192, slack=-40646, slack_exp=-113500, r_n_time=2517046, hits=1, overhead=201
+TPA_MECH: MBB 17 	|cur_time=2444729, slack=-40913, slack_exp=-113500, r_n_time=2517316, hits=1, overhead=201
+qrduino benchmark exited with errors...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:47:12:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB 1 	|cur_time=1214, slack=-993, slack_exp=0, r_n_time=221, hits=1, overhead=945
+TPA_MECH: MBB 2 	|cur_time=3045, slack=-2048, slack_exp=0, r_n_time=997, hits=1, overhead=201
+TPA_MECH: MBB 3 	|cur_time=4072, slack=-2315, slack_exp=0, r_n_time=1757, hits=1, overhead=201
+TPA_MECH: MBB 4 	|cur_time=17334, slack=-2582, slack_exp=0, r_n_time=14752, hits=1, overhead=201
+TPA_MECH: MBB 5 	|cur_time=19217, slack=-2849, slack_exp=0, r_n_time=16368, hits=1, overhead=201
+TPA_MECH: MBB 6 	|cur_time=20879, slack=-3116, slack_exp=0, r_n_time=17763, hits=1, overhead=201
+TPA_MECH: MBB 7 	|cur_time=22586, slack=-3383, slack_exp=0, r_n_time=19203, hits=1, overhead=201
+TPA_MECH: MBB 8 	|cur_time=24128, slack=-3650, slack_exp=0, r_n_time=20478, hits=1, overhead=201
+TPA_MECH: MBB 9 	|cur_time=26465, slack=-3917, slack_exp=0, r_n_time=22548, hits=1, overhead=201
+TPA_MECH: MBB 10 	|cur_time=86937, slack=-39034, slack_exp=-113500, r_n_time=161403, hits=68, overhead=211
+TPA_MECH: MBB 11 	|cur_time=88575, slack=-39311, slack_exp=-113500, r_n_time=162764, hits=1, overhead=201
+TPA_MECH: MBB 12 	|cur_time=118735, slack=-39578, slack_exp=-113500, r_n_time=192657, hits=1, overhead=201
+TPA_MECH: MBB 13 	|cur_time=189532, slack=-39845, slack_exp=-113500, r_n_time=263187, hits=1, overhead=201
+TPA_MECH: MBB 14 	|cur_time=192434, slack=-40112, slack_exp=-113500, r_n_time=265822, hits=1, overhead=201
+TPA_MECH: MBB 15 	|cur_time=2392797, slack=-40379, slack_exp=-113500, r_n_time=2465918, hits=1, overhead=201
+TPA_MECH: MBB 16 	|cur_time=2444192, slack=-40646, slack_exp=-113500, r_n_time=2517046, hits=1, overhead=201
+TPA_MECH: MBB 17 	|cur_time=2444729, slack=-40913, slack_exp=-113500, r_n_time=2517316, hits=1, overhead=201
+qrduino benchmark exited with errors...
+Press any key to restart...
