@@ -7,9 +7,9 @@
 
 ################################################################################
 # Configuration setup
-MULTICORE		:= n
+MULTICORE		:= y
 DEBUG			:= y
-OPTIM			:= O0
+OPTIM			:= O2
 C0_ARTIF_APP	:= artifapp2
 C0_FPM			:= n
 BUS_PRIO		:= n

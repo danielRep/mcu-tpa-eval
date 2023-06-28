@@ -3,6 +3,6 @@
 
 #define N_MBBS                              100 /* MBBs */ + 1 /* Entry Point */
 
-extern const tmg_t tmg_prof[N_MBBS];
+static uint32_t t_n_time = 0;
 
 #endif  /* __TPA_CFG_H__ */
