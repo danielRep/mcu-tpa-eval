@@ -14,6 +14,7 @@
 #include "platform_base_addrs.h"
 #include "fsl_mailbox.h"
 #include "ipi.h"
+#include "log.h"
 
 extern void fill_cache();
 
@@ -24,16 +25,12 @@ void Interrupt31_Handler(void)  // IPI interrupt handler
 
     if(msg == CORUNNER_PAUSE)
     {
-        #ifdef LOGGING
-        printf("TPA_MECH: Co-runner paused.\r\n");
-        #endif
+        LOG_PRINT("TPA_MECH: Co-runner paused.\r\n");
         SCB->SCR |= SCB_SCR_SLEEPONEXIT_Msk;    //TODO: this is probably not the best way to pause the core since it does not work if we have more interrupts
     }
     else    //CORUNNER_RESUME
     {
-        #ifdef LOGGING
-        printf("TPA_MECH: Co-runner resumed.\r\n");
-        #endif
+        LOG_PRINT("TPA_MECH: Co-runner resumed.\r\n");
         SCB->SCR &= ~SCB_SCR_SLEEPONEXIT_Msk;
     }
     __DSB();
@@ -55,7 +52,7 @@ int main(void)
 #ifdef C1_STATS
 
 #endif
-    printf("Core1 running...\r\n");
+    //printf("Core1 running!\r\n");
     }
     return 0;
 }
