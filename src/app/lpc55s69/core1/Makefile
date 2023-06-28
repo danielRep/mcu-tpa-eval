@@ -67,6 +67,7 @@ endif
 
 ifeq ($(LOGGING), y)
 CFLAGS += -DLOGGING
+CFLAGS += -DLOGLEVEL=$(LOGLEVEL)
 endif
 
 ifeq ($(C1_IC), y)

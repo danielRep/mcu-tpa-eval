@@ -81,6 +81,7 @@ endif
 
 ifeq ($(LOGGING), y)
 CFLAGS += -DLOGGING
+CFLAGS += -DLOGLEVEL=$(LOGLEVEL)
 endif
 
 ifeq ($(MULTICORE), y)
