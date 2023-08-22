@@ -192,10 +192,9 @@ initframe ()
   rlens = malloc_beebs (WD + 1);
   // finders
   putfind ();
-  TPA_CALLBACK(4);
+  TPA_CALLBACK(2);
   // alignment blocks
   doaligns ();
-  TPA_CALLBACK(5);
   // single black
   SETQRBIT (8, WD - 8);
   // timing gap - masks only
@@ -205,14 +204,13 @@ initframe ()
       setmask (WD - 8, y);
       setmask (7, y + WD - 7);
     }
-  TPA_CALLBACK(6);
+  TPA_CALLBACK(3);
   for (x = 0; x < 8; x++)
     {
       setmask (x, 7);
       setmask (x + WD - 8, 7);
       setmask (x, WD - 8);
     }
-  TPA_CALLBACK(7);
   // reserve mask-format area
   for (x = 0; x < 9; x++)
     setmask (x, 8);
@@ -221,7 +219,7 @@ initframe ()
       setmask (x + WD - 8, 8);
       setmask (8, x);
     }
-  TPA_CALLBACK(8);
+  TPA_CALLBACK(4);
   for (y = 0; y < 7; y++)
     setmask (8, y + WD - 7);
   // timing
@@ -236,14 +234,13 @@ initframe ()
 	SETQRBIT (8 + x, 6);
 	SETQRBIT (6, 8 + x);
       }
-  TPA_CALLBACK(9);
+  TPA_CALLBACK(5);
   // version block
   putvpat ();
   for (y = 0; y < WD; y++)
     for (x = 0; x <= y; x++)
       if (QRBIT (x, y))
-	TPA_CALLBACK(10);
-  setmask (x, y);
+	setmask (x, y);
 }
 
 void
