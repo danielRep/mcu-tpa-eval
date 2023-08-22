@@ -41,7 +41,6 @@ ifeq ($(TPA), prof)
 	tpa-objs-y += tpa_prof.o
 else ifeq ($(TPA), mech)
 	tpa-objs-y += tpa_mech.o
-	tpa-objs-y += ipi.o
 endif
 tpa-objs-y += cyc_cnt.o
 objs-y += $(addprefix $(TPA_DIR)/, $(tpa-objs-y))
@@ -70,7 +69,7 @@ TARGET := $(BIN_DIR)/$(PROJ_NAME).elf
 ################################################################################
 # Toolchain Flags
 # CC Flags
-CFLAGS := -$(OPTIM) -Wall $(plat-flags) $(addprefix -I, $(INC_DIRS))
+CFLAGS := -$(OPTIM) -Wall $(plat-flags-c0) $(addprefix -I, $(INC_DIRS))
 CFLAGS += -fcommon --specs=nano.specs -ffunction-sections -fdata-sections
 CFLAGS += -DBENCHAPP=\"$(C0_BENCH_APP)\"
 CFLAGS += -DTESTID=\"$(TESTID)\"
