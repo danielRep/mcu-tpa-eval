@@ -60,18 +60,17 @@ benchmark_body (int rpt)
       encode = in_encode;
       size = 22;
       init_heap_beebs ((void *) heap, HEAP_SIZE);
-      TPA_CALLBACK(1);
       initeccsize (1, size);
-      TPA_CALLBACK(2);
       memcpy (strinbuf, encode, size);
-      TPA_CALLBACK(3);
+      TPA_CALLBACK(1);
       initframe ();
-      TPA_CALLBACK(11);
+      TPA_CALLBACK(6);
       qrencode ();
-      TPA_CALLBACK(16);
+      TPA_CALLBACK(11);
       freeframe ();
+      TPA_CALLBACK(12);
       freeecc ();
-      TPA_CALLBACK(17);
+      TPA_CALLBACK(13);
     }
 
   return 0;
