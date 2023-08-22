@@ -7,10 +7,12 @@
 
 ################################################################################
 # Configuration setup
-MULTICORE		:= n
+MULTICORE		:= y
 DEBUG			:= y
-OPTIM			:= O2
-C0_BENCH_APP	:= statemate
+OPTIM			:= O0
+C0_ARTIF_APP	:= artifapp1
 C0_FPM			:= n
 BUS_PRIO		:= n
-TPA				:= prof
+C1_INTRF_APP	:= ifi
+TPA				:= mech
+LOGGING			:= y

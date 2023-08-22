@@ -1,0 +1,22 @@
+Ready to start running t2 compiled at 10:55:20:
+	- App: artifapp1 benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1000x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 6)...
+TPA_PROF: MBB = 1 | t_time = 155
+TPA_PROF: 	0->1 | n_time = 155
+TPA_PROF: 	3->1 | n_time = 155
+TPA_PROF: 	2->1 | n_time = 155
+TPA_PROF: MBB = 2 | t_time = 590
+TPA_PROF: 	1->2 | n_time = 435
+TPA_PROF: MBB = 3 | t_time = 10010
+TPA_PROF: 	2->3 | n_time = 435
+TPA_PROF: 	4->3 | n_time = 415
+TPA_PROF: MBB = 4 | t_time = 10485
+TPA_PROF: 	3->4 | n_time = 475
+TPA_PROF: MBB = 5 | t_time = 9595
+TPA_PROF: 	4->5 | n_time = 485
+artifapp1 benchmark run smoothly...
+Press any key to restart...
