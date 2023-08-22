@@ -1,0 +1,369 @@
+Ready to start running t6 compiled at 15:34:55:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 14)
+TPA_PROF: MBB = 1 | t_time = 1627
+TPA_PROF: 	0->1 | n_time = 1627
+TPA_PROF: MBB = 2 | t_time = 14757
+TPA_PROF: 	1->2 | n_time = 13130
+TPA_PROF: MBB = 3 | t_time = 17673
+TPA_PROF: 	2->3 | n_time = 2916
+TPA_PROF: MBB = 4 | t_time = 20378
+TPA_PROF: 	3->4 | n_time = 2705
+TPA_PROF: MBB = 5 | t_time = 22498
+TPA_PROF: 	4->5 | n_time = 2120
+TPA_PROF: MBB = 6 | t_time = 48269
+TPA_PROF: 	5->6 | n_time = 25771
+TPA_PROF: MBB = 7 | t_time = 77702
+TPA_PROF: 	6->7 | n_time = 29433
+TPA_PROF: MBB = 8 | t_time = 162157
+TPA_PROF: 	7->8 | n_time = 84455
+TPA_PROF: MBB = 9 | t_time = 2367303
+TPA_PROF: 	8->9 | n_time = 2205146
+TPA_PROF: MBB = 10 | t_time = 2414800
+TPA_PROF: 	9->10 | n_time = 47497
+TPA_PROF: MBB = 11 | t_time = 2416361
+TPA_PROF: 	10->11 | n_time = 1561
+TPA_PROF: MBB = 12 | t_time = 2416546
+TPA_PROF: 	11->12 | n_time = 185
+TPA_PROF: MBB = 13 | t_time = 2416696
+TPA_PROF: 	12->13 | n_time = 150
+TPA_PROF: N(end) = 2460431
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+TPA_MECH: Overhead/MBB:     1
+qrduino benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:38:25:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 14)
+TPA_PROF: MBB = 1 | t_time = 8445
+TPA_PROF: 	0->1 | n_time = 8445
+TPA_PROF: MBB = 2 | t_time = 49545
+TPA_PROF: 	1->2 | n_time = 41100
+TPA_PROF: MBB = 3 | t_time = 58000
+TPA_PROF: 	2->3 | n_time = 8455
+TPA_PROF: MBB = 4 | t_time = 66850
+TPA_PROF: 	3->4 | n_time = 8850
+TPA_PROF: MBB = 5 | t_time = 74930
+TPA_PROF: 	4->5 | n_time = 8080
+TPA_PROF: MBB = 6 | t_time = 167710
+TPA_PROF: 	5->6 | n_time = 92780
+TPA_PROF: MBB = 7 | t_time = 315675
+TPA_PROF: 	6->7 | n_time = 147965
+TPA_PROF: MBB = 8 | t_time = 585620
+TPA_PROF: 	7->8 | n_time = 269945
+TPA_PROF: MBB = 9 | t_time = 8067640
+TPA_PROF: 	8->9 | n_time = 7482020
+TPA_PROF: MBB = 10 | t_time = 8212260
+TPA_PROF: 	9->10 | n_time = 144620
+TPA_PROF: MBB = 11 | t_time = 8218695
+TPA_PROF: 	10->11 | n_time = 6435
+TPA_PROF: MBB = 12 | t_time = 8219720
+TPA_PROF: 	11->12 | n_time = 1025
+TPA_PROF: MBB = 13 | t_time = 8220510
+TPA_PROF: 	12->13 | n_time = 790
+TPA_PROF: N(end) = 8264245
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+TPA_MECH: Overhead/MBB:     1
+qrduino benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:38:25:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 14)
+TPA_PROF: MBB = 1 | t_time = 8445
+TPA_PROF: 	0->1 | n_time = 8445
+TPA_PROF: MBB = 2 | t_time = 49545
+TPA_PROF: 	1->2 | n_time = 41100
+TPA_PROF: MBB = 3 | t_time = 58000
+TPA_PROF: 	2->3 | n_time = 8455
+TPA_PROF: MBB = 4 | t_time = 66850
+TPA_PROF: 	3->4 | n_time = 8850
+TPA_PROF: MBB = 5 | t_time = 74930
+TPA_PROF: 	4->5 | n_time = 8080
+TPA_PROF: MBB = 6 | t_time = 167710
+TPA_PROF: 	5->6 | n_time = 92780
+TPA_PROF: MBB = 7 | t_time = 315675
+TPA_PROF: 	6->7 | n_time = 147965
+TPA_PROF: MBB = 8 | t_time = 585620
+TPA_PROF: 	7->8 | n_time = 269945
+TPA_PROF: MBB = 9 | t_time = 8067640
+TPA_PROF: 	8->9 | n_time = 7482020
+TPA_PROF: MBB = 10 | t_time = 8212260
+TPA_PROF: 	9->10 | n_time = 144620
+TPA_PROF: MBB = 11 | t_time = 8218695
+TPA_PROF: 	10->11 | n_time = 6435
+TPA_PROF: MBB = 12 | t_time = 8219720
+TPA_PROF: 	11->12 | n_time = 1025
+TPA_PROF: MBB = 13 | t_time = 8220510
+TPA_PROF: 	12->13 | n_time = 790
+TPA_PROF: N(end) = 8264245
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+TPA_MECH: Overhead/MBB:     1
+qrduino benchmark run smoothly...
+Press any key to restart...
+şCore1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:40:32:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=    8524 s=-6408.90 r=    1627 h=  1 o= 3655 PAUSED
+TPA_MECH: MBB  2 c=   25494 s=-6309.90 r=   14757 h=  1 o= 1246 PAUSED
+TPA_MECH: MBB  3 c=   29782 s=-6807.10 r=   17673 h=  1 o= 1251 PAUSED
+TPA_MECH: MBB  4 c=   33864 s=-7372.60 r=   20378 h=  1 o= 1276 PAUSED
+TPA_MECH: MBB  5 c=   37386 s=-8138.60 r=   22498 h=  1 o= 1276 PAUSED
+TPA_MECH: MBB  6 c=   64559 s=-1809.30 r=   48269 h=  1 o= 1251 PAUSED
+TPA_MECH: MBB  7 c=   95369 s=5643.60 r=   77702 h=  1 o= 1256 RUNNING
+TPA_MECH: MBB  8 c=  367790 s=-156985.91 r=  162157 h=  1 o= 3620 PAUSED
+TPA_MECH: MBB  9 c= 2576741 s=500752.91 r= 2367303 h=  1 o= 1246 RUNNING
+TPA_MECH: MBB 10 c= 2726267 s=412973.00 r= 2414800 h=  1 o= 3625 RUNNING
+TPA_MECH: MBB 11 c= 2736752 s=404517.31 r= 2416361 h=  1 o= 3625 RUNNING
+TPA_MECH: MBB 12 c= 2741842 s=399667.81 r= 2416546 h=  1 o= 3625 RUNNING
+TPA_MECH: MBB 13 c= 2746697 s=395007.81 r= 2416696 h=  1 o= 3530 RUNNING
+TPA_MECH: Overhead/MBB:  2345
+qrduino benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 15:40:32:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=    8524 s=-6408.90 r=    1627 h=  1 o= 3655 PAUSED
+TPA_MECH: MBB  2 c=   25494 s=-6309.90 r=   14757 h=  1 o= 1246 PAUSED
+TPA_MECH: MBB  3 c=   29782 s=-6807.10 r=   17673 h=  1 o= 1251 PAUSED
+TPA_MECH: MBB  4 c=   33864 s=-7372.60 r=   20378 h=  1 o= 1276 PAUSED
+TPA_MECH: MBB  5 c=   37386 s=-8138.60 r=   22498 h=  1 o= 1276 PAUSED
+TPA_MECH: MBB  6 c=   64559 s=-1809.30 r=   48269 h=  1 o= 1251 PAUSED
+TPA_MECH: MBB  7 c=   95369 s=5643.60 r=   77702 h=  1 o= 1256 RUNNING
+TPA_MECH: MBB  8 c=  367790 s=-156985.91 r=  162157 h=  1 o= 3620 PAUSED
+TPA_MECH: MBB  9 c= 2576741 s=500752.91 r= 2367303 h=  1 o= 1246 RUNNING
+TPA_MECH: MBB 10 c= 2726267 s=412973.00 r= 2414800 h=  1 o= 3625 RUNNING
+TPA_MECH: MBB 11 c= 2736752 s=404517.31 r= 2416361 h=  1 o= 3625 RUNNING
+TPA_MECH: MBB 12 c= 2741842 s=399667.81 r= 2416546 h=  1 o= 3625 RUNNING
+TPA_MECH: MBB 13 c= 2746697 s=395007.81 r= 2416696 h=  1 o= 3530 RUNNING
+TPA_MECH: Overhead/MBB:  2345
+qrduino benchmark run smoothly...
+Press any key to restart...
+şCore1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 16:49:06:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=    8564 s=4294960384.00 r=    1627 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  2 c=   50679 s=4294931456.00 r=   14757 h=  1 o=  900 RUNNING
+TPA_MECH: MBB  3 c=   60539 s=4294924544.00 r=   17673 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  4 c=   70279 s=4294917376.00 r=   20378 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  5 c=   79609 s=4294910208.00 r=   22498 h=  1 o=  865 RUNNING
+TPA_MECH: MBB  6 c=  186704 s=4294828800.00 r=   48269 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  7 c=  324454 s=4294720512.00 r=   77702 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  8 c=  596849 s=4294532608.00 r=  162157 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  9 c= 7931089 s=4289403392.00 r= 2367303 h=  1 o=  960 RUNNING
+TPA_MECH: MBB 10 c= 8080599 s=4289301504.00 r= 2414800 h=  1 o=  960 RUNNING
+TPA_MECH: MBB 11 c= 8088564 s=4289295104.00 r= 2416361 h=  1 o=  865 RUNNING
+TPA_MECH: MBB 12 c= 8090944 s=4289292800.00 r= 2416546 h=  1 o=  960 RUNNING
+TPA_MECH: MBB 13 c= 8093184 s=4289290752.00 r= 2416696 h=  1 o=  960 RUNNING
+TPA_MECH: Overhead/MBB:   941
+qrduino benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 16:49:06:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=    8564 s=4294960384.00 r=    1627 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  2 c=   50679 s=4294931456.00 r=   14757 h=  1 o=  900 RUNNING
+TPA_MECH: MBB  3 c=   60539 s=4294924544.00 r=   17673 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  4 c=   70279 s=4294917376.00 r=   20378 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  5 c=   79609 s=4294910208.00 r=   22498 h=  1 o=  865 RUNNING
+TPA_MECH: MBB  6 c=  186704 s=4294828800.00 r=   48269 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  7 c=  324454 s=4294720512.00 r=   77702 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  8 c=  596849 s=4294532608.00 r=  162157 h=  1 o=  960 RUNNING
+TPA_MECH: MBB  9 c= 7931089 s=4289403392.00 r= 2367303 h=  1 o=  960 RUNNING
+TPA_MECH: MBB 10 c= 8080599 s=4289301504.00 r= 2414800 h=  1 o=  960 RUNNING
+TPA_MECH: MBB 11 c= 8088564 s=4289295104.00 r= 2416361 h=  1 o=  865 RUNNING
+TPA_MECH: MBB 12 c= 8090944 s=4289292800.00 r= 2416546 h=  1 o=  960 RUNNING
+TPA_MECH: MBB 13 c= 8093184 s=4289290752.00 r= 2416696 h=  1 o=  960 RUNNING
+TPA_MECH: Overhead/MBB:   941
+qrduino benchmark run smoothly...
+Press any key to restart...
+8~ş˜ ÏîşÿşCore1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 16:49:30:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=    9364 s=-7737.00 r=    1627 h=  1 o= 2985 PAUSED
+TPA_MECH: MBB  2 c=   25674 s=-10917.00 r=   14757 h=  1 o=  991 PAUSED
+TPA_MECH: MBB  3 c=   29717 s=-12044.00 r=   17673 h=  1 o=  966 PAUSED
+TPA_MECH: MBB  4 c=   33524 s=-13146.00 r=   20378 h=  1 o= 1046 PAUSED
+TPA_MECH: MBB  5 c=   36826 s=-14328.00 r=   22498 h=  1 o= 1046 PAUSED
+TPA_MECH: MBB  6 c=   63779 s=-15510.00 r=   48269 h=  1 o= 1021 PAUSED
+TPA_MECH: MBB  7 c=   94369 s=-16667.00 r=   77702 h=  1 o= 1021 PAUSED
+TPA_MECH: MBB  8 c=  179981 s=-17824.00 r=  162157 h=  1 o= 1021 PAUSED
+TPA_MECH: MBB  9 c= 2386284 s=-18981.00 r= 2367303 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 10 c= 2434928 s=-20128.00 r= 2414800 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 11 c= 2437636 s=-21275.00 r= 2416361 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 12 c= 2438968 s=-22422.00 r= 2416546 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 13 c= 2440265 s=-23569.00 r= 2416696 h=  1 o= 1011 PAUSED
+TPA_MECH: Overhead/MBB:  1166
+qrduino benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t6 compiled at 16:49:30:
+	- App: qrduino benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=    9364 s=-7737.00 r=    1627 h=  1 o= 2985 PAUSED
+TPA_MECH: MBB  2 c=   25674 s=-10917.00 r=   14757 h=  1 o=  991 PAUSED
+TPA_MECH: MBB  3 c=   29717 s=-12044.00 r=   17673 h=  1 o=  966 PAUSED
+TPA_MECH: MBB  4 c=   33524 s=-13146.00 r=   20378 h=  1 o= 1046 PAUSED
+TPA_MECH: MBB  5 c=   36826 s=-14328.00 r=   22498 h=  1 o= 1046 PAUSED
+TPA_MECH: MBB  6 c=   63779 s=-15510.00 r=   48269 h=  1 o= 1021 PAUSED
+TPA_MECH: MBB  7 c=   94369 s=-16667.00 r=   77702 h=  1 o= 1021 PAUSED
+TPA_MECH: MBB  8 c=  179981 s=-17824.00 r=  162157 h=  1 o= 1021 PAUSED
+TPA_MECH: MBB  9 c= 2386284 s=-18981.00 r= 2367303 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 10 c= 2434928 s=-20128.00 r= 2414800 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 11 c= 2437636 s=-21275.00 r= 2416361 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 12 c= 2438968 s=-22422.00 r= 2416546 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 13 c= 2440265 s=-23569.00 r= 2416696 h=  1 o= 1011 PAUSED
+TPA_MECH: Overhead/MBB:  1166
+qrduino benchmark run smoothly...
+Press any key to restart...
+…»+»++«/ë¹;/û©·­û{¥}µï·{©yÿùyÿy{ë«·½ï{ï{ÿ­÷íé·½ë{ÿyûë«·ıïùïYû¯«µ­ë{ï[û¯©·ıûyÿ[ùë©·åë{yù««·ïùû{ù¯«»ù»[û¯©¹û¹yùë©¹ù»yù¯«ûû»Yûëù«ù?;/»+»+++»ëë¹»«û©·­û{­}ÿï÷{©÷ıû{ÿ[{ë©÷½û{ÿ[{««÷½û{ÿ{·ï¿«·ıïùïY{¯«µ½û{ï[ù¯«·ıûyÿ[ù«©·ıªy[ù¯«ÿïû¹[{««ûû¹yùï«¹ù»[û««¹ùûYûë«¹ù½[ù¯ë;¿?»¯…»«»«+«?ëù¹;«û«·­û{­}÷ï¿©·ıë{ÿy{¯©÷½û{ï{÷­÷«÷½ë{ÿ{û¯«÷ıûyïyûë©ÿ­ë{ï[ûë«·ıë{ÿYûë«·åë{yù¯«ÿïû¹[{««»û¹{û¯©»ù»yûë©»ù¹yûë«¹û¹[û¯ù«?¹»/…³/»+++?ëù»»«û«·­ûy­}ÿï÷{©·ıë{ÿ[{ë©·½ïyÿy{««ÿ½ë{ÿ[û««·ıûyï[{¯«·½ëyï_ù¯©·ıû{ÿyùë©·ıªù[ûë«·ï®¹{ù¯«¹û¹yù¯©ÿûû[û««¹ù»[ûë©¹ù¹[ù«ë+¿»;©ƒ•«û««é»û­{­y¿©÷íë{ÿy¯½{ï{­÷í÷û·ï·ï¿ÿ½û{·©ıyÿû¯å[ëïùy{«ûyëûûû©¹¹û¹ùëù+?…»+«¿ë;/­÷ï÷©÷íë{ı©÷ûï««÷½ûÿyëı{ï¯µÿYë«ıëyÿYûµíyùÿï®ûëù»«û[[û«û¹ù¿;ƒ««+»ùûû«û{}ï{·ëÿy¯ÿyÿyyé·ëyûë·{Yûë·ùïë·ëY¯«ëyù©ÿïë«{¹»ë¯«?¹i33m	- VTOR0
+Rea runni compi 13:55:25:
+m	- Amark
+	- Start a 0x00
+ess any ke0;32mSing.. 1 c=-7697.0 r=    162 290CH: MB c=   25554 s=-10797.   14  1 91TPA_MECH:  97 s=.00 r=   1 o=  D
+TPA 4 c=   33=-13026.00 20378 PAUSED
+TP: MBB=   s=208.00 22498 h=  PAUSED
+TB  6 63659 s=5390.0 r=269 h== 10USED
+TPA_MECH: M79 s=165477702 h=  1 021 MECH: 861 s=.00 r62157 h=  1021 _MECH= 2386164 s-188r= 2 1011ED
+TP 10 -20 r= 01TCH: MBB 11 s= 24163  1= 10TPA_MECH: M48 s= o= 1 24401011 A_MECH: Ovehead/MBB: 
+ino benchmark run smoothly.ress any keyestart2JC;33m	- VTOR: 000100ady to start running t6t 13:55:25:
+0;3m	- A benchart ddres0000000any key to start...
+S. Running..
+ MBB 9324 s7697.027 h=5 PABB  2-   14o=  AUSEDMECH: MBB  597 s=-11924.00 r17673  o= _MECH: MBB =3404 -130r=   1 o= PAUSED
+TPH: MBc=    s=208.0098 h== 104USED
+TPA_MECH: MBB  6 63659 s=1   48269 h  1 AUSED
+TPA_M   942-165477702 h=  11021 PAUSED
+TPA MBB 9=4.00  h=  1 o=ED
+TPA_MEC: MBB86164 -18 r= 236730  1 o=11 PAUSED
+TPA_MECH: MBB 10 434808 s=0008.00 r=   1 o 101TPA_MBB 11243751-21155.00 r==  1 o= 1011 
+TPA_2 c= 24388-22302.00 r6546 h=  11011 13 c= 2440145 s-234416696 h=  A_MEC/ 1160
+uino un smoPress restar1 setup and runninReadtart g t6 ced at 25:
+nchm[0;33m	- Start address 000000ess an.32mSamplingng...
+MBB  1 c= 24 s=r=   h=  1 o=ED
+TP  2 c=   0 r=   147=  991 PACH: MBB  3 2959-1192400 r=673 h=  1 AUSED
+TPA_MECH:    33404 _MECH: 5 c= =-142r=   h=  1 o= PAUS63659 s=390.00SED
+TMECH: MBB  7 c=  6547.00 r=   77702 h== 10AUSED
+TPA_MBB  8 c=  179861 s=-.00 r=2157 h=  1 o= 1PAUSED
+TPA_MECH: MBB  9 c= 2386=-18861.00 r= 23 h o= PAUSE_MECH: MBB  2434808 -200r= 24148001 o=S37516s=1556  1 o= 101USED
+TPA_MEB 12 c= 28546 h=oBB 13 c=45 s=23449.00 r=6696 h=  1 o= 1
+TPA Overh1160
+2mqrduino brk run smoothly...
+Prey key to re..
+etup and .
+OR: 0000;31mReady to start running piledat 13:55:25;33m	- App: no ben Start00000000
+ any o start...
+mSampl1x. RA_MEC  1 c=   -7697    =  1 o= 2
+TPA_MBB  2 c=   25=-10797.00 r14757 1 o= D
+TP9597  r=  SED
+TB  4 c33404 s=3026.0  1 o= 1046 PAUSED
+M c=   367-14208.00 r=   22498 h46 PAUSED
+TPA_6 c=659 s=h=  11021 D
+TPA 7 c=s=r=   77702 1 o= 1021A_MEC79861 -170 16215 1 o 102SED
+TPA_MECH: MBB  94 s=-1 2367  1 o= 1011 PAUSED
+TPA_MECH: M0 c= 2434808 s=-00 r=4800 h o= 1011 MECH:MBB 11 c= 2437516 s== 241 o= PAUSED
+TP_MECH:12 c=-223416546s=96 h=  1 o 101A_MEd/MBB:  1160
+Press any art...e1 setup ng.
+00010000dy to running t6 ed at 13:55[0;33mp: qrdbenchm	- Start ad 0x000
+
+P to start..mpling 1x.ing...
+TPA_MMBB      9324 s=-7697.00 r=    1627 h=  1 o= 290525554 s=-10797.00 r= BB  3  2959-   17
+TPA_MBB  4 c=   33404 s=-13026.00 r20378  o= 1046 D
+TPA_MECH: MBB  5 c=   36706 s=-14208.00 r=   22498 h=  1 o= 1046 PAUSA_MECH: MBB  6 c=    s=390.00 r=   48269 h=  1 o=1 PABB  7 9424-100 r=   77  1 21 PAUSED
+TPA_MECH: MBB  8 c=  179861 s=-17704.00 r=  16=  1021 
+TPA 9 c=-1886414800 1011SED
+TPA_MECH: MBB 11 c= 24 s=155.00 r= 2416361 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 12 c= 2438848 s=-22302.AUSED
+TPA_MECH: MBB 1-234496696 h o= 1
+TPA_MECH:BB:  no brk run.
+Press any key to restart.	- VTOR: 00010000
+Ready to start running t6 compiled at 13:55:25:
+ess y to s;32mSg 1x. Running...TPA_MBB     93-7697.00 r= 7 h= 2905 PAUCH: MBc=   s=-1   14757 h=91 PTPA_M3 c=   29597 s=-11924.00 r=   17673 h o=  MECH:404 s=-13026.00 203781 o= 1046 PAUSED
+TP: MBB =   36706 s=08.00 r=   22498 h=  1 o= 1046 PAUPA_MECH: MBB  6 -1  1 oUSED
+BB  79 s=-00 r=o= 1MECH:   179-17704.00 r=  162157 h=  1 o= 1021 D
+TPA_MECH: 9 c= 238=-18861.00 r= 2367303 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB= 24s=008.000 h=  PAUSED
+TPA_MECH: MBB 11  s=1155.00 r= 2416361 h== 10USED
+TPA_M2 c= -00 r= 2416546 h=  1 o= 1011 PAUSED
+TPA_MECH: MBB 13 c= 2440-23449.00 r= 2416696  o= 1011 PAUSED
+TPA_MECH: Over 1160
+ess a to restart...
