@@ -58,7 +58,7 @@ TARGET := $(BIN_DIR)/$(PROJ_NAME).elf
 ################################################################################
 # Toolchain Flags
 # CC Flags
-CFLAGS := -$(OPTIM) -Wall $(plat-flags) $(addprefix -I, $(INC_DIRS))
+CFLAGS := -$(OPTIM) -Wall $(plat-flags-c1) $(addprefix -I, $(INC_DIRS))
 CFLAGS += -fcommon --specs=nano.specs -ffunction-sections -fdata-sections
 
 ifeq ($(DEBUG), y)
