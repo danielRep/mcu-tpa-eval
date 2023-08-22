@@ -33,8 +33,8 @@ INCLUDE gen_mem.ld
     <o1> Flash Size (in Bytes) <0x0-0xFFFFFFFF:8>
   </h>
   -----------------------------------------------------------------------------*/
-__ROM_BASE = __CORE0_ROM_START;
-__ROM_SIZE = __CORE0_ROM_LEN;
+__ROM_BASE = __CORE1_ROM_START;
+__ROM_SIZE = __CORE1_ROM_LEN;
 
 /*--------------------- Embedded RAM Configuration ----------------------------
   <h> RAM Configuration
@@ -42,8 +42,8 @@ __ROM_SIZE = __CORE0_ROM_LEN;
     <o1> RAM Size (in Bytes) <0x0-0xFFFFFFFF:8>
   </h>
  -----------------------------------------------------------------------------*/
-__RAM_BASE = __CORE0_RAM_START;
-__RAM_SIZE = __CORE0_RAM_LEN;
+__RAM_BASE = __CORE1_RAM_START;
+__RAM_SIZE = __CORE1_RAM_LEN;
 
 /*--------------------- Stack / Heap Configuration ----------------------------
   <h> Stack / Heap Configuration
@@ -51,8 +51,8 @@ __RAM_SIZE = __CORE0_RAM_LEN;
     <o1> Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
   </h>
   -----------------------------------------------------------------------------*/
-__STACK_SIZE = __CORE0_STACK_SIZE;
-__HEAP_SIZE  = __CORE0_HEAP_SIZE;
+__STACK_SIZE = __CORE1_STACK_SIZE;
+__HEAP_SIZE  = __CORE1_HEAP_SIZE;
 
 /*
  *-------------------- <<< end of configuration section >>> -------------------
@@ -112,9 +112,6 @@ SECTIONS
     {
         . = ALIGN(4);
         __text_start = .;
-
-        KEEP(*(.bootagent.vtb));
-        KEEP(*(.bootagent.boot));
 
         KEEP(*(.vectors))
         *(.text*)

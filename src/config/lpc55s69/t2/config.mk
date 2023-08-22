@@ -7,10 +7,13 @@
 
 ################################################################################
 # Configuration setup
-MULTICORE		:= n
+MULTICORE		:= y
 DEBUG			:= y
-OPTIM			:= O0
-C0_ARTIF_APP	:= artifapp1
+OPTIM			:= O2
+C0_BENCH_APP	:= qrduino
 C0_FPM			:= n
 BUS_PRIO		:= n
-TPA				:= prof
+C1_INTRF_APP	:= ifi
+TPA				:= mech
+LOGGING			:= y
+LOGLEVEL		:= 0
