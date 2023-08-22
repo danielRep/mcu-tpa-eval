@@ -9,10 +9,11 @@
 # Configuration setup
 MULTICORE		:= y
 DEBUG			:= y
-OPTIM			:= O0
-C0_ARTIF_APP	:= artifapp1
+OPTIM			:= O2
+C0_BENCH_APP	:= st
 C0_FPM			:= n
 BUS_PRIO		:= n
 C1_INTRF_APP	:= ifi
 TPA				:= mech
 LOGGING			:= y
+LOGLEVEL		:= 0

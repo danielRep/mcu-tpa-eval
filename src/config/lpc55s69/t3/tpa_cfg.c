@@ -9,69 +9,57 @@ tmg_t tmg_prof[N_MBBS] =
         .n_times = NULL,
     },
     {   /* MBB 1 */
-        .t_time = 155,
-        .edges = 3,
+        .t_time = 120,
+        .edges = 1,
         .n_times = (n_time_t[])
         {
             {
                 .src_mbb = 0,
-                .time = 155,
-            },
-            {
-                .src_mbb = 3,
-                .time = 155,
-            },
-            {
-                .src_mbb = 2,
-                .time = 155,
+                .time = 120,
             },
         },
     },
     {   /* MBB 2 */
-        .t_time = 590,
+        .t_time = 358515,
         .edges = 1,
         .n_times = (n_time_t[])
         {
             {
                 .src_mbb = 1,
-                .time = 435,
+                .time = 358395,
             },
         },
     },
     {   /* MBB 3 */
-        .t_time = 10010,
-        .edges = 2,
+        .t_time = 456530,
+        .edges = 1,
         .n_times = (n_time_t[])
         {
             {
                 .src_mbb = 2,
-                .time = 435,
-            },
-            {
-                .src_mbb = 4,
-                .time = 415,
+                .time = 98015,
             },
         },
     },
     {   /* MBB 4 */
-        .t_time = 10485,
+        .t_time = 814950,
         .edges = 1,
         .n_times = (n_time_t[])
         {
             {
                 .src_mbb = 3,
-                .time = 475,
+                .time = 358420,
             },
         },
     },
     {   /* MBB 5 */
-        .t_time = 9595,
+        .t_time = 1172182,
         .edges = 1,
         .n_times = (n_time_t[])
         {
             {
                 .src_mbb = 4,
-                .time = 485,
+                .time = 357232,
             },
         },
     },

@@ -1,22 +1,90 @@
-Ready to start running t2 compiled at 10:55:20:
-	- App: artifapp1 benchmark
+Ready to start running t3 compiled at 16:19:29:
+	- App: st benchmark
 	- Start address 0x00000000
 
 Press any key to start...
-Sampling 1000x. Running...
-TPA_PROF: Application TMG profile (number of MBBs: 6)...
-TPA_PROF: MBB = 1 | t_time = 155
-TPA_PROF: 	0->1 | n_time = 155
-TPA_PROF: 	3->1 | n_time = 155
-TPA_PROF: 	2->1 | n_time = 155
-TPA_PROF: MBB = 2 | t_time = 590
-TPA_PROF: 	1->2 | n_time = 435
-TPA_PROF: MBB = 3 | t_time = 10010
-TPA_PROF: 	2->3 | n_time = 435
-TPA_PROF: 	4->3 | n_time = 415
-TPA_PROF: MBB = 4 | t_time = 10485
-TPA_PROF: 	3->4 | n_time = 475
-TPA_PROF: MBB = 5 | t_time = 9595
-TPA_PROF: 	4->5 | n_time = 485
-artifapp1 benchmark run smoothly...
+Sampling 1x. Running...
+TPA_PROF: Application TMG profile (number of MBBs: 6)
+TPA_PROF: MBB = 1 | t_time = 120
+TPA_PROF: 	0->1 | n_time = 120
+TPA_PROF: MBB = 2 | t_time = 358515
+TPA_PROF: 	1->2 | n_time = 358395
+TPA_PROF: MBB = 3 | t_time = 456530
+TPA_PROF: 	2->3 | n_time = 98015
+TPA_PROF: MBB = 4 | t_time = 814950
+TPA_PROF: 	3->4 | n_time = 358420
+TPA_PROF: MBB = 5 | t_time = 1172182
+TPA_PROF: 	4->5 | n_time = 357232
+TPA_PROF: N(end) = 1172182
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+ PAUSED
+TPA_MECH: Overhead/MBB:     1
+st benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t3 compiled at 16:22:15:
+	- App: st benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=     679 s=-547.00 r=     120 h=  1 o= 3420 PAUSED
+TPA_MECH: MBB  2 c=  362669 s=31697.50 r=  358515 h=  1 o= 1291 RUNNING
+TPA_MECH: MBB  3 c=  622680 s=-120497.00 r=  456530 h=  1 o= 3550 PAUSED
+TPA_MECH: MBB  4 c=  984825 s=-88380.00 r=  814950 h=  1 o= 1251 PAUSED
+TPA_MECH: MBB  5 c= 1343434 s=-54033.80 r= 1172182 h=  1 o= 1251 PAUSED
+TPA_MECH: Overhead/MBB:  2153
+st benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t3 compiled at 16:22:15:
+	- App: st benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=     584 s=-452.00 r=     120 h=  1 o= 3585 PAUSED
+TPA_MECH: MBB  2 c=  362739 s=31627.50 r=  358515 h=  1 o= 1291 RUNNING
+TPA_MECH: MBB  3 c=  622750 s=-120567.00 r=  456530 h=  1 o= 3550 PAUSED
+TPA_MECH: MBB  4 c=  984895 s=-88450.00 r=  814950 h=  1 o= 1251 PAUSED
+TPA_MECH: MBB  5 c= 1343504 s=-54103.80 r= 1172182 h=  1 o= 1251 PAUSED
+TPA_MECH: Overhead/MBB:  2186
+st benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t3 compiled at 16:22:15:
+	- App: st benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=     584 s=-452.00 r=     120 h=  1 o= 3585 PAUSED
+TPA_MECH: MBB  2 c=  362739 s=31627.50 r=  358515 h=  1 o= 1291 RUNNING
+TPA_MECH: MBB  3 c=  622750 s=-120567.00 r=  456530 h=  1 o= 3550 PAUSED
+TPA_MECH: MBB  4 c=  984895 s=-88450.00 r=  814950 h=  1 o= 1251 PAUSED
+TPA_MECH: MBB  5 c= 1343504 s=-54103.80 r= 1172182 h=  1 o= 1251 PAUSED
+TPA_MECH: Overhead/MBB:  2186
+st benchmark run smoothly...
+Press any key to restart...
+Core1 setup and running.
+	- VTOR: 00010000
+Ready to start running t3 compiled at 16:22:15:
+	- App: st benchmark
+	- Start address 0x00000000
+
+Press any key to start...
+Sampling 1x. Running...
+TPA_MECH: MBB  1 c=     679 s=-547.00 r=     120 h=  1 o= 3420 PAUSED
+TPA_MECH: MBB  2 c=  362669 s=31697.50 r=  358515 h=  1 o= 1291 RUNNING
+TPA_MECH: MBB  3 c=  622680 s=-120497.00 r=  456530 h=  1 o= 3550 PAUSED
+TPA_MECH: MBB  4 c=  984825 s=-88380.00 r=  814950 h=  1 o= 1251 PAUSED
+TPA_MECH: MBB  5 c= 1343434 s=-54033.80 r= 1172182 h=  1 o= 1251 PAUSED
+TPA_MECH: Overhead/MBB:  2153
+st benchmark run smoothly...
 Press any key to restart...
