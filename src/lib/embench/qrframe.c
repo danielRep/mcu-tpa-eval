@@ -19,7 +19,12 @@
 /* Header for BEEBS library calls */
 
 #include "beebsc.h"
+#ifdef TPA
 #include "tpa.h"
+#else
+#define TPA_CALLBACK(x) (x)
+#endif
+
 
 #ifndef __AVR__
 #define PROGMEM
