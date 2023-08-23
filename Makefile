@@ -8,7 +8,8 @@
 ################################################################################
 # Makefile Arguments
 PLATFORM	:= lpc55s69
-TESTID		:= t6
+TESTID		:= sol0
+TESTSUITE	:= $(shell echo $(TESTID) | cut -c1-3)
 
 ################################################################################
 # Toolchain Macros
