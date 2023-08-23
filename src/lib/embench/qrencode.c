@@ -16,7 +16,13 @@
 #include <string.h>
 
 #include "qrencode.h"
+
+#ifdef TPA
 #include "tpa.h"
+#else
+#define TPA_CALLBACK(x) (x)
+#endif
+
 extern unsigned char neccblk1;
 extern unsigned char neccblk2;
 extern unsigned char datablkw;
