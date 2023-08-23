@@ -6,7 +6,7 @@ else ifeq ($(C0_BENCH_APP), minver)
 	embe-objs-y += libminver.o
 else ifeq ($(C0_BENCH_APP), mont64)
 	embe-objs-y += mont64.o
-else ifeq ($(C0_BENCH_APP), crc_32)
+else ifeq ($(C0_BENCH_APP), crc32)
 	embe-objs-y += crc_32.o beebsc.o
 else ifeq ($(C0_BENCH_APP), nsichneu)
 	embe-objs-y += libnsichneu.o
