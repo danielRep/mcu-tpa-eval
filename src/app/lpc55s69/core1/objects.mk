@@ -6,6 +6,9 @@ ifeq ($(C1_INTRF_APP), ifi)
 	core1-objs-y += cache_interf.o
 else ifeq ($(C1_INTRF_APP), dai)
 	core1-objs-y += main_dai.o
+else ifeq ($(C1_INTRF_APP), eval)
+	core1-objs-y += main_eval.o
+	core1-objs-y += cache_interf.o
 else
-$(error C1 interf app "$(C1_INTRF_APP)" doesn't exist. Apps: main_ifi, main_dai")
+$(error C1 interf app "$(C1_INTRF_APP)" doesn't exist. Apps: main_ifi, main_dai, main_eval")
 endif
