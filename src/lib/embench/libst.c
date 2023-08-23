@@ -32,11 +32,13 @@
 #include <math.h>
 #include "support.h"
 #include "platform_config.h"
+
 #ifdef TPA
 #include "tpa.h"
 #else
 #define TPA_CALLBACK(x) (x)
 #endif
+
 /* This scale factor will be changed to equalise the runtime of the
    benchmarks. */
 #define LOCAL_SCALE_FACTOR 13
