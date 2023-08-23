@@ -10,7 +10,7 @@
 MULTICORE		:= n
 DEBUG			:= y
 OPTIM			:= O2
-C0_BENCH_APP	:= sglib-combined
+C0_BENCH_APP	:= wikisort
 C0_FPM			:= y
 C0_CLK_MAX		:= y
 BUS_PRIO		:= n

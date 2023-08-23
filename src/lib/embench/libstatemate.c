@@ -44,7 +44,11 @@
 #include <string.h>
 #include "support.h"
 #include "platform_config.h"
-#include "tpa_prof.h"
+#ifdef TPA
+#include "tpa.h"
+#else
+#define TPA_CALLBACK(x) (x)
+#endif
 
 /* This scale factor will be changed to equalise the runtime of the
    benchmarks. */
