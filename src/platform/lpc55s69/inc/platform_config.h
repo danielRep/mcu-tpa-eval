@@ -24,7 +24,7 @@
 #endif
 #ifndef __ASSEMBLER__
 
-#define CPU_MHZ                                     50000000UL
+#define CPU_MHZ                                     150000000UL
 #define UART0_CLK_FREQ                              12000000U
 #define UART0_CLK_ATTACH                            kFRO12M_to_FLEXCOMM0
 #define UART0_RST                                   kFC0_RST_SHIFT_RSTn
