@@ -197,7 +197,7 @@ int platform_init(void)
     printf(RED "System clock configured: %ld.\n", SystemCoreClock);
 
 #ifdef MULTICORE
-    printf(RED "Core1 setup and running.\n");
+    printf(RED "Core1 setup and running "INTRFAPP" interf app.\n");
     printf(YELLOW "\t- VTOR: %.8X\n", (unsigned int)((SYSCON->CPBOOT)&SYSCON_CPBOOT_CPBOOT_MASK));
 #endif
 

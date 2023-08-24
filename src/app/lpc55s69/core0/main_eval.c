@@ -38,7 +38,7 @@ int main(void)
     /* Init platform specific hardware */
     platform_init();
 
-    printf(RED "Ready to start running "TESTID" from "TESTSUITE" compiled at "__TIME__":\n");
+    printf(RED "Ready to start running "TESTID" compiled at "__TIME__".\n");
     printf(YELLOW "\t- Workload: "BENCHAPP" benchmark\n");
     printf(YELLOW "\t- .text start: 0x%.8X\n", (unsigned int)&__text_start);
     printf(YELLOW "\t- .data start: 0x%.8X\n", (unsigned int)&__data_start__);
