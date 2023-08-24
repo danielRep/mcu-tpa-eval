@@ -12,7 +12,7 @@
 fill_cache:
     .rept N_REPT-1
     .align      2
-    //b   1f
+    b   1f
     mov r8, r8
     mov r8, r8
     mov r8, r8
