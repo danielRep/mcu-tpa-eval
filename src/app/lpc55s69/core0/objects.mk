@@ -1,5 +1,5 @@
 
-ifeq ($(findstring $(TESTSUITE),sol cmn slp cat),$(TESTSUITE))
+ifeq ($(findstring $(TESTSUITE),sol cmn slp ctt),$(TESTSUITE))
     core0-objs-y += main_eval.o
 else ifeq ($(TESTSUITE),tpa)
     core0-objs-y += main_tpa.o
