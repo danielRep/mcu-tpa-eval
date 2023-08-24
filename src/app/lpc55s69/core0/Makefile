@@ -79,6 +79,7 @@ TARGET := $(BIN_DIR)/$(PROJ_NAME).elf
 CFLAGS := -$(OPTIM) -Wall $(plat-flags-c0) $(addprefix -I, $(INC_DIRS))
 CFLAGS += -fcommon --specs=nano.specs -ffunction-sections -fdata-sections
 CFLAGS += -DBENCHAPP=\"$(C0_BENCH_APP)\"
+CFLAGS += -DINTRFAPP=\"$(C1_INTRF_APP)\"
 CFLAGS += -DTESTID=\"$(TESTID)\"
 CFLAGS += -DTESTSUITE=\"$(TESTSUITE)\"
 
