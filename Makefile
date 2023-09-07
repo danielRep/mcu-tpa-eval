@@ -7,7 +7,7 @@
 
 ################################################################################
 # Makefile Arguments
-PLATFORM	:= lpc55s69
+PLATFORM	:= stm32f767
 TESTID		:= ctt
 TESTSUITE	:= $(shell echo $(TESTID) | cut -c1-3)
 
