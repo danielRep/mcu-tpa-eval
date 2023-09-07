@@ -26,6 +26,7 @@ void print_cycles(uint32_t t_cyc[])
     }
     return;
 }
+extern uint32_t __Vectors;
 
 int main(void)
 {
