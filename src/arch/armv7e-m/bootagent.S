@@ -8,7 +8,9 @@
  * the Free Software Foundation.
  *
  */
+#ifdef MULTICORE
 #include "cpu_id.s"
+#endif
 
 .syntax     unified
 

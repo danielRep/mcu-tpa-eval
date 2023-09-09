@@ -13,7 +13,7 @@ void dwt_unlock(void)
 
     /* Unlock access to DWT */
     ITM->LAR = DWT_LAR_UNLOCK;
-    DWT->LAR = DWT_LAR_UNLOCK;
+    //DWT->LAR = DWT_LAR_UNLOCK;
 }
 
 void dwt_reset_counters(void)
@@ -59,68 +59,6 @@ void dwt_init_counters(void)
     dwt_reset_counters();
 
     dwt_enable_counters();
-}
-
-// Return cpu usage in percentage
-uint32_t dwt_cpu_usage(void)
-{
-    uint32_t cpu_usage = 0;
-
-    /* Disable cycle counter and sleep counter */
-    DWT->CTRL &= ~(DWT_CTRL_CYCCNTENA | DWT_CTRL_SLEEPEVTENA);
-
-    cpu_usage = (DWT->CYCCNT / (DWT->CYCCNT + DWT->SLEEPCNT));
-
-    DWT->CTRL |= (DWT_CTRL_CYCCNTENA | DWT_CTRL_SLEEPEVTENA);
-
-    return (cpu_usage * 100);
-}
-
-void dwt_watch_data_address_range(uint32_t base_addr, uint32_t mem_size)
-{
-
-    __asm("ISB");
-    DWT->COMP2 = base_addr;
-    DWT->FUNCTION2 |= (DWT_FUNC_MATCH_DATA_ADDR | DWT_FUNC_ACTION_DEBUG_EVENT | DWT_FUNC_DATASIZE_1_BYTE);
-
-    DWT->COMP3 = (base_addr + mem_size);
-    DWT->FUNCTION3 |= (DWT_FUNC_MATCH_DATA_ADDR_LIMIT | DWT_FUNC_DATASIZE_1_BYTE);
-
-    // Clear Debug Handler pending bit in case it is one
-    CoreDebug->DEMCR &= ~(CoreDebug_DEMCR_MON_PEND_Msk);
-
-    __asm("DSB");
-}
-
-void dwt_compare_cyc_count(uint32_t cycnt)
-{
-    // dwt_unlock();
-
-    /*Reset CYCNT Val */
-    DWT->CYCCNT = 0;
-
-    DWT->CTRL &= ~(DWT_CTRL_CYCCNTENA);
-
-    /* Cycle Count value to match in the comparator */
-    DWT->COMP0 = cycnt;
-
-    DWT->FUNCTION0 |= (DWT_FUNC_MATCH_CYC_CNT | DWT_FUNC_ACTION_DEBUG_EVENT | DWT_FUNC_DATASIZE_4_BYTE);
-
-    DWT->CTRL |= (DWT_CTRL_CYCCNTENA);
-
-    //    ENABLE_DEBUG_EX_S();
-}
-
-void dwt_watch_data_addr(uint32_t addr)
-{
-    // dwt_unlock();
-    /*Use Comparator 2 */
-    DWT->COMP2 = (uint32_t)addr;
-
-    DWT->FUNCTION2 |= (DWT_FUNC_MATCH_DATA_ADDR | DWT_FUNC_ACTION_DEBUG_EVENT | DWT_FUNC_DATASIZE_4_BYTE);
-
-    /*Enable Debug Monitor Exeption for Secure World*/
-    //    ENABLE_DEBUG_EX_S();
 }
 
 void inline dwt_enable_cycnt(void)
