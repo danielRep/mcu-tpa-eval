@@ -17,4 +17,4 @@ C0_BOOTAGENT	:= n
 C0_FPM			:= y
 C0_DMA1			:= n
 C0_CLK_MAX		:= y
-C0_BENCH_APP	:= wikisort
+C0_BENCH_APP	:= mont64

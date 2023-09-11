@@ -5,8 +5,8 @@
 #define FLASH_MEM                               0x08000000
 #define FLASH_MEM_SIZE                          0x00100000
 
-#define SRAM1_MEM                               0x10000000
-#define SRAM1_MEM_SIZE                          0x18000
+#define SRAM1_MEM                               0x20000000
+#define SRAM1_MEM_SIZE                          0x16800
 #define SRAM2_MEM                               0x2007C000
 #define SRAM2_MEM_SIZE                          0x8000
 
