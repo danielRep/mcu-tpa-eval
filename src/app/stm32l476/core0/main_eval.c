@@ -20,43 +20,32 @@
 
 uint32_t cycles[N_SAMPLES];
 
-#ifdef C0_DMA1
-uint32_t volatile dma_transfers = 0;
-void Interrupt56_Handler(void);
+#ifdef C0_DMA0
+void Interrupt11_Handler(void);
+volatile uint32_t total_transfers1 = 0;
+void Interrupt11_Handler(void)
+{
+    if(DMA1->ISR & DMA_ISR_TCIF1)
+    {
+        DMA1->IFCR |= DMA_IFCR_CTCIF1 | DMA_IFCR_CHTIF1;
+        total_transfers1++;
+        dma1_restart();
+    }
+}
+#endif
 
+#ifdef C0_DMA1
+void Interrupt56_Handler(void);
+volatile uint32_t total_transfers2 = 0;
 void Interrupt56_Handler(void)
 {
-    if(DMA2->LISR & DMA_LISR_TCIF0)
+    if(DMA2->ISR & DMA_ISR_TCIF1)
     {
-        DMA2->LIFCR |= DMA_LIFCR_CTCIF0 | DMA_LIFCR_CHTIF0;
-
-        dma1_restart();
+        DMA2->IFCR |= DMA_IFCR_CTCIF1 | DMA_IFCR_CHTIF1;
+        total_transfers2++;
+        dma2_restart();
     }
 }
-
-void Interrupt55_Handler(void)
-{
-    if(DMA2->LISR & DMA_LISR_TCIF0)
-    {
-        DMA2->LIFCR |= DMA_LIFCR_CTCIF0 | DMA_LIFCR_CHTIF0;
-
-        dma1_restart();
-    }
-}
-
-void Interrupt57_Handler(void)
-{
-    if(DMA2->LISR & DMA_LISR_TCIF0)
-    {
-        DMA2->LIFCR |= DMA_LIFCR_CTCIF0 | DMA_LIFCR_CHTIF0;
-
-        dma1_restart();
-    }
-}
-
-
-
-
 #endif
 
 void print_cycles(uint32_t t_cyc[])
@@ -100,16 +89,14 @@ int main(void)
 
     while(1)
     {
-        #ifdef C0_DMA0
-        dma0_start();
-        #endif
-
         for(it = 0; it < N_SAMPLES; it++)
         {
-            #ifdef C0_DMA1
+            #ifdef C0_DMA0
             dma1_start();
             #endif
-
+            #ifdef C0_DMA1
+            dma2_start();
+            #endif
             dwt_enable_counters();
             dwt_reset_cycnt();
             result = benchmark_body(1);
@@ -119,20 +106,21 @@ int main(void)
             printf(BLUE "%lu\n", cycles[it]);
             #endif
 
-            #ifdef C0_DMA1
+            #ifdef C0_DMA0
             dma1_reinit();
-            //dma_print_copy();
+            #endif
+            #ifdef C0_DMA1
+            dma2_reinit();
             #endif
         }
-
-        #ifdef C0_DMA0
-        dma_print_copy();
-        #endif
-        #ifdef C0_DMA1
-        dma_transfers = 0;
-        #endif
         #ifndef C0_STATS
         print_cycles(cycles);
+        #endif
+        #ifdef C0_DMA0
+        dma1_print_copy(total_transfers1);
+        #endif
+        #ifdef C0_DMA1
+        dma2_print_copy(total_transfers2);
         #endif
 
         if(verify_benchmark (result))

@@ -5,17 +5,20 @@
 
 #define NUMBER_OF_TRANSFERS         (0xffff)     //up to 65535
 
-void dma0_init(void);
-void dma0_start(void);
+DMA_HandleTypeDef     Dma1Handle, Dma2Handle;
 
 int dma1_init(void);
-void dma1_start(void);
+int dma1_start(void);
 int dma1_polltransfer(void);
 void dma1_reinit(void);
 void dma1_restart(void);
+void dma1_print_copy(uint32_t transfers);
 
-void dma_print_copy(void);
-void assembly_loop(void);
-void dma_get_handle(DMA_HandleTypeDef **hdma);
-void dma_pooling(void);
+int dma2_init(void);
+int dma2_start(void);
+int dma2_polltransfer(void);
+void dma2_reinit(void);
+void dma2_restart(void);
+void dma2_print_copy(uint32_t transfers);
+
 #endif  /* __DMA_DRIVER_H__ */

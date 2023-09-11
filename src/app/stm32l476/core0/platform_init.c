@@ -162,6 +162,7 @@ int platform_init(void)
 {
 #if C0_CLK_MAX
     SystemClock_Config();
+    /* ST HAL turns systick on. We need to turn it off. */
     SysTick->CTRL = 0; // Disable Systick
 #endif
     if (!(uart_init()))
@@ -185,11 +186,15 @@ int platform_init(void)
 #endif
 
 #ifdef C0_DMA0
-    dma0_init();
+    if (dma1_init() != 0)
+    {
+        printf(RED "DMA1 init failed.\n");
+        return -1;
+    }
 #endif
 
 #ifdef C0_DMA1
-    if (dma1_init() != 0)
+    if (dma2_init() != 0)
     {
         printf(RED "DMA1 init failed.\n");
         return -1;
