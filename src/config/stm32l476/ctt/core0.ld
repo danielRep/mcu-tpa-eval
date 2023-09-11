@@ -68,6 +68,7 @@ MEMORY
 {
     FLASH (rx)  : ORIGIN = __ROM_BASE, LENGTH = __ROM_SIZE
     RAM   (rwx) : ORIGIN = __RAM_BASE, LENGTH = __RAM_SIZE
+    SRAM1 (rwx) : ORIGIN = 0x10000000, LENGTH = 32K
 }
 
 /* Linker script to place sections and symbol values. Should be used together
@@ -113,8 +114,8 @@ SECTIONS
         . = ALIGN(4);
         __text_start = .;
 
-        KEEP(*(.bootagent.vtb));
-        KEEP(*(.bootagent.boot));
+        /*KEEP(*(.bootagent.vtb));
+        KEEP(*(.bootagent.boot));*/
 
         KEEP(*(.vectors))
         *(.text*)
@@ -237,6 +238,16 @@ SECTIONS
     __data_end__ = .;
 
   } > RAM AT > FLASH
+
+  .sram1 :
+  {
+    . = ALIGN(4);
+    __sram1_start__ = .;
+    *(.sram1)
+    *(.sram1.*)
+    . = ALIGN(4);
+    __sram1_end__ = .;
+  } > SRAM1
 
     /* Get end address of the .text LMA for boot agent */
     __etext_lma = LOADADDR(.data) + (__data_end__ - __data_start__);
