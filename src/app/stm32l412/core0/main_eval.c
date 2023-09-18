@@ -25,12 +25,9 @@ void Interrupt11_Handler(void);
 volatile uint32_t total_transfers1 = 0;
 void Interrupt11_Handler(void)
 {
-    if(DMA1->ISR & DMA_ISR_TCIF1)
-    {
-        DMA1->IFCR |= DMA_IFCR_CTCIF1 | DMA_IFCR_CHTIF1;
-        total_transfers1++;
-        dma1_restart();
-    }
+    HAL_DMA_IRQHandler(&Dma1Handle);
+    total_transfers1++;
+    dma1_start();
 }
 #endif
 
@@ -39,12 +36,9 @@ void Interrupt56_Handler(void);
 volatile uint32_t total_transfers2 = 0;
 void Interrupt56_Handler(void)
 {
-    if(DMA2->ISR & DMA_ISR_TCIF1)
-    {
-        DMA2->IFCR |= DMA_IFCR_CTCIF1 | DMA_IFCR_CHTIF1;
-        total_transfers2++;
-        dma2_restart();
-    }
+    HAL_DMA_IRQHandler(&Dma2Handle);
+    total_transfers2++;
+    dma2_start();
 }
 #endif
 
@@ -90,14 +84,15 @@ int main(void)
 
     while(1)
     {
+        #ifdef C0_DMA0
+        dma1_start();
+        #endif
+        #ifdef C0_DMA1
+        dma2_start();
+        #endif
+
         for(it = 0; it < N_SAMPLES; it++)
         {
-            #ifdef C0_DMA0
-            dma1_start();
-            #endif
-            #ifdef C0_DMA1
-            dma2_start();
-            #endif
             dwt_enable_counters();
             dwt_reset_cycnt();
             result = benchmark_body(1);
@@ -106,22 +101,17 @@ int main(void)
             #ifdef C0_STATS
             printf(BLUE "%lu\n", cycles[it]);
             #endif
-
-            #ifdef C0_DMA0
-            dma1_reinit();
-            #endif
-            #ifdef C0_DMA1
-            dma2_reinit();
-            #endif
         }
-        #ifndef C0_STATS
-        print_cycles(cycles);
-        #endif
+
         #ifdef C0_DMA0
+        dma1_reinit();
         dma1_print_copy(total_transfers1);
         #endif
         #ifdef C0_DMA1
         dma2_print_copy(total_transfers2);
+        #endif
+        #ifndef C0_STATS
+        print_cycles(cycles);
         #endif
 
         if(verify_benchmark (result))

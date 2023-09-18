@@ -525,7 +525,7 @@ HAL_StatusTypeDef HAL_DMA_Start_IT(DMA_HandleTypeDef *hdma, uint32_t SrcAddress,
 #endif /* DMAMUX1 */
 
     /* Enable the Peripheral */
-    //__HAL_DMA_ENABLE(hdma);
+    __HAL_DMA_ENABLE(hdma);
   }
   else
   {
