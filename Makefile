@@ -7,8 +7,8 @@
 
 ################################################################################
 # Makefile Arguments
-PLATFORM	:= stm32f767
-TESTID		:= ctt
+PLATFORM	:= stm32l412
+TESTID		:= sol
 TESTSUITE	:= $(shell echo $(TESTID) | cut -c1-3)
 
 ################################################################################
@@ -31,8 +31,11 @@ SSTRIP	:=	$(CROSS_COMPILE)strip
 
 FLASHTOOL	:= pyocd
 FLASHOPTS	:=
+
 ifeq ($(PLATFORM), lpc55s69)
 	FLASHOPTS += -t LPC55S69
+else ifeq ($(PLATFORM), stm32l412)
+	FLASHOPTS += -t stm32l412kbux
 endif
 
 ################################################################################
