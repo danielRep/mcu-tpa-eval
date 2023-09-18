@@ -1,13 +1,14 @@
 #include "stm32l4xx_hal.h"
 #include "dma_driver.h"
 #include "content_eval.h"
+#include "mem_defs.h"
 
 #define ALIGNED         __attribute__((aligned(sizeof(uint32_t))))
 #define SECTION(x)      __attribute__((section(x)))
+#define DMA1_SRC        FLASH_MEM
+#define DMA2_SRC        FLASH_MEM
 
-ALIGNED const uint32_t src_addr1 = 0xDEADBEEF;
 ALIGNED uint32_t dst_addr1 = 0xC0FFEE00;
-ALIGNED const uint32_t src_addr2 = 0xDEADBEEF;
 ALIGNED uint32_t dst_addr2 = 0xC0FFEE00;
 
 DMA_HandleTypeDef     Dma1Handle, Dma2Handle;
@@ -38,13 +39,16 @@ int dma1_init()
         return -1;
     }
 
+    /* Disable half-transfers interrupt */
+    __HAL_DMA_DISABLE_IT(&Dma1Handle, DMA_IT_HT);
+
     /* Enable the DMA STREAM global Interrupt */
     HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
 
     printf(RED"DMA1 memory-to-memory transfer configured and enabled:\n");
     printf(YELLOW"\t- N transfers: %dB\n", NUMBER_OF_TRANSFERS);
-    printf(YELLOW"\t- &src_addr: 0x%.8X\n", (unsigned int)&src_addr1);
-    printf(YELLOW"\t- src_addr: 0x%.8lX\n", src_addr1);
+    printf(YELLOW"\t- &src_addr: 0x%.8lX\n", (uint32_t)DMA1_SRC);
+    printf(YELLOW"\t- src_addr: 0x%.8lX\n", *(uint32_t*)DMA1_SRC);
     printf(YELLOW"\t- &dst_addr: 0x%.8X\n", (unsigned int)&dst_addr1);
     printf(YELLOW"\t- dst_addr: 0x%.8lX\n", dst_addr1);
 
@@ -53,7 +57,7 @@ int dma1_init()
 
 int dma1_start(void)
 {
-    if(HAL_DMA_Start_IT(&Dma1Handle, (uint32_t)&src_addr1, (uint32_t)&dst_addr1, NUMBER_OF_TRANSFERS) !=0)
+    if(HAL_DMA_Start_IT(&Dma1Handle, (uint32_t)DMA1_SRC, (uint32_t)&dst_addr1, NUMBER_OF_TRANSFERS) !=0)
     {
         printf(RED"DMA1 start error!\n");
         return -1;
@@ -71,10 +75,15 @@ int dma1_polltransfer(void)
     return 0;
 }
 
-void dma1_reinit(void)
+void dma1_deinit(void)
 {
     HAL_DMA_Abort_IT(&Dma1Handle);
     HAL_DMA_DeInit(&Dma1Handle);
+}
+
+void dma1_reinit(void)
+{
+    dma1_deinit();
     /* Initialize the DMA stream */
     if (HAL_DMA_Init(&Dma1Handle) != HAL_OK)
     {
@@ -84,7 +93,7 @@ void dma1_reinit(void)
     return;
 }
 
-void dma1_restart(void)
+void dma1_enable(void)
 {
     __HAL_DMA_ENABLE(&Dma1Handle);
 }
@@ -93,7 +102,7 @@ void dma1_print_copy(uint32_t transfers)
 {
     printf(GREEN"DMA1 copy verification:\n");
     printf(YELLOW"\t- transfers: %ld\n", transfers);
-    printf(YELLOW"\t- src_addr: 0x%.8lX\n", src_addr1);
+    printf(YELLOW"\t- src_addr: 0x%.8lX\n", (uint32_t)DMA1_SRC);
     printf(YELLOW"\t- dst_addr: 0x%.8lX\n", dst_addr1);
 
     /* To make sure that the DMA is working, reset the dst_addr */
@@ -128,13 +137,16 @@ int dma2_init()
         return -1;
     }
 
+    /* Disable half-transfers interrupt */
+    __HAL_DMA_DISABLE_IT(&Dma2Handle, DMA_IT_HT);
+
     /* Enable the DMA STREAM global Interrupt */
     HAL_NVIC_EnableIRQ(DMA2_Channel1_IRQn);
 
     printf(RED"DMA2 memory-to-memory transfer configured and enabled:\n");
     printf(YELLOW"\t- N transfers: %dB\n", NUMBER_OF_TRANSFERS);
-    printf(YELLOW"\t- &src_addr: 0x%.8X\n", (unsigned int)&src_addr2);
-    printf(YELLOW"\t- src_addr: 0x%.8lX\n", src_addr2);
+    printf(YELLOW"\t- &src_addr: 0x%.8lX\n", (uint32_t)DMA2_SRC);
+    printf(YELLOW"\t- src_addr: 0x%.8lX\n", *(uint32_t*)DMA2_SRC);
     printf(YELLOW"\t- &dst_addr: 0x%.8X\n", (unsigned int)&dst_addr2);
     printf(YELLOW"\t- dst_addr: 0x%.8lX\n", dst_addr2);
 
@@ -143,7 +155,7 @@ int dma2_init()
 
 int dma2_start(void)
 {
-    if(HAL_DMA_Start_IT(&Dma2Handle, (uint32_t)&src_addr2, (uint32_t)&dst_addr2, NUMBER_OF_TRANSFERS) !=0)
+    if(HAL_DMA_Start_IT(&Dma2Handle, (uint32_t)DMA2_SRC, (uint32_t)&dst_addr2, NUMBER_OF_TRANSFERS) !=0)
     {
         printf(RED"DMA2 start error!\n");
         return -1;
@@ -160,10 +172,15 @@ int dma2_polltransfer(void)
     return 0;
 }
 
-void dma2_reinit(void)
+void dma2_deinit(void)
 {
     HAL_DMA_Abort_IT(&Dma2Handle);
     HAL_DMA_DeInit(&Dma2Handle);
+}
+
+void dma2_reinit(void)
+{
+    dma2_deinit();
     /* Initialize the DMA stream */
     if (HAL_DMA_Init(&Dma2Handle) != HAL_OK)
     {
@@ -173,7 +190,7 @@ void dma2_reinit(void)
     return;
 }
 
-void dma2_restart(void)
+void dma2_enable(void)
 {
     __HAL_DMA_ENABLE(&Dma2Handle);
 }
@@ -182,7 +199,7 @@ void dma2_print_copy(uint32_t transfers)
 {
     printf(GREEN"DMA2 copy verification:\n");
     printf(YELLOW"\t- transfers: %ld\n", transfers);
-    printf(YELLOW"\t- src_addr: 0x%.8lX\n", src_addr2);
+    printf(YELLOW"\t- src_addr: 0x%.8lX\n", (uint32_t)DMA2_SRC);
     printf(YELLOW"\t- dst_addr: 0x%.8lX\n", dst_addr2);
 
     /* To make sure that the DMA is working, reset the dst_addr */
@@ -190,4 +207,3 @@ void dma2_print_copy(uint32_t transfers)
     printf(YELLOW"\t- redefined dst_addr to: 0x%.8lX\n", dst_addr2);
 
 }
-q
