@@ -28,11 +28,11 @@
 #define USARTx_RELEASE_RESET()           __HAL_RCC_USART2_RELEASE_RESET()
 
 /* Definition for USARTx Pins */
-#define USARTx_TX_PIN                    GPIO_PIN_2
 #define USARTx_TX_GPIO_PORT              GPIOA
+#define USARTx_TX_PIN                    GPIO_PIN_2
 #define USARTx_TX_AF                     GPIO_AF7_USART2
-#define USARTx_RX_PIN                    GPIO_PIN_3
 #define USARTx_RX_GPIO_PORT              GPIOA
+#define USARTx_RX_PIN                    GPIO_PIN_3
 #define USARTx_RX_AF                     GPIO_AF7_USART2
 
 /* Definition for USARTx's NVIC IRQ and IRQ Handlers */

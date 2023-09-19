@@ -16,11 +16,11 @@
 
 #include "stm32l4xx_hal.h"
 
+void Error_Handler(void);
+
 /* UART handler declaration */
 UART_HandleTypeDef UartHandle;
 
-/* Enable HSI oscillator and configure the PLL to reach the max system frequency (216 MHz)
-    when using HSEBypass oscillator as PLL clock source. */
 void SystemClock_Config(void)
 {
     RCC_OscInitTypeDef RCC_OscInitStruct = {0};
@@ -30,8 +30,7 @@ void SystemClock_Config(void)
      */
     if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
     {
-        __disable_irq();
-        while(1);
+        Error_Handler();
     }
 
     /** Initializes the RCC Oscillators according to the specified parameters
@@ -49,8 +48,7 @@ void SystemClock_Config(void)
     RCC_OscInitStruct.PLL.PLLR = RCC_PLLR_DIV2;
     if (HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
     {
-        __disable_irq();
-        while(1);
+        Error_Handler();
     }
 
     /** Initializes the CPU, AHB and APB buses clocks
@@ -63,8 +61,7 @@ void SystemClock_Config(void)
 
     if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
     {
-        __disable_irq();
-        while(1);
+        Error_Handler();
     }
 }
 
@@ -202,4 +199,12 @@ int platform_init(void)
 #endif
 
     return 0;
+}
+
+void Error_Handler(void)
+{
+    printf(RED "Error_Handler\n");
+    __disable_irq();
+    while (1)
+        ;
 }
