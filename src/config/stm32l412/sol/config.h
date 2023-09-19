@@ -3,7 +3,7 @@
 
 #include "mem_defs.h"
 
-#define N_SAMPLES                           5
+#define N_SAMPLES                           1000
 
 /* Core0 Memory Layout */
 //CODE
