@@ -16,4 +16,4 @@ C0_FPM			:= y
 C0_DMA0			:= y
 C0_DMA1			:= y
 C0_CLK_MAX		:= y
-C0_BENCH_APP	:= matmult-int
+C0_BENCH_APP	:= qrduino

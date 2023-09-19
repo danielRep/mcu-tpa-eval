@@ -207,3 +207,4 @@ void dma2_print_copy(uint32_t transfers)
     printf(YELLOW"\t- redefined dst_addr to: 0x%.8lX\n", dst_addr2);
 
 }
+
