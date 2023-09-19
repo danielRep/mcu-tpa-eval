@@ -9,11 +9,9 @@
 
 ################################################################################
 # Configuration setup
-MULTICORE		:= n
 DEBUG			:= y
 OPTIM			:= O2
 
-C0_BOOTAGENT	:= n
 C0_FPM			:= y
 C0_DMA0			:= y
 C0_DMA1			:= y
