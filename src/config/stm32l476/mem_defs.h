@@ -3,7 +3,7 @@
 
 /* Memories addresses and sizes*/
 #define FLASH_MEM                               0x08000000
-#define FLASH_MEM_SIZE                          0x00100000
+#define FLASH_MEM_SIZE                          0x100000
 
 #define SRAM1_MEM                               0x20000000
 #define SRAM1_MEM_SIZE                          0x16800
