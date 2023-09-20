@@ -1,0 +1,10 @@
+plat-objs-y += cy_device.o
+plat-objs-y += cy_flash.o
+plat-objs-y += cy_ipc_pipe.o
+plat-objs-y += cy_sysclk.o
+plat-objs-y += cy_wdt.o
+plat-objs-y += cy_sysint.o
+plat-objs-y += cy_ipc_sema.o
+plat-objs-y += cy_ipc_drv.o
+plat-objs-y += cy_syslib.o
+plat-objs-y += cy_syslib_ext.o

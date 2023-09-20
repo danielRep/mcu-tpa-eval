@@ -12,7 +12,7 @@
 #ifndef __CONTENT_EVAL_H__
 #define __CONTENT_EVAL_H__
 
-#define NORMAL  "\e[0m"
+#define COMMON  "\e[0m"
 #define BLACK   "\e[0;30m1"
 #define RED     "\e[0;31m"
 #define GREEN   "\e[0;32m"
