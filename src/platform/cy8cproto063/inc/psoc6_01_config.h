@@ -1546,7 +1546,7 @@ typedef enum
 } en_prot_master_t;
 
 /* Pointer to device configuration structure */
-#define CY_DEVICE_CFG                   (&cy_deviceIpBlockCfgPSoC6_01)
+#define CY_DEVICE_CFG                   (&cy_deviceIpBlockCfgPSoC6_03)
 
 /* Include IP definitions */
 #include "ip/cyip_sflash.h"

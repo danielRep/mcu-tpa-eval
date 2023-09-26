@@ -19,11 +19,17 @@
 #define CM0_CPU_MHZ                                     100000000UL
 #define CM4_CPU_MHZ                                     150000000UL
 #define CPU_MHZ                                         CM4_CPU_MHZ
+
 /* Definition for USARTx clock resources */
 
 /* Definition for USARTx Pins */
-
-/* Definition for USARTx's NVIC IRQ and IRQ Handlers */
+#define CYBSP_UART_RX                                   (P5_0)
+#define CYBSP_UART_TX                                   (P5_1)
+#define CYBSP_UART_RTS                                  (NC)
+#define CYBSP_UART_CTS                                  (NC)
+#define CYBSP_DEBUG_UART_CTS                            (NC)
+#define CYBSP_DEBUG_UART_RTS                            (NC)
+#define CY_RETARGET_IO_BAUDRATE                         (115200)
 
 int platform_init(void);
 
