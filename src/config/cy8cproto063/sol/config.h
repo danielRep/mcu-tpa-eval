@@ -11,7 +11,7 @@
 #define CORE0_ROM_LEN                       FLASH_MEM_SIZE     //64KB
 //DATA
 #define CORE0_RAM_START                     SRAM_MEM
-#define CORE0_RAM_LEN                       SRAM_MEM_SIZE      //32KB
+#define CORE0_RAM_LEN                       0x8000      //32KB
 //STACK
 #define CORE0_STACK_SIZE                    0x2000
 //HEAP
