@@ -145,79 +145,7 @@ void SystemInit(void)
     Cy_WDT_Unlock();
     Cy_WDT_Disable();
 
-    Cy_SystemInit();
     SystemCoreClockUpdate();
-
-    /* Clear data register of IPC structure #7, reserved for the Deep-Sleep operations. */
-    REG_IPC_STRUCT_DATA(CY_IPC_STRUCT_PTR(CY_IPC_CHAN_DDFT)) = 0UL;
-
-    /* Release IPC structure #7 to avoid deadlocks in case of SW or WDT reset during Deep-Sleep entering. */
-    REG_IPC_STRUCT_RELEASE(CY_IPC_STRUCT_PTR(CY_IPC_CHAN_DDFT)) = 0UL;
-
-#if !defined(CY_IPC_DEFAULT_CFG_DISABLE)
-    /* Allocate and initialize semaphores for the system operations. */
-    CY_SECTION_SHAREDMEM
-    static uint32_t ipcSemaArray[CY_IPC_SEMA_COUNT / CY_IPC_SEMA_PER_WORD];
-
-    (void) Cy_IPC_Sema_Init(CY_IPC_CHAN_SEMA, CY_IPC_SEMA_COUNT, ipcSemaArray);
-
-
-    /********************************************************************************
-    *
-    * Initializes the system pipes. The system pipes are used by BLE and Flash.
-    *
-    * If the default startup file is not used, or SystemInit() is not called in your
-    * project, call the following three functions prior to executing any flash or
-    * EmEEPROM write or erase operation:
-    *  -# Cy_IPC_Sema_Init()
-    *  -# Cy_IPC_Pipe_Config()
-    *  -# Cy_IPC_Pipe_Init()
-    *  -# Cy_Flash_Init()
-    *
-    *******************************************************************************/
-
-    /* Create an array of endpoint structures */
-    static cy_stc_ipc_pipe_ep_t systemIpcPipeEpArray[CY_IPC_MAX_ENDPOINTS];
-
-    Cy_IPC_Pipe_Config(systemIpcPipeEpArray);
-
-    static cy_ipc_pipe_callback_ptr_t systemIpcPipeSysCbArray[CY_SYS_CYPIPE_CLIENT_CNT];
-
-    static const cy_stc_ipc_pipe_config_t systemIpcPipeConfigCm0 =
-    {
-    /* .ep0ConfigData */
-        {
-            /* .ipcNotifierNumber    */  CY_IPC_INTR_CYPIPE_EP0,
-            /* .ipcNotifierPriority  */  CY_SYS_INTR_CYPIPE_PRIOR_EP0,
-            /* .ipcNotifierMuxNumber */  CY_SYS_INTR_CYPIPE_MUX_EP0,
-            /* .epAddress            */  CY_IPC_EP_CYPIPE_CM0_ADDR,
-            /* .epConfig             */  CY_SYS_CYPIPE_CONFIG_EP0
-        },
-    /* .ep1ConfigData */
-        {
-            /* .ipcNotifierNumber    */  CY_IPC_INTR_CYPIPE_EP1,
-            /* .ipcNotifierPriority  */  CY_SYS_INTR_CYPIPE_PRIOR_EP1,
-            /* .ipcNotifierMuxNumber */  0u,
-            /* .epAddress            */  CY_IPC_EP_CYPIPE_CM4_ADDR,
-            /* .epConfig             */  CY_SYS_CYPIPE_CONFIG_EP1
-        },
-    /* .endpointClientsCount     */  CY_SYS_CYPIPE_CLIENT_CNT,
-    /* .endpointsCallbacksArray  */  systemIpcPipeSysCbArray,
-    /* .userPipeIsrHandler       */  &Cy_SysIpcPipeIsrCm0
-    };
-
-    Cy_IPC_Pipe_Init(&systemIpcPipeConfigCm0);
-
-#if defined(CY_DEVICE_PSOC6ABLE2)
-    Cy_Flash_Init();
-#endif /* defined(CY_DEVICE_PSOC6ABLE2) */
-
-#endif /* !defined(CY_IPC_DEFAULT_CFG_DISABLE) */
-
-    #if defined(CY_DEVICE_SECURE)
-        /* Initialize Protected Regsiter Access driver. */
-        Cy_PRA_Init();
-    #endif /* defined(CY_DEVICE_SECURE) */
 }
 
 

@@ -14,8 +14,41 @@
 #include "platform_config.h"
 #include "dma_driver.h"
 
+/* Platform BSP Includes*/
+#include "cyhal_uart.h"
+
+cyhal_uart_t cy_retarget_io_uart_obj;
+static char cy_retarget_io_stdout_prev_char = 0;
+
+static inline cy_rslt_t cy_retarget_io_getchar(char* c)
+{
+    return cyhal_uart_getc(&cy_retarget_io_uart_obj, (uint8_t*)c, 0);
+}
+
+static inline cy_rslt_t cy_retarget_io_putchar(char c)
+{
+    return cyhal_uart_putc(&cy_retarget_io_uart_obj, (uint8_t)c);
+}
+
 bool uart_init(void)
 {
+    const cyhal_uart_cfg_t uart_config =
+    {
+        .data_bits          = 8,
+        .stop_bits          = 1,
+        .parity             = CYHAL_UART_PARITY_NONE,
+        .rx_buffer          = NULL,
+        .rx_buffer_size     = 0
+    };
+
+    cy_rslt_t result = cyhal_uart_init(&cy_retarget_io_uart_obj, CYBSP_UART_TX, CYBSP_UART_RX, CYBSP_UART_CTS, CYBSP_UART_RTS, NULL,
+                                       &uart_config);
+
+    if (result == CY_RSLT_SUCCESS)
+    {
+        result = cyhal_uart_set_baud(&cy_retarget_io_uart_obj, CY_RETARGET_IO_BAUDRATE, NULL);
+    }
+
     return true;
 }
 
@@ -31,44 +64,65 @@ void systemclock_config(void)
 
 int _read(int file, char *ptr, int len)
 {
-    int n_chars = 0;
-    uint8_t byte;
+    (void)file;
 
-    if(ptr != NULL)
+    int32_t nChars = 0;
+    if (ptr != NULL)
     {
-        for(n_chars = 0; n_chars < len; ++ptr)
+        cy_rslt_t rslt;
+        do
         {
-            //while ((USART0->FIFOSTAT & USART_FIFOSTAT_RXNOTEMPTY_MASK) == 0U);
-            //USART_ReadBlocking(USART0, &byte, 1);
-            *ptr = (char)byte;
-            ++n_chars;
-
-            if((*ptr == '\n') || (*ptr == '\r'))
+            rslt = cy_retarget_io_getchar(ptr);
+            if (rslt == CY_RSLT_SUCCESS)
             {
-                break;
+                ++nChars;
+                if ((*ptr == '\n') || (*ptr == '\r'))
+                {
+                    break;
+                }
+                ptr++;
             }
-        }
+        } while ((rslt == CY_RSLT_SUCCESS) && (nChars < len));
     }
-    return (n_chars);
+
+    return (nChars);
 }
 
 int _write(int file, const uint8_t *ptr, int len)
 {
-    if (isatty(file)) {
-        for (size_t i = 0; i < len; i++)
+    int32_t nChars = 0;
+    (void)file;
+    if (ptr != NULL)
+    {
+        cy_rslt_t rslt = CY_RSLT_SUCCESS;
+
+        for (; nChars < len; ++nChars)
         {
-            //while (0U == (USART0->STAT & USART_STAT_TXIDLE_MASK));
-            //USART_WriteBlocking(USART0, &ptr[i], 1);
+            if ((*ptr == '\n') && (cy_retarget_io_stdout_prev_char != '\r'))
+            {
+                rslt = cy_retarget_io_putchar('\r');
+            }
+
+            if (CY_RSLT_SUCCESS == rslt)
+            {
+                rslt = cy_retarget_io_putchar((uint32_t)*ptr);
+            }
+
+            if (CY_RSLT_SUCCESS != rslt)
+            {
+                break;
+            }
+
+            cy_retarget_io_stdout_prev_char = *ptr;
+            ++ptr;
         }
-
-        return len;
-
     }
-    return -1;
+    return (nChars);
 }
 
 int platform_init(void)
 {
+    SCB->VTOR = (uint32_t)&__Vectors;
 #if C0_CLK_MAX
     systemclock_config();
 #endif

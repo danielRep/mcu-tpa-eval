@@ -36,7 +36,7 @@ ifeq ($(PLATFORM), lpc55s69)
 	FLASHOPTS += -t LPC55S69
 else ifeq ($(PLATFORM), stm32l412)
 	FLASHOPTS += -t stm32l412kbux
-ifeq ($(PLATFORM), cy8cproto063)
+else ifeq ($(PLATFORM), cy8cproto063)
 	FLASHOPTS += -t cy8c6347bzi-bld53
 endif
 
