@@ -68,7 +68,7 @@ int platform_init(void)
 
     pins_init();
 
-    printf(CLEAR);
+    printf(CLEARSCREEN);
 
     return 0;
 }

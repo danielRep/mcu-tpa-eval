@@ -176,7 +176,7 @@ int platform_init(void)
     {
         return -1;
     }
-    printf(CLEAR);
+    printf(CLEARSCREEN);
     printf(RED "System clock configured: %ld.\n", SystemCoreClock);
 
 #ifdef FPM
