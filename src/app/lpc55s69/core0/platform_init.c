@@ -193,7 +193,7 @@ int platform_init(void)
     pins_init();
     mailbox_init();
 
-    printf(CLEAR);
+    printf(CLEARSCREEN);
     printf(RED "System clock configured: %ld.\n", SystemCoreClock);
 
 #ifdef MULTICORE

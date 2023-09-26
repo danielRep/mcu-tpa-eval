@@ -12,16 +12,16 @@
 #ifndef __CONTENT_EVAL_H__
 #define __CONTENT_EVAL_H__
 
-#define COMMON  "\e[0m"
-#define BLACK   "\e[0;30m1"
-#define RED     "\e[0;31m"
-#define GREEN   "\e[0;32m"
-#define YELLOW  "\e[0;33m"
-#define BLUE    "\e[0;34m"
-#define MAGENTA "\e[0;35m"
-#define CYAN    "\e[0;36m"
-#define GRAY    "\e[0;37m"
-#define CLEAR   "\033[2J"
+#define COMMON          "\e[0m"
+#define BLACK           "\e[0;30m1"
+#define RED             "\e[0;31m"
+#define GREEN           "\e[0;32m"
+#define YELLOW          "\e[0;33m"
+#define BLUE            "\e[0;34m"
+#define MAGENTA         "\e[0;35m"
+#define CYAN            "\e[0;36m"
+#define GRAY            "\e[0;37m"
+#define CLEARSCREEN     "\033[2J"
 
 #include "utils_io.h"
 #include <stdlib.h>

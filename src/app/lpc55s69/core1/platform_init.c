@@ -136,7 +136,7 @@ int platform_init(void)
     pins_init();
     mailbox_init();
 
-    printf(CLEAR);
+    printf(CLEARSCREEN);
 
     return 0;
 }
