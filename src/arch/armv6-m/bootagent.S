@@ -13,6 +13,7 @@
 #endif
 
 .syntax     unified
+.arch       armv6-m
 
 /*----------------------------------------------------------------------------*/
 .section    .bootagent.boot, "ax"
@@ -21,6 +22,7 @@
 .align      2
 .global     reset_handler
 .type       reset_handler, %function
+.fnstart
 /*----------------------------------------------------------------------------*/
 reset_handler:
 
@@ -55,6 +57,8 @@ _boot2_0:
 
     /* This point should never be reached */
     b       .
+.fnend
+.size    reset_handler, . - reset_handler
 
 /* Force aligment of literal pool */
 .align 2
@@ -74,6 +78,7 @@ _bootagent_vtb:
 
 # -------------------------------------------------------------
 .thumb_func
+.align   2
 .type    nmi_handler, %function
 .fnstart
 nmi_handler:
@@ -82,6 +87,7 @@ nmi_handler:
 .size    nmi_handler, . - nmi_handler
 # -------------------------------------------------------------
 .thumb_func
+.align   2
 .type    hardfault_handler, %function
 .fnstart
 hardfault_handler:
