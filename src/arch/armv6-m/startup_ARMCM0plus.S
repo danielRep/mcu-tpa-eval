@@ -96,8 +96,6 @@ __Vectors_End:
                 .globl   Reset_Handler
                 .fnstart
 Reset_Handler:
-                bl       SystemInit
-
                 ldr      r4, =__copy_table_start__
                 ldr      r5, =__copy_table_end__
 
@@ -144,6 +142,7 @@ Reset_Handler:
                 b        .L_loop2
 .L_loop2_done:
 
+                bl       SystemInit
                 bl       _start
 
                 .fnend
