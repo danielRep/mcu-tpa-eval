@@ -58,7 +58,7 @@ int main(void)
             systick_reset_counter();
             systick_enable_counter();
             result = benchmark_body(1);
-            cycles[it] = systick_read_counter();
+            cycles[it] = (0xFFFFFF - 1) - systick_read_counter();
 
             #ifdef C0_STATS
             printf(BLUE "%lu\n", cycles[it]);

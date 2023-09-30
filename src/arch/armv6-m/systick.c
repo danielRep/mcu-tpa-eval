@@ -17,7 +17,7 @@ void inline systick_disable_counter(void)
 void inline systick_enable_counter(void)
 {
     /* Enable all DWT counters */
-    SysTick->CTRL |= 0x1;
+    SysTick->CTRL |= 0x5;
 }
 
 uint32_t systick_read_counter(void)
