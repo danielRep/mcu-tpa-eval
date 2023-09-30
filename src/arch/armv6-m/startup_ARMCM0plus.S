@@ -142,7 +142,7 @@ Reset_Handler:
                 b        .L_loop2
 .L_loop2_done:
 
-                bl       SystemInit
+                /*bl       SystemInit*/
                 bl       _start
 
                 .fnend
