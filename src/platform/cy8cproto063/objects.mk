@@ -32,3 +32,6 @@ plat-objs-y += cyhal_irq_impl.o
 plat-objs-y += cyhal_psoc6_01_116_bga_ble.o
 plat-objs-y += cyhal_system.o
 plat-objs-y += cy_scb_common.o
+plat-objs-y += cycfg_system.o
+plat-objs-y += cy_prot.o
+plat-objs-y += cycfg_peripherals.o
