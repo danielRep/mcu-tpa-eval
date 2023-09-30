@@ -116,6 +116,7 @@ SECTIONS
         KEEP(*(.bootagent.vtb));
         KEEP(*(.bootagent.boot));
 
+        . = ALIGN(256);
         KEEP(*(.vectors))
         *(.text*)
 
