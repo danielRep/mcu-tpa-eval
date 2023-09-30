@@ -13,16 +13,19 @@
 #include "platform_base_addrs.h"
 #include "platform_config.h"
 #include "dma_driver.h"
+#include "system_psoc6.h"
 
 /* Platform BSP Includes*/
 #include "cyhal_uart.h"
+#include "cycfg_system.h"
+#include "cycfg_peripherals.h"
 
 cyhal_uart_t cy_retarget_io_uart_obj;
 static char cy_retarget_io_stdout_prev_char = 0;
 
-static inline cy_rslt_t cy_retarget_io_getchar(char* c)
+static inline cy_rslt_t cy_retarget_io_getchar(char *c)
 {
-    return cyhal_uart_getc(&cy_retarget_io_uart_obj, (uint8_t*)c, 0);
+    return cyhal_uart_getc(&cy_retarget_io_uart_obj, (uint8_t *)c, 0);
 }
 
 static inline cy_rslt_t cy_retarget_io_putchar(char c)
@@ -33,13 +36,12 @@ static inline cy_rslt_t cy_retarget_io_putchar(char c)
 bool uart_init(void)
 {
     const cyhal_uart_cfg_t uart_config =
-    {
-        .data_bits          = 8,
-        .stop_bits          = 1,
-        .parity             = CYHAL_UART_PARITY_NONE,
-        .rx_buffer          = NULL,
-        .rx_buffer_size     = 0
-    };
+        {
+            .data_bits = 8,
+            .stop_bits = 1,
+            .parity = CYHAL_UART_PARITY_NONE,
+            .rx_buffer = NULL,
+            .rx_buffer_size = 0};
 
     cy_rslt_t result = cyhal_uart_init(&cy_retarget_io_uart_obj, CYBSP_UART_TX, CYBSP_UART_RX, CYBSP_UART_CTS, CYBSP_UART_RTS, NULL,
                                        &uart_config);
@@ -59,7 +61,10 @@ void pins_init(void)
 
 void systemclock_config(void)
 {
-    return;
+    init_cycfg_system();
+    // Do any additional configuration reservations that are needed on all cores.
+    reserve_cycfg_system();
+    reserve_cycfg_peripherals();
 }
 
 int _read(int file, char *ptr, int len)
@@ -123,11 +128,13 @@ int _write(int file, const uint8_t *ptr, int len)
 int platform_init(void)
 {
     SCB->VTOR = (uint32_t)&__Vectors;
+
+    SystemInit();
 #if C0_CLK_MAX
     systemclock_config();
 #endif
 
-    if(!(uart_init()))
+    if (!(uart_init()))
     {
         return -1;
     }
@@ -138,16 +145,20 @@ int platform_init(void)
     printf(RED "System clock configured: %ld.\n", SystemCoreClock);
 
 #ifdef MULTICORE
-    printf(RED "Core1 setup and running "INTRFAPP" interf app.\n");
+    printf(RED "Core1 setup and running " INTRFAPP " interf app.\n");
     printf(YELLOW "\t- VTOR: %.8X\n", 0xDEADBEEF);
 #endif
 
 #ifdef FPM
     printf(RED "Flash Performance mode configured.\n");
-    printf(YELLOW "\t- accelerator 0xDEADBEEF\n");
-    printf(YELLOW "\t- prefetcher 0xDEADBEEF\n");
+    printf(YELLOW "\t- instruction cache ON\n");
+    printf(YELLOW "\t- prefetcher ON\n");
+
+    FLASHC->CM0_CA_CTL0 |= FLASHC_CM0_CA_CTL0_ENABLED_Msk;
+    FLASHC->CM0_CA_CTL0 |= FLASHC_CM0_CA_CTL0_PREF_EN_Msk;
 #else
-    //SYSCON->FMCCR &= ~(SYSCON_FMCCR_FETCHCFG_MASK | SYSCON_FMCCR_DATACFG_MASK | SYSCON_FMCCR_ACCEL_MASK | SYSCON_FMCCR_PREFEN_MASK);
+    FLASHC->CM0_CA_CTL0 &= ~FLASHC_CM0_CA_CTL0_ENABLED_Msk;
+    FLASHC->CM0_CA_CTL0 &= ~FLASHC_CM0_CA_CTL0_PREF_EN_Msk;
 #endif
 
 #ifdef C0_DMA0
