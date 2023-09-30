@@ -31,6 +31,8 @@
 #define CYBSP_DEBUG_UART_RTS                            (NC)
 #define CY_RETARGET_IO_BAUDRATE                         (115200)
 
+#define CY_CFG_PWR_USING_ULP                            0
+
 int platform_init(void);
 
 #endif  /* |__ASSEMBLER__ */
