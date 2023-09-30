@@ -52,6 +52,10 @@ _boot1_1:
 
 /* Boot Stage 2 --------------------------------------------------------------*/
 _boot2_0:
+    /* Initialize stack pointer */
+    ldr     r0, =__StackTop
+    mov     sp, r0
+
     /* Jump to app boot */
     b       Reset_Handler
 
@@ -74,6 +78,7 @@ _bootagent_vtb:
     .word nmi_handler                   /* -14   NMI Handler                  */
     .word hardfault_handler             /* -13   Hard Fault Handler           */
 /* TODO: Check how to define interrupts */
+.space 256
 .size _bootagent_vtb, . - _bootagent_vtb
 
 # -------------------------------------------------------------
