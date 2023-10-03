@@ -129,6 +129,9 @@ __Vectors_End:
                 .globl   Reset_Handler
                 .fnstart
 Reset_Handler:
+                /* Initialize stack pointer */
+                ldr     r0, =__StackTop
+                mov     sp, r0
                 bl       SystemInit
 
                 ldr      r4, =__copy_table_start__
