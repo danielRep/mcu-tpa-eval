@@ -8,7 +8,7 @@
 ################################################################################
 # Makefile Arguments
 PLATFORM	:= cy8cproto063
-TESTID		:= sol
+TESTID		:= cmn
 TESTSUITE	:= $(shell echo $(TESTID) | cut -c1-3)
 
 ################################################################################
@@ -37,7 +37,7 @@ ifeq ($(PLATFORM), lpc55s69)
 else ifeq ($(PLATFORM), stm32l412)
 	FLASHOPTS += -t stm32l412kbux
 else ifeq ($(PLATFORM), cy8cproto063)
-	FLASHOPTS += -t cy8c6347bzi-bld53
+	FLASHOPTS += -t cy8c6xx7_nosmif
 endif
 
 
@@ -116,7 +116,7 @@ flash:
 	@$(FLASHTOOL) flash $(CORE0_ELF) $(FLASHOPTS)
 ifeq ($(MULTICORE), y)
 	@echo "Loading the core1 app..."
-	@$(FLASHTOOL) flash $(CORE1_ELF)
+	@$(FLASHTOOL) flash $(CORE1_ELF) $(FLASHOPTS)
 endif
 
 erase:
