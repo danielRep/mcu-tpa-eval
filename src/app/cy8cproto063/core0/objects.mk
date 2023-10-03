@@ -1,3 +1,4 @@
+CPU		:=	cortex-m0plus
 
 ifeq ($(findstring $(TESTSUITE),sol cmn slp ctt),$(TESTSUITE))
     core0-objs-y += main_eval.o
