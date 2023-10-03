@@ -1,3 +1,5 @@
+CPU		:=	cortex-m4
+
 core1-objs-y += system_psoc6_cm4.o
 core1-objs-y += platform_init.o
 
