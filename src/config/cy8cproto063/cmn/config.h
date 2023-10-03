@@ -10,7 +10,7 @@
 #define CORE0_ROM_START                     FLASH_MEM
 #define CORE0_ROM_LEN                       0x10000     //64KB
 //DATA
-#define CORE0_RAM_START                     SRAM0
+#define CORE0_RAM_START                     SRAM_MEM
 #define CORE0_RAM_LEN                       0x8000      //32KB
 //STACK
 #define CORE0_STACK_SIZE                    0x2000
@@ -22,7 +22,7 @@
 #define CORE1_ROM_START                     FLASH_MEM+CORE0_ROM_LEN
 #define CORE1_ROM_LEN                       0x10000     //64KB
 //DATA
-#define CORE1_RAM_START                     SRAM1
+#define CORE1_RAM_START                     SRAM_MEM+CORE0_RAM_LEN
 #define CORE1_RAM_LEN                       0x8000      //32KB
 //STACK
 #define CORE1_STACK_SIZE                    0x800
