@@ -25,6 +25,9 @@
 .fnstart
 /*----------------------------------------------------------------------------*/
 reset_handler:
+    /* Initialize stack pointer */
+    ldr     r0, =__StackTop
+    mov     sp, r0
 
 #if (defined(C0_BOOTAGENT) || defined(C1_BOOTAGENT))
 /* Boot Stage 0 --------------------------------------------------------------*/
@@ -52,10 +55,6 @@ _boot1_1:
 
 /* Boot Stage 2 --------------------------------------------------------------*/
 _boot2_0:
-    /* Initialize stack pointer */
-    ldr     r0, =__StackTop
-    mov     sp, r0
-
     /* Jump to app boot */
     b       Reset_Handler
 
