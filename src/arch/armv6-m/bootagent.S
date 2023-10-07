@@ -56,7 +56,7 @@ _boot1_1:
 /* Boot Stage 2 --------------------------------------------------------------*/
 _boot2_0:
     /* Jump to app boot */
-    b       Reset_Handler
+    bl       Reset_Handler
 
     /* This point should never be reached */
     b       .
