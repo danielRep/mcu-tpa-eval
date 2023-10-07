@@ -151,7 +151,7 @@ int platform_init(void)
 
 #ifdef FPM
     printf(RED "Flash Performance mode configured.\n");
-    printf(YELLOW "\t- wait states: %d\n", FLASHC_FLASH_CTL & FLASHC_V2_FLASH_CTL_MAIN_WS_Msk);
+    printf(YELLOW "\t- wait states: %ld\n", FLASHC_FLASH_CTL & FLASHC_V2_FLASH_CTL_MAIN_WS_Msk);
     printf(YELLOW "\t- instruction cache ON\n");
     printf(YELLOW "\t- prefetcher ON\n");
 

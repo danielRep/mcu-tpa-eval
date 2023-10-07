@@ -8,7 +8,7 @@
 ################################################################################
 # Makefile Arguments
 PLATFORM	:= cy8cproto063
-TESTID		:= cmn
+TESTID		:= ctt
 TESTSUITE	:= $(shell echo $(TESTID) | cut -c1-3)
 
 ################################################################################
@@ -126,3 +126,6 @@ erase:
 linkerfile:
 	@echo "Creating LD defines..."
 	@$(CC) -P -E $(addprefix -I, $(CFG_INC)) $(LDGEN_C) $(LD_VAR) -o $(LDGEN_O)
+
+run-test: clean all flash
+	@echo "\nRunning test $(TESTID) on $(PLATFORM)..."
