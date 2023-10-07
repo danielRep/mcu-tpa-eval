@@ -21,12 +21,9 @@ int main(void)
     platform_init();
     printf("Hello from core1!\r\n");
 
-    while(1)
+    while (1)
     {
-
-    fill_cache();
-
-    //printf("Core1 running!\r\n");
+        fill_cache();
     }
     return 0;
 }
