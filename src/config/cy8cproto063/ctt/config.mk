@@ -10,10 +10,10 @@
 MULTICORE		:= y
 DEBUG			:= y
 OPTIM			:= O2
-C0_BENCH_APP	:= wikisort
+
+C0_BENCH_APP	:= mont64
 C0_FPM			:= y
 C0_CLK_MAX		:= y
-BUS_PRIO		:= C0-2 C1-3 DMA0-3 DMA1-3
-C1_INTRF_APP	:= dai
+C1_INTRF_APP	:= ifi
 C0_DMA0			:= y
 C0_DMA1			:= y
