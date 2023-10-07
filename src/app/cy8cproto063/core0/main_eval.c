@@ -15,6 +15,7 @@
 #include "platform_base_addrs.h"
 #include "support.h"
 #include "config.h"
+#include "dma_driver.h"
 
 uint32_t cycles[N_SAMPLES];
 
@@ -53,6 +54,13 @@ int main(void)
 
     while(1)
     {
+        #ifdef C0_DMA0
+        dma0_start();
+        #endif
+        #ifdef C0_DMA1
+        dma1_start();
+        #endif
+
         for(it = 0; it < N_SAMPLES; it++)
         {
             systick_reset_counter();
@@ -65,6 +73,14 @@ int main(void)
             #endif
         }
 
+        #ifdef C0_DMA0
+        dma0_reinit();
+        dma0_print_copy();
+        #endif
+        #ifdef C0_DMA1
+        dma1_reinit();
+        dma1_print_copy();
+        #endif
         #ifndef C0_STATS
         print_cycles(cycles);
         #endif
