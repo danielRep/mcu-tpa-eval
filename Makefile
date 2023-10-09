@@ -128,4 +128,4 @@ linkerfile:
 	@$(CC) -P -E $(addprefix -I, $(CFG_INC)) $(LDGEN_C) $(LD_VAR) -o $(LDGEN_O)
 
 run-test: clean all flash
-	@echo "\nRunning test $(TESTID) on $(PLATFORM)..."
+	@echo "\nRunning benchmark $(C0_BENCH_APP) from test $(TESTID) on $(PLATFORM)..."
