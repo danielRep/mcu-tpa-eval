@@ -32,10 +32,10 @@ set rmargin at screen 1
 
 
 set key auto columnheader
-set key at graph 0.99, 1.12
+set key at graph 1, 1.12
 #set title title_arg
 
-set output path.'/lpc_contention.pdf'
+set output path.'/interf.pdf'
 set terminal pdfcairo font "times new roman,9" size 6,2.7
 set format y "%gx"
 
@@ -64,13 +64,11 @@ set grid ytics mytics  # draw lines for each ytics and mytics
 #set mytics 2
 unset grid
 
-graphable=path."/lpc_contention.dat"
+graphable=path."/interf.dat"
 plot \
 	graphable using 2:xtic(1), \
 	'' u 4, \
 	'' u 6, \
-	'' u 8, \
 	'' u ($0):2:3 with labels rotate by 90 left offset -2.4,0.5 font ",7" ,  \
 	'' u ($0):4:5 with labels rotate by 90 left offset -0.8,0.5 font ",7" ,  \
 	'' u ($0):6:7 with labels rotate by 90 left offset 0.6,0.5 font ",7" ,  \
-	'' u ($0):8:9 with labels rotate by 90 left offset 2.0,0.5 font ",7" ,  \
