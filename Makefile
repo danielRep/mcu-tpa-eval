@@ -7,7 +7,7 @@
 
 ################################################################################
 # Makefile Arguments
-PLATFORM	:= cy8cproto063
+PLATFORM	:= stm32l412
 TESTID		:= ctt
 TESTSUITE	:= $(shell echo $(TESTID) | cut -c1-3)
 
@@ -51,6 +51,7 @@ CORE0_DIR	:= $(APP_DIR)/core0
 CORE1_DIR	:= $(APP_DIR)/core1
 ARCH_DIR	:= $(SRC_DIR)/arch
 PLAT_DIR	:= $(SRC_DIR)/platform/$(PLATFORM)
+RES_DIR		:= $(CUR_DIR)/results
 
 BIN_DIR		:= $(CUR_DIR)/bin/$(PLATFORM)
 BUILD_DIR	:= $(CUR_DIR)/build/$(PLATFORM)
@@ -59,6 +60,10 @@ CFG_DIR		:= $(SRC_DIR)/config
 # Cfg Directories
 CFG_INC		+= $(CFG_DIR)/$(PLATFORM)/$(TESTID)/
 CFG_INC		+= $(CFG_DIR)/$(PLATFORM)/
+
+# Results Directories
+SCP_DIR		:= $(RES_DIR)/scripts
+GRA_DIR		:= $(RES_DIR)/graphs/$(PLATFORM)
 
 # Generators
 LDGEN_C		:= $(CFG_DIR)/ldscript.c
@@ -95,7 +100,7 @@ export
 
 ################################################################################
 # Default Makefile Rules
-.PHONY: clean flash erase
+.PHONY: clean flash erase results
 
 all: linkerfile
 	@echo "Building core0 app..."
@@ -129,3 +134,8 @@ linkerfile:
 
 run-test: clean all flash
 	@echo "\nRunning benchmark $(C0_BENCH_APP) from test $(TESTID) on $(PLATFORM)..."
+
+results:
+	@echo "\nGenerating graphs for $(PLATFORM)..."
+	@python3 $(SCP_DIR)/tabularize.py $(GRA_DIR)/interf.dat
+	@gnuplot -e "path='$(GRA_DIR)'; title_arg='$(PLATFORM)'" "$(GRA_DIR)/interf.gnu"
