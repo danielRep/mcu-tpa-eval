@@ -1,0 +1,20 @@
+Benchmark     	"solo"	"avg (ms)"	"common"	"avg (ms)"	"catastrophic"	"avg (ms)"
+aha-mont64    	1.00  	0.26ms    	3.38    	0.26ms    	15.85         	0.31ms
+crc32         	1.00  	0.35ms    	4.11    	0.35ms    	17.08         	0.39ms
+cubic         	1.00  	9.93ms    	2.27    	10.09ms   	7.61          	11.87ms
+edn           	1.00  	0.74ms    	3.38    	0.74ms    	23.25         	0.98ms
+huffbench     	1.00  	4.54ms    	3.25    	4.54ms    	19.60         	5.55ms
+matmult-int   	1.00  	1.34ms    	4.03    	1.34ms    	18.44         	1.83ms
+minver        	1.00  	0.19ms    	2.60    	0.19ms    	9.05          	0.2ms
+nbody         	1.00  	59.46ms   	2.42    	58.7ms    	8.82          	72.52ms
+nettle-aes    	1.00  	1.06ms    	2.31    	1.07ms    	6.77          	1.2ms
+nettle-sha256 	1.00  	0.17ms    	2.87    	0.17ms    	9.07          	0.2ms
+nsichneu      	1.00  	0.08ms    	2.31    	0.08ms    	7.02          	0.1ms
+picojpeg      	1.00  	10.35ms   	2.80    	10.36ms   	10.60         	13.6ms
+qrduino       	1.00  	9.25ms    	2.96    	9.25ms    	13.68         	11.65ms
+sglib-combined	1.00  	1.59ms    	2.78    	1.59ms    	11.12         	2.27ms
+slre          	1.00  	0.42ms    	2.27    	0.42ms    	7.14          	0.57ms
+st            	1.00  	6.03ms    	2.36    	6.04ms    	7.27          	7.19ms
+statemate     	1.00  	0.03ms    	3.46    	0.03ms    	13.98         	0.05ms
+ud            	1.00  	0.05ms    	2.64    	0.05ms    	9.84          	0.06ms
+wikisort      	1.00  	32.33ms   	2.65    	32.19ms   	10.77         	39.2ms
