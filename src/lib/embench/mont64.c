@@ -218,7 +218,7 @@ static uint64 in_a, in_b, in_m;
 void
 warm_caches (int  heat)
 {
-  int  res = benchmark_body (heat);
+  benchmark_body (heat);
   (void)res;
 
   return;
