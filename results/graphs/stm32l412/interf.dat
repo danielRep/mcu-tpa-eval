@@ -1,20 +1,20 @@
-Benchmark     	"solo"	"avg (ms)"	"catastrophic"	"avg (ms)"
-aha-mont64    	1.00  	0.11ms    	182.15        	20.45ms
-crc32         	1.00  	0.36ms    	1.80          	0.64ms
-cubic         	1.00  	5.95ms    	1338.87       	7970.67ms
-edn           	1.00  	0.63ms    	38.92         	24.59ms
-huffbench     	1.00  	4.19ms    	10.74         	45.06ms
-matmult-int   	1.00  	1.38ms    	0.93          	1.29ms
-minver        	1.00  	0.10ms    	1216.24       	123.24ms
-nbody         	1.00  	42.60ms   	1225.55       	52203.25ms
-nettle-aes    	1.00  	1.03ms    	159.23        	164.44ms
-nettle-sha256 	1.00  	0.13ms    	1016.27       	135.24ms
-nsichneu      	1.00  	0.07ms    	1390.47       	94.26ms
-picojpeg      	1.00  	10.64ms   	494.74        	5263.53ms
-qrduino       	1.00  	10.08ms   	31.39         	316.29ms
-sglib-combined	1.00  	1.67ms    	85.61         	143.14ms
-slre          	1.00  	0.50ms    	1124.77       	561.50ms
-st            	1.00  	3.89ms    	1380.87       	5365.45ms
-statemate     	1.00  	0.04ms    	338.10        	12.31ms
-ud            	1.00  	0.04ms    	1141.32       	43.16ms
-wikisort      	1.00  	35.55ms   	635.93        	22607.71ms
+Benchmark     	"catastrophic"	"avg (ms)"
+aha-mont64    	182.15        	20.45ms
+crc32         	1.80          	0.64ms
+cubic         	1338.87       	7970.67ms
+edn           	38.92         	24.59ms
+huffbench     	10.74         	45.06ms
+matmult-int   	0.93          	1.29ms
+minver        	1216.24       	123.24ms
+nbody         	1225.55       	52203.25ms
+nettle-aes    	159.23        	164.44ms
+nettle-sha256 	1016.27       	135.24ms
+nsichneu      	1390.47       	94.26ms
+picojpeg      	494.74        	5263.53ms
+qrduino       	31.39         	316.29ms
+sglib-combined	85.61         	143.14ms
+slre          	1124.77       	561.50ms
+st            	1380.87       	5365.45ms
+statemate     	338.10        	12.31ms
+ud            	1141.32       	43.16ms
+wikisort      	635.93        	22607.71ms
