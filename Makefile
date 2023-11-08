@@ -33,7 +33,7 @@ FLASHTOOL	:= pyocd
 FLASHOPTS	:=
 
 ifeq ($(PLATFORM), lpc55s69)
-	FLASHOPTS += -t LPC55S69
+	FLASHOPTS += -t lpc55s69
 else ifeq ($(PLATFORM), stm32l412)
 	FLASHOPTS += -t stm32l412kbux
 else ifeq ($(PLATFORM), cy8cproto063)
