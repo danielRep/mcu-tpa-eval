@@ -14,7 +14,15 @@
 #include "platform_config.h"
 #include "platform_base_addrs.h"
 #include "support.h"
+#include "dma_driver.h"
 #include "config.h"
+
+#if defined(TPA_PROF) || defined(TPA_MECH)
+#include "tpa_prof.h"
+#include "tpa_mech.h"
+#include "tpa_cfg.h"
+#include "log.h"
+#endif
 
 uint32_t cycles[N_SAMPLES];
 
@@ -26,7 +34,6 @@ void print_cycles(uint32_t t_cyc[])
     }
     return;
 }
-extern uint32_t __Vectors;
 
 int main(void)
 {
@@ -47,15 +54,35 @@ int main(void)
     printf(GREEN "\nPress any key to start...\n");
     getchar();
 
-    initialise_benchmark ();
     dwt_unlock();
+    initialise_benchmark ();
 
     printf(GREEN "Sampling %dx. Running...\n", N_SAMPLES);
 
     while(1)
     {
+        #ifdef C0_DMA0
+        dma0_start();
+        #endif
+        #ifdef C0_DMA1
+        dma1_start();
+        #endif
+
+        #ifdef TPA_PROF
+        tpa_prof_init();
+        #elif defined(TPA_MECH)
+        tpa_mech_init();
+        #endif
+
         for(it = 0; it < N_SAMPLES; it++)
         {
+            #ifdef TPA_PROF
+            tpa_prof_start();
+            #endif
+            #ifdef TPA_MECH
+            tpa_mech_start();
+            #endif
+
             dwt_enable_counters();
             dwt_reset_cycnt();
             result = benchmark_body(1);
@@ -64,10 +91,33 @@ int main(void)
             #ifdef C0_STATS
             printf(BLUE "%lu\n", cycles[it]);
             #endif
+            #ifdef TPA_PROF
+            tpa_prof_stop();
+            #endif
+            #ifdef TPA_MECH
+            tpa_mech_reset();
+            #endif
         }
+        #ifdef TPA_PROF
+        tpa_print_tmg();
 
+        LOG_PRINT_MBB_LOG();
+        LOG_RESET_MBB_LOG();
+        #endif
+        #ifdef C0_DMA0
+        dma0_ch_disable();
+        #endif
+        #ifdef C0_DMA1
+        dma1_ch_disable();
+        #endif
         #ifndef C0_STATS
         print_cycles(cycles);
+        #endif
+        #ifdef C0_DMA0
+        dma0_print_dst();
+        #endif
+        #ifdef C0_DMA1
+        dma1_print_dst();
         #endif
 
         if(verify_benchmark (result))
