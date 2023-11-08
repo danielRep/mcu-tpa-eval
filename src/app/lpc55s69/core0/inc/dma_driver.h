@@ -4,9 +4,11 @@
 void dma0_init(void);
 void dma0_start(void);
 void dma0_ch_disable(void);
+void dma0_print_dst(void);
 
 void dma1_init(void);
 void dma1_start(void);
 void dma1_ch_disable(void);
+void dma1_print_dst(void);
 
 #endif  /* __DMA_DRIVER_H__ */

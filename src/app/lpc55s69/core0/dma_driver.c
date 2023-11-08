@@ -9,11 +9,11 @@
 
 ALIGNED const uint32_t src_buff1[BUFF_LENGTH/2] = {[0 ... BUFF_LENGTH/2-1] = 1};
 ALIGNED const uint32_t src_buff2[BUFF_LENGTH/2] = {[0 ... BUFF_LENGTH/2-1] = 2};
-ALIGNED uint32_t dst_buff1[BUFF_LENGTH] = {[0 ... BUFF_LENGTH-1] = 3};
+ALIGNED uint32_t dst_buff1[BUFF_LENGTH] = {[0 ... BUFF_LENGTH-1] = 0xDEADBEEF};
 
 ALIGNED const uint32_t src_buff3[BUFF_LENGTH/2] = {[0 ... BUFF_LENGTH/2-1] = 1};
 ALIGNED const uint32_t src_buff4[BUFF_LENGTH/2] = {[0 ... BUFF_LENGTH/2-1] = 2};
-ALIGNED uint32_t dst_buff2[BUFF_LENGTH] = {[0 ... BUFF_LENGTH-1] = 3};
+ALIGNED uint32_t dst_buff2[BUFF_LENGTH] = {[0 ... BUFF_LENGTH-1] = 0xDEADBEEF};
 
 __attribute__((aligned(sizeof(dma_descriptor_t)))) dma_descriptor_t dma0_tbl[2];
 __attribute__((aligned(sizeof(dma_descriptor_t)))) dma_descriptor_t dma1_tbl[2];
@@ -54,6 +54,17 @@ void dma0_start(void)
     return;
 }
 
+void dma0_print_dst(void)
+{
+    printf(GREEN"DMA0 copy verification:\n");
+    printf(YELLOW"\t- src_buff[0]: 0x%.8lX\n", src_buff1[0]);
+    printf(YELLOW"\t- dst_buff[0]: 0x%.8lX\n", dst_buff1[0]);
+
+    /* To make sure that the DMA is working, reset the dst_buff */
+    dst_buff1[0] = 0xDEADBEEF;
+    printf(YELLOW"\t- redefined dst_buff to: 0x%.8lX\n", dst_buff1[0]);
+}
+
 void dma1_init()
 {
     DMA_Init(DMA1);
@@ -87,4 +98,15 @@ void dma1_start(void)
 {
     DMA_StartTransfer(&dma1_hndl);
     return;
+}
+
+void dma1_print_dst(void)
+{
+    printf(GREEN"DMA1 copy verification:\n");
+    printf(YELLOW"\t- src_buff[0]: 0x%.8lX\n", src_buff3[0]);
+    printf(YELLOW"\t- dst_buff[0]: 0x%.8lX\n", dst_buff2[0]);
+
+    /* To make sure that the DMA is working, reset the dst_buff */
+    dst_buff2[0] = 0xDEADBEEF;
+    printf(YELLOW"\t- redefined dst_buff to: 0x%.8lX\n", dst_buff2[0]);
 }
