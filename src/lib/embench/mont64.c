@@ -219,7 +219,6 @@ void
 warm_caches (int  heat)
 {
   benchmark_body (heat);
-  (void)res;
 
   return;
 }
