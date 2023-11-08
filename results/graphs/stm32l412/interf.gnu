@@ -15,12 +15,13 @@ set ylabel "Rel. Perf. Degradation"
 set style fill solid
 set xtics rotate by 30 right
 
-set key auto columnheader
+#set key auto columnheader
+set key inside top right horizontal
 
 set output path.'/stm.pdf'
 
 #size of window
-set terminal pdfcairo font "times new roman,10" size 5,1.5
+set terminal pdfcairo font "times new roman,10" size 5,1.8
 
 set linetype  1 lc rgb '#bd7ebe' lw 1
 set linetype cycle  8
@@ -29,7 +30,7 @@ set logscale y 10
 
 
 #size of coloumns
-set boxwidth 0.7
+set boxwidth 0.4
 
 set grid ytics mytics  # draw lines for each ytics and mytics
 #set mytics 2
@@ -37,5 +38,5 @@ unset grid
 
 graphable=path."/interf.dat"
 plot \
-	graphable using 2:xtic(1), \
-	'' u 4, \
+	graphable using 2:xtic(1) title 'catastrophic'#, \
+	#'' u 4, \

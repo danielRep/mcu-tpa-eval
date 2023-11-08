@@ -16,7 +16,8 @@ set style fill solid
 
 set yrange [:1.8]
 
-set key auto columnheader
+#set key auto columnheader
+set key inside top right horizontal
 #set key at graph 1, 1.12
 
 #set title "Infineon PSoC6"
@@ -26,7 +27,7 @@ set ylabel "Rel. Perf. Degradation"
 set output path.'/infineon.pdf'
 
 #size of window
-set terminal pdfcairo font "times new roman,10" size 5,1.5
+set terminal pdfcairo font "times new roman,10" size 5,1.8
 #set format y "%g"
 
 # Add more ticks to the y-axis
@@ -53,8 +54,8 @@ set grid ytics mytics  # draw lines for each ytics and mytics
 
 graphable=path."/interf.dat"
 plot \
-	graphable using 2:xtic(1), \
-	'' u 4, \
+	graphable using 2:xtic(1) title 'common', \
+	'' u 4 title 'catastrophic', \
 #	'' u ($0):2:3 with labels rotate by 90 left offset -2.4,0.5 font ",7" ,  \
 #	'' u ($0):4:5 with labels rotate by 90 left offset -0.8,0.5 font ",7" ,  \
 #	'' u ($0):6:7 with labels rotate by 90 left offset 0.6,0.5 font ",7" ,  \
