@@ -1,0 +1,26 @@
+{
+    "app_name": "st.c",
+    "total_mbbs": 5,
+    "mbbs":[
+        {
+            "mbb": 1,
+            "edges": 1
+        },
+        {
+            "mbb": 2,
+            "edges": 1
+        },
+        {
+            "mbb": 3,
+            "edges": 1
+        },
+        {
+            "mbb": 4,
+            "edges": 1
+        },
+        {
+            "mbb": 5,
+            "edges": 1
+        }
+    ]
+}
