@@ -7,9 +7,8 @@
 
 ################################################################################
 # Makefile Arguments
-PLATFORM	:= stm32l412
-TESTID		:= ctt
-TESTSUITE	:= $(shell echo $(TESTID) | cut -c1-3)
+PLATFORM	:= lpc55s69
+TESTID		:= tpa
 
 ################################################################################
 # Toolchain Macros
