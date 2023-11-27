@@ -21,15 +21,12 @@ LIBC_DIR  := $(LIB_DIR)/libc/newlib
 EMBE_DIR  := $(LIB_DIR)/embench
 MEM_DIR   := $(CFG_DIR)/$(PLATFORM)
 BENCH_DIR := $(CFG_DIR)/$(PLATFORM)/$(TESTID)
-
-ifeq ($(TESTSUITE), tpa)
 TPA_DIR   := $(LIB_DIR)/tpa_mech/src
 ARTF_DIR  := $(LIB_DIR)/libartifapps
-endif
 
 SRC_DIRS  := $(CORE0_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR) $(TPA_DIR) $(ARTF_DIR)
 INC_DIRS  := $(addsuffix /inc, $(SRC_DIRS)) $(MEM_DIR) $(BENCH_DIR)
-
+$(info $(INC_DIRS))
 # Source Files
 -include $(addsuffix /objects.mk , $(SRC_DIRS))
 
@@ -40,17 +37,9 @@ objs-y += $(addprefix $(LIBC_DIR)/, $(libc-objs-y))
 objs-y += $(addprefix $(EMBE_DIR)/, $(embe-objs-y))
 objs-y += $(addprefix $(ARTF_DIR)/, $(artifapps-objs-y))
 
-ifeq ($(TESTSUITE), tpa)
-
-ifeq ($(TPA), prof)
-	tpa-objs-y += tpa_prof.o
-else ifeq ($(TPA), mech)
-	tpa-objs-y += tpa_mech.o
-endif
-
-tpa-objs-y += cyc_cnt.o
-objs-y += $(addprefix $(TPA_DIR)/, $(tpa-objs-y))
-objs-y += $(addprefix $(BENCH_DIR)/, tpa_cfg.o)
+ifeq ($(TESTID), tpa)
+-include $(addsuffix /objects.mk , $(BENCH_DIR))
+objs-y += $(tpa-objs-y)
 endif
 
 # Dependencies

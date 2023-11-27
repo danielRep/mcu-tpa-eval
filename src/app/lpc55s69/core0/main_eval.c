@@ -17,9 +17,8 @@
 #include "dma_driver.h"
 #include "config.h"
 
-#if defined(TPA_PROF) || defined(TPA_MECH)
-#include "tpa_prof.h"
-#include "tpa_mech.h"
+#ifdef TPA
+#include "tpa.h"
 #include "tpa_cfg.h"
 #include "log.h"
 #endif
@@ -100,7 +99,8 @@ int main(void)
         }
         #ifdef TPA_PROF
         tpa_print_tmg();
-
+        #endif
+        #ifdef TPA_MECH
         LOG_PRINT_MBB_LOG();
         LOG_RESET_MBB_LOG();
         #endif
