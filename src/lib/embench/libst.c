@@ -43,7 +43,7 @@
    benchmarks. */
 #define LOCAL_SCALE_FACTOR 13
 
-#define MAX 100
+#define MAXM 100
 
 void InitSeed (void);
 int RandomInteger ();
@@ -60,7 +60,7 @@ void Calc_LinCorrCoef (double[], double[], double, double);
  */
 
 int Seed;
-double ArrayA[MAX], ArrayB[MAX];
+double ArrayA[MAXM], ArrayB[MAXM];
 double SumA, SumB;
 double Coef;
 
@@ -137,9 +137,9 @@ Calc_Sum_Mean (double Array[], double *Sum, double *Mean)
   int i;
 
   *Sum = 0;
-  for (i = 0; i < MAX; i++)
+  for (i = 0; i < MAXM; i++)
     *Sum += Array[i];
-  *Mean = *Sum / MAX;
+  *Mean = *Sum / MAXM;
 }
 
 
@@ -157,9 +157,9 @@ Calc_Var_Stddev (double Array[], double Mean, double *Var, double *Stddev)
   double diffs;
 
   diffs = 0.0;
-  for (i = 0; i < MAX; i++)
+  for (i = 0; i < MAXM; i++)
     diffs += Square (Array[i] - Mean);
-  *Var = diffs / MAX;
+  *Var = diffs / MAXM;
   *Stddev = sqrt (*Var);
 }
 
@@ -173,7 +173,7 @@ Calc_LinCorrCoef (double ArrayA[], double ArrayB[], double MeanA,
 
   numerator = 0.0;
   Aterm = Bterm = 0.0;
-  for (i = 0; i < MAX; i++)
+  for (i = 0; i < MAXM; i++)
     {
       numerator += (ArrayA[i] - MeanA) * (ArrayB[i] - MeanB);
       Aterm += Square (ArrayA[i] - MeanA);
@@ -194,7 +194,7 @@ Initialize (double Array[])
 {
   register int i;
 
-  for (i = 0; i < MAX; i++)
+  for (i = 0; i < MAXM; i++)
     Array[i] = i + RandomInteger () / 8095.0;
 }
 
