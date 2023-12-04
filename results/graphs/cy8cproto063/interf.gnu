@@ -14,7 +14,7 @@ set xtics rotate by 30 right
 
 set style fill solid
 
-set yrange [:1.8]
+#set yrange [:1.8]
 
 #set key auto columnheader
 set key inside top right horizontal
@@ -31,7 +31,7 @@ set terminal pdfcairo font "times new roman,10" size 5,1.8
 #set format y "%g"
 
 # Add more ticks to the y-axis
-set ytics add ("0" 0.9)
+#set ytics add ("0" 0.9)
 #set ytics
 
 #set arrow from 0.,avg to 10., avg nohead front lc rgb "#555555" lw 2  dashtype "-"
