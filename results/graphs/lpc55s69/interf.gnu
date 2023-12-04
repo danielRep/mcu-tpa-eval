@@ -40,7 +40,7 @@ set logscale y 10
 
 set linetype  1 lc rgb '#b2e061' lw 1
 set linetype  2 lc rgb '#7eb0d5' lw 1
-set linetype  3 lc rgb '#bd7ebe' lw 1
+set linetype  3 lc rgb '#FE9D52' lw 1
 set linetype cycle  8
 
 #size of coloumns
@@ -51,10 +51,11 @@ set boxwidth 0.7
 #unset grid
 
 graphable=path."/interf.dat"
+
 plot \
-	graphable using 2:xtic(1) title 'common', \
-	'' u 4 title 'sloppy', \
-	'' u 6 title 'catastrophic', \
+	graphable using 2:xtic(1) title 'cmn1', \
+	'' u 4 title 'cmn2', \
+	'' u 6 title 'ctt1', \
 #	'' u ($0):2:3 with labels rotate by 90 left offset -2.4,0.5 font ",7" ,  \
 #	'' u ($0):4:5 with labels rotate by 90 left offset -0.8,0.5 font ",7" ,  \
 #	'' u ($0):6:7 with labels rotate by 90 left offset 0.6,0.5 font ",7" ,  \
