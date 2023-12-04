@@ -19,6 +19,7 @@
 #include "cyhal_uart.h"
 #include "cycfg_system.h"
 #include "cycfg_peripherals.h"
+#include "cy_prot.h"
 
 cyhal_uart_t cy_retarget_io_uart_obj;
 static char cy_retarget_io_stdout_prev_char = 0;
@@ -160,6 +161,34 @@ int platform_init(void)
 #else
     FLASHC->CM0_CA_CTL0 &= ~FLASHC_CM0_CA_CTL0_ENABLED_Msk;
     FLASHC->CM0_CA_CTL0 &= ~FLASHC_CM0_CA_CTL0_PREF_EN_Msk;
+#endif
+
+#ifdef BUS_PRIO
+    printf(RED "Bus priority enabled and configured:\n");
+#ifdef C0_PRIO
+    uint32_t volatile *reg = (uint32_t *)(CY_PROT_BASE + 0x0);
+    uint32_t reg_val = (*reg&~PROT_SMPU_MS0_CTL_PRIO_Msk) | (C0_PRIO << PROT_SMPU_MS0_CTL_PRIO_Pos);
+    *reg = reg_val;
+#endif
+#ifdef C1_PRIO
+    reg = (uint32_t *)(CY_PROT_BASE + 0x4);
+    reg_val = (*reg&~PROT_SMPU_MS1_CTL_PRIO_Msk) | (C1_PRIO << PROT_SMPU_MS1_CTL_PRIO_Pos);
+    *reg = reg_val;
+#endif
+#ifdef DMA0_PRIO
+    reg = (uint32_t *)(CY_PROT_BASE + 0x8);
+    reg_val = (*reg&~PROT_SMPU_MS2_CTL_PRIO_Msk) | (DMA0_PRIO << PROT_SMPU_MS2_CTL_PRIO_Pos);
+    *reg = reg_val;
+#endif
+#ifdef DMA1_PRIO
+    reg = (uint32_t *)(CY_PROT_BASE + 0xC);
+    reg_val = (*reg&~PROT_SMPU_MS3_CTL_PRIO_Msk) | (DMA1_PRIO << PROT_SMPU_MS3_CTL_PRIO_Pos);
+    *reg = reg_val;
+#endif
+    printf(YELLOW "\t- PROT->PROT_SMPU_MS0_CTL=0x%.8lX\n",*(uint32_t*)(CY_PROT_BASE + 0x0));
+    printf(YELLOW "\t- PROT->PROT_SMPU_MS1_CTL=0x%.8lX\n",*(uint32_t*)(CY_PROT_BASE + 0x4));
+    printf(YELLOW "\t- PROT->PROT_SMPU_MS2_CTL=0x%.8lX\n",*(uint32_t*)(CY_PROT_BASE + 0x8));
+    printf(YELLOW "\t- PROT->PROT_SMPU_MS3_CTL=0x%.8lX\n",*(uint32_t*)(CY_PROT_BASE + 0xC));
 #endif
 
 #ifdef C0_DMA0
