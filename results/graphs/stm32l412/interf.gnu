@@ -23,7 +23,7 @@ set output path.'/stm.pdf'
 #size of window
 set terminal pdfcairo font "times new roman,10" size 5,1.8
 
-set linetype  1 lc rgb '#bd7ebe' lw 1
+set linetype  1 lc rgb '#FE9D52' lw 1
 set linetype cycle  8
 set ytics add ("0" 0.1)
 set logscale y 10
@@ -32,11 +32,11 @@ set logscale y 10
 #size of coloumns
 set boxwidth 0.4
 
-set grid ytics mytics  # draw lines for each ytics and mytics
+#set grid ytics mytics  # draw lines for each ytics and mytics
 #set mytics 2
-unset grid
+#unset grid
 
 graphable=path."/interf.dat"
 plot \
-	graphable using 2:xtic(1) title 'catastrophic'#, \
+	graphable using 2:xtic(1) title 'ctt3'#, \
 	#'' u 4, \
