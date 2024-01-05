@@ -12,12 +12,6 @@
 #include "snipmath.h"
 #include "platform_config.h"
 
-#ifdef TPA
-#include "tpa.h"
-#else
-#define TPA_CALLBACK(x) (x)
-#endif
-
 /* This scale factor will be changed to equalise the runtime of the
    benchmarks. */
 #define LOCAL_SCALE_FACTOR 10
@@ -88,17 +82,17 @@ benchmark_body (int rpt)
       /* solve some cubic functions */
       /* should get 3 solutions: 2, 6 & 2.5   */
       SolveCubic(a1, b1, c1, d1, &solutions, output);
-            TPA_CALLBACK(1);
+
       soln_cnt0 = solutions;
       memcpy(res0,output,3*sizeof(res0[0]));
-  TPA_CALLBACK(2);
+
       /* should get 1 solution: 2.5           */
       SolveCubic(a2, b2, c2, d2, &solutions, output);
       soln_cnt1 = solutions;
       res1 = output[0];
       
       SolveCubic(a3, b3, c3, d3, &solutions, output);
-      TPA_CALLBACK(3);
+
       SolveCubic(a4, b4, c4, d4, &solutions, output);
       /* Now solve some random equations */
       for(a1=1;a1<3;a1++) {
@@ -109,11 +103,6 @@ benchmark_body (int rpt)
             }
 	  }
 	}
-  TPA_CALLBACK(4);
-
-  TPA_CALLBACK(5);
-  TPA_CALLBACK(6);
-  TPA_CALLBACK(7);
       }
     }
 

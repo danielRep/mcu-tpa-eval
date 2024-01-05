@@ -17,12 +17,6 @@
 
 #include "qrencode.h"
 
-#ifdef TPA
-#include "tpa.h"
-#else
-#define TPA_CALLBACK(x) (x)
-#endif
-
 extern unsigned char neccblk1;
 extern unsigned char neccblk2;
 extern unsigned char datablkw;
@@ -615,9 +609,7 @@ qrencode ()
   unsigned badness;
 
   stringtoqr ();
-  TPA_CALLBACK(7);
   fillframe ();			// Inisde loop to avoid having separate mask buffer
-  TPA_CALLBACK(8);
   memcpy (strinbuf, qrframe, WD * WDB);
   
   for (i = 0; i < 8; i++)
@@ -640,10 +632,8 @@ qrencode ()
 	break;			// don't increment i to avoid redoing mask
       memcpy (qrframe, strinbuf, WD * WDB);	// reset filled frame
     }
-    TPA_CALLBACK(9);
   if (best != i)		// redo best mask - none good enough, last wasn't best
     applymask (best);
-  TPA_CALLBACK(10);
   addfmt (best);		// add in final format bytes
 }
 
