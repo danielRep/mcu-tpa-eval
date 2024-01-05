@@ -3,15 +3,7 @@
 
 #include "mem_defs.h"
 
-#define N_SAMPLES                           1
-#define WARMUP_HEAT                         100
-
-/* t2:
- * CORE0-CODE: FLASH_MEM
- * CORE0-DATA: SRAM0
- * CORE0-CODE: FLASH_MEM
- * CORE0-DATA: SRAM1
- */
+#define N_SAMPLES                           100
 
 /* Core0 Memory Layout */
 //CODE
@@ -21,11 +13,11 @@
 #define CORE0_RAM_START                     SRAM0
 #define CORE0_RAM_LEN                       0x8000      //32KB
 //STACK
-#define CORE0_STACK_SIZE                    0x800
+#define CORE0_STACK_SIZE                    0x2000
 //HEAP
 #define CORE0_HEAP_SIZE                     0x400
 
-/* Core0 Memory Layout */
+/* Core1 Memory Layout */
 //CODE
 #define CORE1_ROM_START                     FLASH_MEM+CORE0_ROM_LEN
 #define CORE1_ROM_LEN                       0x10000     //64KB
