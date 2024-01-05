@@ -9,12 +9,12 @@
 # Configuration setup
 MULTICORE		:= y
 DEBUG			:= y
-OPTIM			:= O0
+OPTIM			:= O2
 
-C0_BENCH_APP	:= wikisort
+C0_BENCH_APP	:= nsichneu
 C0_FPM			:= y
 C0_CLK_MAX		:= y
 C1_INTRF_APP	:= ifi
-BUS_PRIO		:= C0-3 C1-0 DMA0-0 DMA1-0	# "0": highest priority, "3": lowest priority
+BUS_PRIO		:= C0-3 C1-0 DMA0-0 DMA1-0 # "0": highest priority, "3": lowest priority
 C0_DMA0			:= y
 C0_DMA1			:= y
