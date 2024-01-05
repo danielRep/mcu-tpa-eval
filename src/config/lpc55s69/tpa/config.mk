@@ -7,7 +7,7 @@
 
 ################################################################################
 # TPA Mechanism Configuration
-TPA				:= prof
+#TPA				:= prof
 MULTICORE		:= n
 C0_BENCH_APP	:= picojpeg
 C1_INTRF_APP	:= ifi
