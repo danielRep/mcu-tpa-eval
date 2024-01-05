@@ -16,23 +16,23 @@
 #include "support.h"
 #include "dma_driver.h"
 #include "config.h"
-
-#ifdef TPA
-#include "tpa.h"
-#include "tpa_cfg.h"
-#include "log.h"
+#ifdef TPA_PROF
+#include "profiler.h"
 #endif
 
+#ifdef C0_STATS
 uint32_t cycles[N_SAMPLES];
+#endif
 
-void print_cycles(uint32_t t_cyc[])
+#ifdef TPA_PROF
+
+void DebugMon_Handler(void)
 {
-    for (size_t i = 0; i < N_SAMPLES; i++)
-    {
-        printf(BLUE"%lu\n", t_cyc[i]);
-    }
-    return;
+    printf(RED "DebugMon_Handler\n");
+    //code_mon_debughandler();
 }
+
+#endif
 
 int main(void)
 {
@@ -66,52 +66,33 @@ int main(void)
         #ifdef C0_DMA1
         dma1_start();
         #endif
-
         #ifdef TPA_PROF
-        tpa_prof_init();
-        #elif defined(TPA_MECH)
-        tpa_mech_init();
+        profiler_init();
         #endif
 
         for(it = 0; it < N_SAMPLES; it++)
         {
-            #ifdef TPA_PROF
-            tpa_prof_start();
-            #endif
-            #ifdef TPA_MECH
-            tpa_mech_start();
-            #endif
-
+            #ifdef C0_STATS
             dwt_enable_counters();
             dwt_reset_cycnt();
+            #endif
+
             result = benchmark_body(1);
-            cycles[it] = dwt_read_cycnt();
 
             #ifdef C0_STATS
+            cycles[it] = dwt_read_cycnt();
             printf(BLUE "%lu\n", cycles[it]);
             #endif
-            #ifdef TPA_PROF
-            tpa_prof_stop();
-            #endif
-            #ifdef TPA_MECH
-            tpa_mech_reset();
-            #endif
         }
+
         #ifdef TPA_PROF
-        tpa_print_tmg();
-        #endif
-        #ifdef TPA_MECH
-        LOG_PRINT_MBB_LOG();
-        LOG_RESET_MBB_LOG();
+        profiler_dump();
         #endif
         #ifdef C0_DMA0
         dma0_ch_disable();
         #endif
         #ifdef C0_DMA1
         dma1_ch_disable();
-        #endif
-        #ifndef C0_STATS
-        print_cycles(cycles);
         #endif
         #ifdef C0_DMA0
         dma0_print_dst();
