@@ -1,20 +1,20 @@
-Benchmark     	"common-1xSRAM"	"avg (ms)"	"common-2xSRAM"	"avg (ms)"	"catastrophic"	"avg (ms)"
-aha-mont64    	3.38           	0.23ms    	4.75           	0.32ms    	2626.10       	175.1ms
-crc32         	4.11           	0.92ms    	5.77           	1.28ms    	3572.40       	792.55ms
-cubic         	2.27           	13.44ms   	2.81           	16.66ms   	1196.25       	7082.51ms
-edn           	3.38           	1.06ms    	4.84           	1.52ms    	3351.43       	1047.71ms
-huffbench     	3.25           	6.72ms    	4.94           	10.21ms   	3160.23       	6527.06ms
-matmult-int   	4.03           	2.44ms    	5.62           	3.41ms    	3889.53       	2355.04ms
-minver        	2.60           	0.05ms    	3.09           	0.06ms    	1306.98       	22.63ms
-nbody         	2.42           	94.07ms   	3.15           	122.4ms   	557.65        	21685.88ms
-nettle-aes    	2.31           	3.1ms     	2.62           	3.52ms    	1124.60       	1505.95ms
-nettle-sha256 	2.87           	0.25ms    	3.36           	0.29ms    	1519.24       	128.44ms
-nsichneu      	2.31           	0.12ms    	2.63           	0.14ms    	2250.96       	115.61ms
-picojpeg      	2.80           	22.41ms   	3.75           	30.04ms   	1858.03       	14867.31ms
-qrduino       	2.96           	18.22ms   	4.36           	26.83ms   	2354.27       	14484.21ms
-sglib-combined	2.78           	3.68ms    	3.76           	4.97ms    	1856.38       	2454.62ms
-slre          	2.27           	1.24ms    	2.71           	1.48ms    	1244.27       	677.35ms
-st            	2.36           	11.31ms   	2.86           	13.71ms   	1159.96       	5550.16ms
-statemate     	3.46           	0.1ms     	4.27           	0.12ms    	2426.16       	67.65ms
-ud            	2.64           	0.09ms    	3.25           	0.11ms    	1479.76       	46.97ms
-wikisort      	2.65           	67.37ms   	3.59           	91.01ms   	772.43        	19601.36ms
+Benchmark     	"cmn1"	"avg (ms)"	"cmn2"	"avg (ms)"	"ctt1"	"avg (ms)"	"ctt2" 	"avg (ms)"
+aha-mont64    	3.38  	0.23ms    	4.75  	0.32ms    	15.85 	175.1ms   	2626.10	0ms
+crc32         	4.11  	0.92ms    	5.77  	1.28ms    	17.08 	792.55ms  	3572.40	0ms
+cubic         	2.27  	13.44ms   	2.81  	16.66ms   	7.61  	7082.51ms 	1196.25	0ms
+edn           	3.38  	1.06ms    	4.84  	1.52ms    	23.25 	1047.71ms 	3351.43	0ms
+huffbench     	3.25  	6.72ms    	4.94  	10.21ms   	19.60 	6527.06ms 	3160.23	0ms
+matmult-int   	4.03  	2.44ms    	5.62  	3.41ms    	18.44 	2355.04ms 	3889.53	0ms
+minver        	2.60  	0.05ms    	3.09  	0.06ms    	9.05  	22.63ms   	1306.98	0ms
+nbody         	2.42  	94.07ms   	3.15  	122.4ms   	8.82  	21685.88ms	557.65 	0ms
+nettle-aes    	2.31  	3.1ms     	2.62  	3.52ms    	6.77  	1505.95ms 	1124.60	0ms
+nettle-sha256 	2.87  	0.25ms    	3.36  	0.29ms    	9.07  	128.44ms  	1519.24	0ms
+nsichneu      	2.31  	0.12ms    	2.63  	0.14ms    	7.02  	115.61ms  	2250.96	0ms
+picojpeg      	2.80  	22.41ms   	3.75  	30.04ms   	10.60 	14867.31ms	1858.03	0ms
+qrduino       	2.96  	18.22ms   	4.36  	26.83ms   	13.68 	14484.21ms	2354.27	0ms
+sglib-combined	2.78  	3.68ms    	3.76  	4.97ms    	11.12 	2454.62ms 	1856.38	0ms
+slre          	2.27  	1.24ms    	2.71  	1.48ms    	7.14  	677.35ms  	1244.27	0ms
+st            	2.36  	11.31ms   	2.86  	13.71ms   	7.27  	5550.16ms 	1159.96	0ms
+statemate     	3.46  	0.1ms     	4.27  	0.12ms    	13.98 	67.65ms   	2426.16	0ms
+ud            	2.64  	0.09ms    	3.25  	0.11ms    	9.84  	46.97ms   	1479.76	0ms
+wikisort      	2.65  	67.37ms   	3.59  	91.01ms   	10.77 	19601.36ms	772.43 	0ms

@@ -38,5 +38,5 @@ set boxwidth 0.4
 
 graphable=path."/interf.dat"
 plot \
-	graphable using 2:xtic(1) title 'ctt3'#, \
+	graphable using 2:xtic(1) title 'ctt5'#, \
 	#'' u 4, \
