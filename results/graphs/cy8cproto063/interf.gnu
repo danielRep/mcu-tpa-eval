@@ -14,7 +14,7 @@ set xtics rotate by 30 right
 
 set style fill solid
 
-#set yrange [:1.8]
+set yrange [0:4.9]
 
 #set key auto columnheader
 set key inside top right horizontal
@@ -43,6 +43,7 @@ set terminal pdfcairo font "times new roman,10" size 5,1.8
 
 set linetype  1 lc rgb '#b2e061' lw 1
 set linetype  2 lc rgb '#FE9D52' lw 1
+set linetype  3 lc rgb '#C70039' lw 1
 set linetype cycle  8
 
 #size of coloumns
@@ -55,7 +56,8 @@ set grid ytics mytics  # draw lines for each ytics and mytics
 graphable=path."/interf.dat"
 plot \
 	graphable using 2:xtic(1) title 'cmn3', \
-	'' u 4 title 'ctt2', \
+	'' u 4 title 'ctt3', \
+	'' u 6 title 'ctt4', \
 #	'' u ($0):2:3 with labels rotate by 90 left offset -2.4,0.5 font ",7" ,  \
 #	'' u ($0):4:5 with labels rotate by 90 left offset -0.8,0.5 font ",7" ,  \
 #	'' u ($0):6:7 with labels rotate by 90 left offset 0.6,0.5 font ",7" ,  \
