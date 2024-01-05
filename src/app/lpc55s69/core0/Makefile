@@ -21,12 +21,12 @@ LIBC_DIR  := $(LIB_DIR)/libc/newlib
 EMBE_DIR  := $(LIB_DIR)/embench
 MEM_DIR   := $(CFG_DIR)/$(PLATFORM)
 BENCH_DIR := $(CFG_DIR)/$(PLATFORM)/$(TESTID)
-TPA_DIR   := $(LIB_DIR)/tpa_mech/src
+TPA_DIR   := $(LIB_DIR)/tpa_mech
 ARTF_DIR  := $(LIB_DIR)/libartifapps
 
-SRC_DIRS  := $(CORE0_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR) $(TPA_DIR) $(ARTF_DIR)
+SRC_DIRS  := $(CORE0_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR) $(ARTF_DIR)
 INC_DIRS  := $(addsuffix /inc, $(SRC_DIRS)) $(MEM_DIR) $(BENCH_DIR)
-$(info $(INC_DIRS))
+
 # Source Files
 -include $(addsuffix /objects.mk , $(SRC_DIRS))
 
@@ -37,9 +37,8 @@ objs-y += $(addprefix $(LIBC_DIR)/, $(libc-objs-y))
 objs-y += $(addprefix $(EMBE_DIR)/, $(embe-objs-y))
 objs-y += $(addprefix $(ARTF_DIR)/, $(artifapps-objs-y))
 
-ifeq ($(TESTID), tpa)
--include $(addsuffix /objects.mk , $(BENCH_DIR))
-objs-y += $(tpa-objs-y)
+ifdef ($(TPA))
+objs-y += $(BENCH_DIR)/tmg.o
 endif
 
 # Dependencies
@@ -78,11 +77,6 @@ endif
 
 ifeq ($(C0_CLK_MAX), y)
 CFLAGS += -DC0_CLK_MAX
-endif
-
-ifeq ($(LOGGING), y)
-CFLAGS += -DLOGGING
-CFLAGS += -DLOGLEVEL=$(LOGLEVEL)
 endif
 
 ifeq ($(MULTICORE), y)
@@ -133,16 +127,21 @@ ifeq ($(C0_DMA1), y)
 CFLAGS += -DC0_DMA1
 endif
 
-ifeq ($(TPA), prof)
-CFLAGS += -DTPA -DTPA_PROF
-else ifeq ($(TPA), mech)
-CFLAGS += -DTPA -DTPA_MECH
-endif
-
 # LD Flags
 LDFLAGS  += -T$(LDSCRIPT) -L$(BENCH_DIR)
 LDFLAGS  += -Xlinker -Map=$(basename $(TARGET)).map -Wl,--gc-sections
 LDFLAGS  += -lm
+
+# Library flags
+ifeq ($(TPA), prof)
+CFLAGS += -I$(TPA_DIR)/src/arch/armv8-m.main/inc -I$(TPA_DIR)/src/core/inc -I$(TPA_DIR)/src/config
+CFLAGS += -DTPA_PROF -DCONFIG_LOGL=$(CONFIG_LOGL)
+LDFLAGS += -L $(TPA_DIR) -lutpaprof
+else ifeq ($(TPA), mech)
+CFLAGS += -I$(TPA_DIR)/src/arch/armv8-m.main/inc -I$(TPA_DIR)/src/core/inc -I$(TPA_DIR)/src/config
+CFLAGS += -DTPA_MECH -DCONFIG_LOGL=$(CONFIG_LOGL)
+LDFLAGS += -L $(TPA_DIR) -lutpamech
+endif
 
 ################################################################################
 # Default Makefile Rules
@@ -153,13 +152,13 @@ EMPTYTARGETS := clean
 all: $(TARGET)
 
 # Rule to create final binaries
-$(TARGET): $(gens) $(objs-y)
+$(TARGET): $(gens) $(objs-y) libs
 	@echo "\nGenerating elf		$(patsubst $(CUR_DIR)/%, %, $@)"
 	@$(CC) $(CFLAGS) $(objs-y) $(LDFLAGS) -o $@
 	@echo "Generating hex		$(patsubst $(CUR_DIR)/%, %, $(basename $@).hex)"
 	@$(OBJCOPY) -O ihex $@ $(basename $@).hex
 	@echo "Generating binary	$(patsubst $(CUR_DIR)/%, %, $(basename $@).bin)"
-	@$(OBJCOPY) -O binary $@ $(basename $@).bin
+	@$(OBJCOPY) -O binary $@ $(basename $@).bi
 	@echo "\n$(PROJ_NAME) size table"
 	@$(SIZE) $@
 	@$(OBJDUMP) -S --wide $@ > $(basename $@).asm
@@ -182,11 +181,21 @@ ifeq (,$(filter $(EMPTYTARGETS), $(MAKECMDGOALS)))
 -include $(deps)
 endif
 
+libs:
+ifeq ($(TPA), prof)
+	@echo "Generating tpa profiler library $(TPA_DIR)/libutpaprof.a"
+	@make -C $(TPA_DIR) CONFIG_PLAT=$(PLATFORM) CONFIG_PROF=y CONFIG_FILE=$(BENCH_DIR)/
+else ifeq ($(TPA), mech)
+	@echo "Generating tpa mechanism library $(TPA_DIR)/libutpamech.a"
+	@make -C $(TPA_DIR) CONFIG_PLAT=$(PLATFORM) CONFIG_PROF=n
+endif
+
 # Rule to erase directories
 clean:
 	@echo "Erasing $(PROJ_NAME) directories..."
 	@-rm -rf $(BUILD_DIR)
 	@-rm -rf $(BIN_DIR)
+	@make -C $(TPA_DIR) clean CONFIG_FILE=$(BENCH_DIR)/
 
 # Rule to generate assembly macros
 ifneq ($(wildcard $(ASM_DEFS_SRC)),)
