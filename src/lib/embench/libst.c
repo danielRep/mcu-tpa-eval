@@ -33,11 +33,6 @@
 #include "support.h"
 #include "platform_config.h"
 
-#ifdef TPA
-#include "tpa.h"
-#else
-#define TPA_CALLBACK(x) (x)
-#endif
 
 /* This scale factor will be changed to equalise the runtime of the
    benchmarks. */
@@ -99,22 +94,22 @@ benchmark_body (int rpt)
       double MeanA, MeanB, VarA, VarB, StddevA, StddevB /*, Coef */ ;
 
       InitSeed ();
-      TPA_CALLBACK(1);
+
       Initialize (ArrayA);
       Calc_Sum_Mean (ArrayA, &SumA, &MeanA);
-      TPA_CALLBACK(2);
+
       Calc_Var_Stddev (ArrayA, MeanA, &VarA, &StddevA);
-      TPA_CALLBACK(3);
+
       Initialize (ArrayB);
       Calc_Sum_Mean (ArrayB, &SumB, &MeanB);
-      TPA_CALLBACK(4);
+
       Calc_Var_Stddev (ArrayB, MeanB, &VarB, &StddevB);
 
       /* Coef will have to be used globally in Calc_LinCorrCoef since it would
          be beyond the 6 registers used for passing parameters
        */
       Calc_LinCorrCoef (ArrayA, ArrayB, MeanA, MeanB /*, &Coef */ );
-      TPA_CALLBACK(5);
+
     }
 
   return 0;

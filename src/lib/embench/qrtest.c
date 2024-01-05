@@ -18,11 +18,6 @@
 
 #include <string.h>
 #include "platform_config.h"
-#ifdef TPA
-#include "tpa.h"
-#else
-#define TPA_CALLBACK(x) (x)
-#endif
 
 /* This scale factor will be changed to equalise the runtime of the
    benchmarks. */
@@ -67,15 +62,10 @@ benchmark_body (int rpt)
       init_heap_beebs ((void *) heap, HEAP_SIZE);
       initeccsize (1, size);
       memcpy (strinbuf, encode, size);
-      TPA_CALLBACK(1);
       initframe ();
-      TPA_CALLBACK(6);
       qrencode ();
-      TPA_CALLBACK(11);
       freeframe ();
-      TPA_CALLBACK(12);
       freeecc ();
-      TPA_CALLBACK(13);
     }
 
   return 0;

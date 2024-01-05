@@ -19,12 +19,6 @@
 /* Header for BEEBS library calls */
 
 #include "beebsc.h"
-#ifdef TPA
-#include "tpa.h"
-#else
-#define TPA_CALLBACK(x) (x)
-#endif
-
 
 #ifndef __AVR__
 #define PROGMEM
@@ -197,7 +191,6 @@ initframe ()
   rlens = malloc_beebs (WD + 1);
   // finders
   putfind ();
-  TPA_CALLBACK(2);
   // alignment blocks
   doaligns ();
   // single black
@@ -209,7 +202,6 @@ initframe ()
       setmask (WD - 8, y);
       setmask (7, y + WD - 7);
     }
-  TPA_CALLBACK(3);
   for (x = 0; x < 8; x++)
     {
       setmask (x, 7);
@@ -224,7 +216,6 @@ initframe ()
       setmask (x + WD - 8, 8);
       setmask (8, x);
     }
-  TPA_CALLBACK(4);
   for (y = 0; y < 7; y++)
     setmask (8, y + WD - 7);
   // timing
@@ -239,7 +230,6 @@ initframe ()
 	SETQRBIT (8 + x, 6);
 	SETQRBIT (6, 8 + x);
       }
-  TPA_CALLBACK(5);
   // version block
   putvpat ();
   for (y = 0; y < WD; y++)
