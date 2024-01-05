@@ -6,13 +6,19 @@
 # the Free Software Foundation.
 
 ################################################################################
-# Configuration setup
-MULTICORE		:= y
-DEBUG			:= y
-OPTIM			:= O0
+# TPA Mechanism Configuration
+TPA				:= prof
+CONFIG_LOGL		:= 2
+
+# Platform Configuration
+MULTICORE		:= n
 C0_ARTIF_APP	:= artifapp1
-C0_FPM			:= n
-BUS_PRIO		:= n
 C1_INTRF_APP	:= ifi
-TPA				:= mech
-LOGGING			:= y
+C0_FPM			:= y
+C0_CLK_MAX		:= y
+C0_STATS		:= y
+BUS_PRIO		:= n
+
+# Toolchain Configuration
+DEBUG			:= y
+OPTIM			:= O2

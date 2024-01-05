@@ -7,12 +7,10 @@
 
 ################################################################################
 # TPA Mechanism Configuration
-TPA				:= mech
-MULTICORE		:= y
-C0_BENCH_APP	:= huffbench
-FUNCTION_FONS	
-LOGGING			:= y
-LOGLEVEL		:= 0
+TPA				:= prof
+MULTICORE		:= n
+C0_BENCH_APP	:= picojpeg
+C1_INTRF_APP	:= ifi
 
 # System Configuration setup
 DEBUG			:= y
@@ -20,4 +18,4 @@ OPTIM			:= O2
 C0_FPM			:= y
 C0_CLK_MAX		:= y
 BUS_PRIO		:= n
-C1_INTRF_APP	:= ifi
+

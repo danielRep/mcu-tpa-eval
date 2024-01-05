@@ -1,26 +1,58 @@
 {
     "app_name": "st.c",
-    "total_mbbs": 5,
     "mbbs":[
         {
             "mbb": 1,
-            "edges": 1
+            "address": "0x00000000",
+            "edges":
+            [
+                {
+                    "src_mbb": 0
+                }
+            ]
         },
         {
             "mbb": 2,
-            "edges": 1
+            "address": "0x00000000",
+            "edges":
+            [
+                {
+                    "src_mbb": 1
+                }
+            ]
         },
         {
             "mbb": 3,
-            "edges": 1
+            "address": "0x00000000",
+            "edges":
+            [
+                {
+                    "src_mbb": 2
+                },
+                {
+                    "src_mbb": 5
+                }
+            ]
         },
         {
             "mbb": 4,
-            "edges": 1
+            "address": "0x00000000",
+            "edges":
+            [
+                {
+                    "src_mbb": 3
+                }
+            ]
         },
         {
             "mbb": 5,
-            "edges": 1
+            "address": "0x00000000",
+            "edges":
+            [
+                {
+                    "src_mbb": 3
+                }
+            ]
         }
     ]
 }
