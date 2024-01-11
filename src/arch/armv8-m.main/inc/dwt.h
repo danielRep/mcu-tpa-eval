@@ -24,39 +24,7 @@
 
 #define DWT_DISABLE_ALL_CNTRS       ~(DWT_ENABLE_ALL_CNTRS)
 
-/* Comparator Functions */
-#define DWT_FUNC_MATCH(x)           (x << 0)
-#define DWT_FUNC_ACTION(x)          (x << 4)
-#define DWT_FUNC_DATASIZE(x)        (x << 10)
-#define DWT_FUNC_MATCHED            (1 << 24) // tells if the comparator was the reason for the exception
-#define DWT_FUNC_ID(x)              (x << 27)
 
-#define DWT_FUNC_MATCH_DISABLE                     DWT_FUNC_MATCH(0)
-#define DWT_FUNC_MATCH_CYC_CNT                     DWT_FUNC_MATCH(1)
-#define DWT_FUNC_MATCH_INST_ADDR                   DWT_FUNC_MATCH(2)
-#define DWT_FUNC_MATCH_INST_ADDR_LIMIT             DWT_FUNC_MATCH(3)
-#define DWT_FUNC_MATCH_DATA_ADDR                   DWT_FUNC_MATCH(4)
-#define DWT_FUNC_MATCH_DATA_ADDR_WRITES            DWT_FUNC_MATCH(5)
-#define DWT_FUNC_MATCH_DATA_ADDR_READS             DWT_FUNC_MATCH(6)
-#define DWT_FUNC_MATCH_DATA_ADDR_LIMIT             DWT_FUNC_MATCH(7)
-#define DWT_FUNC_MATCH_DATA_VALUE                  DWT_FUNC_MATCH(8)
-#define DWT_FUNC_MATCH_DATA_VALUE_WRITES           DWT_FUNC_MATCH(9)
-#define DWT_FUNC_MATCH_DATA_VALUE_READS            DWT_FUNC_MATCH(10)
-#define DWT_FUNC_MATCH_LINKED_DATA_VALUE           DWT_FUNC_MATCH(11)
-#define DWT_FUNC_MATCH_DATA_ADDR_WITH_VAL          DWT_FUNC_MATCH(12)
-#define DWT_FUNC_MATCH_DATA_ADDR_WITH_VAL_WRITES   DWT_FUNC_MATCH(13)
-#define DWT_FUNC_MATCH_DATA_ADDR_WITH_VAL_READS    DWT_FUNC_MATCH(14)
-
-#define DWT_FUNC_ACTION_TRIGGER                    DWT_FUNC_ACTION(0)
-#define DWT_FUNC_ACTION_DEBUG_EVENT                DWT_FUNC_ACTION(1)
-#define DWT_FUNC_ACTION_VALUE_PACKET               DWT_FUNC_ACTION(2)
-#define DWT_FUNC_ACTION_PC_PACKET                  DWT_FUNC_ACTION(3)
-
-#define DWT_FUNC_DATASIZE_1_BYTE                   DWT_FUNC_DATASIZE(0)
-#define DWT_FUNC_DATASIZE_2_BYTE                   DWT_FUNC_DATASIZE(1)
-#define DWT_FUNC_DATASIZE_4_BYTE                   DWT_FUNC_DATASIZE(2)
-
-#define DWT_COMP_FUNCTIONS                         DWT_FUNC_ID(31)
 
 /*
 ! DWT Comparator functions
@@ -75,23 +43,15 @@
 *  in linked pairs for instruction address range matching or data address range matching.
 */
 
-
 /* Functions Definition */
 void dwt_unlock(void);
-void dwt_init_counters(void);
-void dwt_enable_counters(void);
-void dwt_disable_counters(void);
 void dwt_reset_counters(void);
-uint32_t dwt_instruction_count(void);
-uint32_t dwt_cpu_usage(void);
-void dwt_compare_cyc_count(uint32_t cycnt);
-void dwt_watch_data_addr(uint32_t addr);
-void dwt_watch_data_address_range(uint32_t base_addr, uint32_t mem_size);
+void dwt_init_counters(void);
+void dwt_disable_counters(void);
+void dwt_enable_counters(void);
+uint32_t dwt_read_cycnt(void);
 void dwt_disable_cycnt(void);
 void dwt_enable_cycnt(void);
 void dwt_reset_cycnt(void);
-uint32_t dwt_read_cycnt(void);
 
 #endif
-
-
