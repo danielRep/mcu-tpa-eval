@@ -21,7 +21,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
+#ifdef TPA
+#include "code_mon.h"
+#endif
                 .syntax  unified
                 .arch    armv8-m.main
 
@@ -49,7 +51,11 @@ __Vectors:
                 .long    0                                  /*     Reserved */
                 .long    0                                  /*     Reserved */
                 .long    SVC_Handler                        /*  -5 SVCall Handler */
+#if defined(TPA_PROF) || defined (TPA_MECH)
+                .long    code_mon_debughandler
+#else
                 .long    DebugMon_Handler                   /*  -4 Debug Monitor Handler */
+#endif
                 .long    0                                  /*     Reserved */
                 .long    PendSV_Handler                     /*  -2 PendSV Handler */
                 .long    SysTick_Handler                    /*  -1 SysTick Handler */
