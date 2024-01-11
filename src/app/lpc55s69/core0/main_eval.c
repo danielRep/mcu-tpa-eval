@@ -14,8 +14,12 @@
 #include "platform_config.h"
 #include "platform_base_addrs.h"
 #include "support.h"
-#include "dma_driver.h"
 #include "config.h"
+
+#if defined (C0_DMA0) || defined (C0_DMA1)
+#include "dma_driver.h"
+#endif
+
 #ifdef TPA_PROF
 #include "profiler.h"
 #endif
