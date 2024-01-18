@@ -20,9 +20,14 @@
 #include "dma_driver.h"
 #endif
 #ifdef TPA_PROF
-#define CM33            //TODO: this should be generated on compile-time of the library
+#define CM33                //TODO: this should be generated on compile-time of the library
 #define TOTAL_HW_BKPTS  8
 #include "profiler.h"
+#include "code_mon.h"
+#elif TPA_MECH
+#define CM33                //TODO: this should be generated on compile-time of the library
+#define TOTAL_HW_BKPTS  8
+#include "utpamech.h"
 #include "code_mon.h"
 #endif
 
@@ -63,7 +68,9 @@ int main(void)
         dma1_start();
         #endif
         #ifdef TPA_PROF
-        profiler_init();
+        utpaprof_init();
+        #elif TPA_MECH
+        utpamech_init();
         #endif
 
         for(it = 0; it < N_SAMPLES; it++)
@@ -82,7 +89,9 @@ int main(void)
         }
 
         #ifdef TPA_PROF
-        profiler_dump();
+        utpaprof_dump();
+        #elif TPA_MECH
+        utpamech_dump();
         #endif
         #ifdef C0_DMA0
         dma0_ch_disable();

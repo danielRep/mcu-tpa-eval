@@ -135,11 +135,20 @@ LDFLAGS  += -lm
 # Library flags
 ifeq ($(TPA), prof)
 CFLAGS += -I$(TPA_DIR)/src/arch/armv8-m.main/inc -I$(TPA_DIR)/src/core/inc -I$(TPA_DIR)/src/config
-CFLAGS += -DTPA_PROF -DCONFIG_LOGL=$(CONFIG_LOGL)
+CFLAGS += -DTPA_PROF -DCONFIG_LOGL=$(CONFIG_LOGL) -DCONFIG_PROF
 LDFLAGS += -L $(TPA_DIR) -lutpaprof
+TPA_CONFIG += CONFIG_PLAT=$(PLATFORM) CONFIG_PROF=y CONFIG_FILE=$(BENCH_DIR)/ CONFIG_PERFLOG=$(CONFIG_PERFLOG)
 else ifeq ($(TPA), mech)
 CFLAGS += -I$(TPA_DIR)/src/arch/armv8-m.main/inc -I$(TPA_DIR)/src/core/inc -I$(TPA_DIR)/src/config
+CFLAGS += -I$(TPA_DIR)/src/plat/$(PLATFORM)/inc
 CFLAGS += -DTPA_MECH -DCONFIG_LOGL=$(CONFIG_LOGL)
+TPA_CONFIG += CONFIG_PLAT=$(PLATFORM) CONFIG_PROF=n CONFIG_FILE=$(BENCH_DIR)/ CONFIG_PERFLOG=$(CONFIG_PERFLOG)
+ifneq ($(CONFIG_FACTORA), def)
+TPA_CONFIG += CONFIG_FACTORA=$(CONFIG_FACTORA)
+endif
+ifneq ($(CONFIG_FACTORB), def)
+TPA_CONFIG += CONFIG_FACTORB=$(CONFIG_FACTORB)
+endif
 LDFLAGS += -L $(TPA_DIR) -lutpamech
 endif
 
@@ -158,7 +167,7 @@ $(TARGET): $(gens) $(objs-y) libs
 	@echo "Generating hex		$(patsubst $(CUR_DIR)/%, %, $(basename $@).hex)"
 	@$(OBJCOPY) -O ihex $@ $(basename $@).hex
 	@echo "Generating binary	$(patsubst $(CUR_DIR)/%, %, $(basename $@).bin)"
-	@$(OBJCOPY) -O binary $@ $(basename $@).bi
+	@$(OBJCOPY) -O binary $@ $(basename $@).bin
 	@echo "\n$(PROJ_NAME) size table"
 	@$(SIZE) $@
 	@$(OBJDUMP) -S --wide $@ > $(basename $@).asm
@@ -184,10 +193,10 @@ endif
 libs:
 ifeq ($(TPA), prof)
 	@echo "Generating tpa profiler library $(TPA_DIR)/libutpaprof.a"
-	@make -C $(TPA_DIR) CONFIG_PLAT=$(PLATFORM) CONFIG_PROF=y CONFIG_FILE=$(BENCH_DIR)/
+	@make -C $(TPA_DIR) $(TPA_CONFIG)
 else ifeq ($(TPA), mech)
 	@echo "Generating tpa mechanism library $(TPA_DIR)/libutpamech.a"
-	@make -C $(TPA_DIR) CONFIG_PLAT=$(PLATFORM) CONFIG_PROF=n CONFIG_FILE=$(BENCH_DIR)/
+	@make -C $(TPA_DIR) $(TPA_CONFIG)
 endif
 
 # Rule to erase directories
@@ -195,7 +204,7 @@ clean:
 	@echo "Erasing $(PROJ_NAME) directories..."
 	@-rm -rf $(BUILD_DIR)
 	@-rm -rf $(BIN_DIR)
-	@make -C $(TPA_DIR) clean CONFIG_FILE=$(BENCH_DIR)/
+	@make -C $(TPA_DIR) $(TPA_CONFIG) clean CONFIG_FILE=$(BENCH_DIR)/
 
 # Rule to generate assembly macros
 ifneq ($(wildcard $(ASM_DEFS_SRC)),)
