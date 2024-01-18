@@ -12,89 +12,53 @@
 #include "content_eval.h"
 #include "platform_base_addrs.h"
 #include "platform_config.h"
-#include "fsl_usart.h"
-#include "fsl_clock.h"
-#include "fsl_iocon.h"
-#include "pin_mux.h"
+#include "uart_pl011.h"
+#include "cache_drv.h"
+#include "sse200_regs.h"
 
-usart_config_t usart_core1_cfg =
+static const struct uart_pl011_dev_cfg_t UART0_PL011_DEV_CFG_NS =
 {
-    .baudRate_Bps = 115200,
-    .parityMode = kUSART_ParityDisabled,
-    .stopBitCount = kUSART_OneStopBit,
-    .bitCountPerChar = kUSART_8BitsPerChar,
-    .loopback = false,
-    .enableRx = true,
-    .enableTx = true,
-    .enableContinuousSCLK = false,
-    .enableMode32k = false,
-    .enableHardwareFlowControl = false,
-    .txWatermark = kUSART_TxFifo0,
-    .rxWatermark = kUSART_RxFifo1,
-    .syncMode = kUSART_SyncModeDisabled,
-    .clockPolarity = kUSART_RxSampleOnFallingEdge,
+    .base = MUSCA_UART0_S_BASE,
+    .def_baudrate = DEFAULT_UART_BAUDRATE,
+    .def_wlen = UART_PL011_WLEN_8,
+    .def_parity = UART_PL011_PARITY_DISABLED,
+    .def_stopbit = UART_PL011_STOPBIT_1
+};
+static struct uart_pl011_dev_data_t UART0_PL011_DEV_DATA_NS =
+{
+    .state = UART_PL011_UNINITIALIZED,
+    .uart_clk = 0,
+    .baudrate = 0
+};
+struct uart_pl011_dev_t UART0_PL011_DEV_NS =
+{
+    &(UART0_PL011_DEV_CFG_NS),
+    &(UART0_PL011_DEV_DATA_NS)
 };
 
 bool uart_init(void)
 {
-    status_t status;
+    //115200, 8 bits, no parity, 1 stop bit
+    uart_pl011_init(&UART0_PL011_DEV_NS, CPU_MHZ);
+    uart_pl011_enable(&UART0_PL011_DEV_NS);
 
-    /* attach 12 MHz clock to FLEXCOMM2 (debug console) */
-    CLOCK_AttachClk(UART2_CLK_ATTACH);
-    RESET_ClearPeripheralReset(UART2_RST);
-    status = USART_Init(USART2, &usart_core1_cfg, UART2_CLK_FREQ);
+    if (uart_pl011_is_writable(&UART0_PL011_DEV_NS))
+        return true;
 
-    if(status!=kStatus_Success)
-        return false;
-
-    return true;
-}
-
-void pins_init(void)
-{
-    CLOCK_EnableClock(kCLOCK_Gpio0);
-    CLOCK_EnableClock(kCLOCK_Gpio1);
-    CLOCK_EnableClock(kCLOCK_Iocon);
-
-
-    IOCON->PIO[0][27] = ((IOCON->PIO[0][27] &
-                          /* Mask bits to zero which are setting */
-                          (~(IOCON_PIO_FUNC_MASK | IOCON_PIO_DIGIMODE_MASK)))
-
-                         /* Selects pin function.
-                          * : PORT027 (pin 27) is configured as FC2_TXD_SCL_MISO_WS. */
-                         | IOCON_PIO_FUNC(PIO0_27_FUNC_ALT1)
-
-                         /* Select Digital mode.
-                          * : Enable Digital mode.
-                          * Digital input is enabled. */
-                         | IOCON_PIO_DIGIMODE(PIO0_27_DIGIMODE_DIGITAL));
-
-    IOCON->PIO[1][24] = ((IOCON->PIO[1][24] &
-                          /* Mask bits to zero which are setting */
-                          (~(IOCON_PIO_FUNC_MASK | IOCON_PIO_DIGIMODE_MASK)))
-
-                         /* Selects pin function.
-                          * : PORT124 (pin 3) is configured as FC2_RXD_SDA_MOSI_DATA. */
-                         | IOCON_PIO_FUNC(PIO1_24_FUNC_ALT1)
-
-                         /* Select Digital mode.
-                          * : Enable Digital mode.
-                          * Digital input is enabled. */
-                         | IOCON_PIO_DIGIMODE(PIO1_24_DIGIMODE_DIGITAL));
+    return false;
 }
 
 int _read(int file, char *ptr, int len)
 {
     int n_chars = 0;
-    uint8_t byte;
+    uint8_t byte = 0;
 
     if(ptr != NULL)
     {
         for(n_chars = 0; n_chars < len; ++ptr)
         {
-            while ((USART2->FIFOSTAT & USART_FIFOSTAT_RXNOTEMPTY_MASK) == 0U);
-            USART_ReadBlocking(USART2, &byte, 1);
+            while (!uart_pl011_is_readable(&UART0_PL011_DEV_NS)){};
+            uart_pl011_read(&UART0_PL011_DEV_NS, &byte);
             *ptr = (char)byte;
             ++n_chars;
 
@@ -107,13 +71,22 @@ int _read(int file, char *ptr, int len)
     return (n_chars);
 }
 
-int _write(int file, const uint8_t *ptr, int len)
+int _write(int file, const void *ptr, int len)
 {
     if (isatty(file)) {
-        for (size_t i = 0; i < len; i++)
-        {
-            while (0U == (USART2->STAT & USART_STAT_TXIDLE_MASK));
-            USART_WriteBlocking(USART2, &ptr[i], 1);
+
+        const uint8_t * buff = (uint8_t *)ptr;
+
+        for (size_t i = 0; i < len; i++) {
+
+            while(!uart_pl011_is_writable(&UART0_PL011_DEV_NS)) {};
+
+            (void)uart_pl011_write(&UART0_PL011_DEV_NS, buff[i]);
+
+            if (buff[i] == '\n') {
+                while(!uart_pl011_is_writable(&UART0_PL011_DEV_NS)) {};
+                (void)uart_pl011_write(&UART0_PL011_DEV_NS, (uint8_t)'\r');
+            }
         }
 
         return len;
@@ -122,21 +95,62 @@ int _write(int file, const uint8_t *ptr, int len)
     return -1;
 }
 
-void mailbox_init(void)
+void iomux_cfg_uart0(void)
 {
-    /* Enable NVIC IRQ */
-    EnableIRQ(MAILBOX_IRQn);
+    //UART0_RxD
+    SCC->IOMUX_ALTF1_OENSEL |= (1<<0);
+
+    SCC->IOMUX_MAIN_INSEL  &= ~(1<<0);
+    SCC->IOMUX_MAIN_OUTSEL &= ~(1<<0);
+    SCC->IOMUX_MAIN_OENSEL &= ~(1<<0);
+
+    SCC->IOMUX_ALTF2_INSEL  &= ~(1<<0);
+    SCC->IOMUX_ALTF2_OUTSEL &= ~(1<<0);
+    SCC->IOMUX_ALTF2_OENSEL &= ~(1<<0);
+
+    SCC->IOMUX_ALTF1_INSEL  |= (1<<0);
+    SCC->IOMUX_ALTF1_OUTSEL |= (1<<0);
+
+    //UART0_TxD
+    SCC->IOMUX_ALTF1_OENSEL |= (1<<1);
+
+    SCC->IOMUX_MAIN_INSEL &= ~(1<<1);
+    SCC->IOMUX_MAIN_OUTSEL &= ~(1<<1);
+    SCC->IOMUX_MAIN_OENSEL &= ~(1<<1);
+
+    SCC->IOMUX_ALTF2_INSEL  &= ~(1<<1);
+    SCC->IOMUX_ALTF2_OUTSEL &= ~(1<<1);
+    SCC->IOMUX_ALTF2_OENSEL &= ~(1<<1);
+
+    SCC->IOMUX_ALTF1_INSEL  |= (1<<1);
+    SCC->IOMUX_ALTF1_OUTSEL |= (1<<1);
 }
 
 int platform_init(void)
 {
+    iomux_cfg_uart0();
+
     if(!(uart_init()))
         return -1;
 
-    pins_init();
-    mailbox_init();
+    printf(CLEAR);
+#ifdef C1_IC
+    static const struct arm_cache_dev_cfg_t SSE_200_CACHE_CFG_S = {
+    .base = MUSCA_CPU_ELEMENT_S_BASE};
 
-    printf(CLEARSCREEN);
+    struct arm_cache_dev_t SSE_200_CACHE_DEV_S = {&(SSE_200_CACHE_CFG_S)};
+
+    if(!arm_cache_is_enabled(&SSE_200_CACHE_DEV_S))
+    {
+        arm_cache_full_invalidate(&SSE_200_CACHE_DEV_S);
+        printf(RED "ICache on core1 enabled.\n");
+        arm_cache_enable(&SSE_200_CACHE_DEV_S);
+#ifdef C1_IC_STATS
+        printf(YELLOW "\t- stats ON\n");
+        arm_cache_statistic_enable(&SSE_200_CACHE_DEV_S);
+#endif
+    }
+#endif
 
     return 0;
 }
