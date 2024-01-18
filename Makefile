@@ -83,6 +83,9 @@ endif
 ifeq ($(C1_BOOTAGENT), y)
 	LD_VAR += -DC1_BOOTAGENT
 endif
+ifeq ($(TPA), mech)
+	LD_VAR += -DTPA_MECH
+endif
 
 ################################################################################
 # Compilation Target
