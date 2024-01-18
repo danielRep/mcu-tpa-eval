@@ -11,22 +11,29 @@ ARCH	:=	armv8-m.main
 
 ################################################################################
 # CPU Definition
-C0_CPU		:=	cortex-m33+nodsp
+C0_CPU		:=	cortex-m33+nodsp+nofp
 C0_ENDIAN	:=	little-endian
 C0_THUMB	:=	thumb
-C0_ABI		:=	softfp
-C0_FPU		:=	fpv5-sp-d16
+C0_ABI		:=	soft
+C0_FPU		:=	auto
 
-C1_CPU		:=	cortex-m33
+# TODO: Fix this, where we are defining the same core since TPA doesnt takes into account different cores per platform
+C1_CPU		:=	cortex-m33+nodsp+nofp
 C1_ENDIAN	:=	little-endian
 C1_THUMB	:=	thumb
-C1_ABI		:=	hard
-C1_FPU		:=	fpv5-sp-d16
+C1_ABI		:=	soft
+C1_FPU		:=	auto
+
+#C1_CPU		:=	cortex-m33
+#C1_ENDIAN	:=	little-endian
+#C1_THUMB	:=	thumb
+#C1_ABI		:=	hard
+#C1_FPU		:=	fpv5-sp-d16
 
 ################################################################################
 # Exporting Flags
 plat-flags-c0 = -mcpu=$(C0_CPU) -m$(C0_THUMB) -m$(C0_ENDIAN) -mfpu=$(C0_FPU) \
 				-mfloat-abi=$(C0_ABI) -u _printf_float -DARMCM33_DSP_FP_TZ
 
-plat-flags-c1 = -mcpu=$(C1_CPU) -m$(C1_THUMB) -m$(C1_ENDIAN) -mfpu=$(C1_FPU)
+plat-flags-c1 = -mcpu=$(C1_CPU) -m$(C1_THUMB) -m$(C1_ENDIAN) -mfpu=$(C1_FPU) \
 				-mfloat-abi=$(C1_ABI) -DARMCM33_DSP_FP_TZ
