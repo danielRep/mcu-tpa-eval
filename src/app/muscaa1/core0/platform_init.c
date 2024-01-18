@@ -14,6 +14,7 @@
 #include "platform_config.h"
 #include "uart_pl011.h"
 #include "cache_drv.h"
+#include "sse200_regs.h"
 
 static const struct uart_pl011_dev_cfg_t UART1_PL011_DEV_CFG_NS =
 {
@@ -114,11 +115,7 @@ int platform_init(void)
 
 #ifdef MULTICORE
     printf(RED "Core1 setup and running "INTRFAPP" interf app.\n");
-    printf(YELLOW "\t- VTOR: %.8X\n", (unsigned int)((SYSCON->CPBOOT)&SYSCON_CPBOOT_CPBOOT_MASK));
-#endif
-
-#ifdef FPM
-
+    printf(YELLOW "\t- VTOR: %.8X\n", (unsigned int)(SCR->INITSVTOR1));
 #endif
 
 #ifdef C0_IC
