@@ -110,7 +110,7 @@ SECTIONS
 {
     .text :
     {
-        . = ALIGN(4);
+        . = ALIGN(128);
         __text_start = .;
 
         KEEP(*(.vectors))
