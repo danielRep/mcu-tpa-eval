@@ -75,7 +75,6 @@ void SystemCoreClockUpdate (void)
  *----------------------------------------------------------------------------*/
 void SystemInit (void)
 {
-
 #if defined (__VTOR_PRESENT) && (__VTOR_PRESENT == 1U)
   SCB->VTOR = (uint32_t) &(__Vectors[0]);
 #endif

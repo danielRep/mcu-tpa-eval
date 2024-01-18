@@ -1,4 +1,4 @@
-core1-objs-y += system_LPC55S69_cm33_core1.o
+core1-objs-y += system_ARMCM33.o
 core1-objs-y += platform_init.o
 
 ifeq ($(C1_INTRF_APP), tpa_ifi)
