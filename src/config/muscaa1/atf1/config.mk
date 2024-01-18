@@ -7,16 +7,20 @@
 
 ################################################################################
 # TPA Mechanism Configuration
-TPA				:= prof
+TPA				:= mech
+CONFIG_DEBUG	:= y
 CONFIG_LOGL		:= 0
+CONFIG_PERFLOG	:= y
+CONFIG_FACTORA	:= def
+CONFIG_FACTORB	:= def
 
 # Platform Configuration
-MULTICORE		:= n
+MULTICORE		:= y
 C0_BOOTAGENT	:= n
 C0_ARTIF_APP	:= artifapp1
-C1_INTRF_APP	:= ifi
 C0_CLK_MAX		:= y
 C0_STATS		:= n
+C1_INTRF_APP	:= ifi
 
 # Toolchain Configuration
 DEBUG			:= y
