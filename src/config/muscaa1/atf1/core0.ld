@@ -63,11 +63,14 @@ __HEAP_SIZE  = __CORE0_HEAP_SIZE;
  */
 __STACKSEAL_SIZE = 0;
 
+__TPA_BASE = __CORE0_TPA_START;
+__TPA_SIZE = __CORE0_TPA_LEN;
 
 MEMORY
 {
     FLASH (rx)  : ORIGIN = __ROM_BASE, LENGTH = __ROM_SIZE
     RAM   (rwx) : ORIGIN = __RAM_BASE, LENGTH = __RAM_SIZE
+    TPA   (rwx) : ORIGIN = __TPA_BASE, LENGTH = __TPA_SIZE
 }
 
 /* Linker script to place sections and symbol values. Should be used together
@@ -108,15 +111,19 @@ GROUP(libc.a)
 
 SECTIONS
 {
+    .tpalib :
+    {
+        *libutpamech.a:(.text .text.*) /* Place .text section of libutpamech.a here */
+    } > TPA
+
     .text :
     {
-        . = ALIGN(4);
         __text_start = .;
 
-        /*KEEP(*(.bootagent.vtb));
+        KEEP(*(.bootagent.vtb));
         KEEP(*(.bootagent.boot));
 
-        . = ALIGN(128);*/ /* TODO: 128 byte alignment for boot agent*/
+        . = ALIGN(128); /* TODO: 128 byte alignment for boot agent*/
         KEEP(*(.vectors))
         *(.text*)
 
@@ -141,6 +148,7 @@ SECTIONS
 
         KEEP(*(.eh_frame*))
     } > FLASH
+
 
   /*
    * SG veneers:
