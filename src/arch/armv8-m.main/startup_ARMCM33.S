@@ -24,6 +24,9 @@
 #ifdef TPA
 #include "code_mon.h"
 #endif
+#ifdef TPA_MECH
+#include "ipi.h"
+#endif
                 .syntax  unified
                 .arch    armv8-m.main
 
@@ -52,7 +55,7 @@ __Vectors:
                 .long    0                                  /*     Reserved */
                 .long    SVC_Handler                        /*  -5 SVCall Handler */
 #if defined(TPA_PROF) || defined (TPA_MECH)
-                .long    code_mon_debughandler
+                .long    utpa_code_mon_debughandler
 #else
                 .long    DebugMon_Handler                   /*  -4 Debug Monitor Handler */
 #endif
@@ -68,7 +71,12 @@ __Vectors:
                 .long    Interrupt4_Handler                 /*   4 Interrupt 4 */
                 .long    Interrupt5_Handler                 /*   5 Interrupt 5 */
                 .long    Interrupt6_Handler                 /*   6 Interrupt 6 */
+#if defined (TPA_MECH)
+                .long    utpa_plat_ipi_handler              /*   7 MHU1 */
+#else
                 .long    Interrupt7_Handler                 /*   7 Interrupt 7 */
+#endif
+
                 .long    Interrupt8_Handler                 /*   8 Interrupt 8 */
                 .long    Interrupt9_Handler                 /*   9 Interrupt 9 */
                 .long    Interrupt10_Handler                /*  10 Interrupt 10 */
