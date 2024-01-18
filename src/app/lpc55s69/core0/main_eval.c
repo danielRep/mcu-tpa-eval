@@ -71,7 +71,7 @@ int main(void)
         dma1_start();
         #endif
         #ifdef TPA_PROF
-        profiler_init();
+        utpaprof_init();
         #endif
 
         for(it = 0; it < N_SAMPLES; it++)
@@ -90,7 +90,7 @@ int main(void)
         }
 
         #ifdef TPA_PROF
-        profiler_dump();
+        utpaprof_dump();
         #endif
         #ifdef C0_DMA0
         dma0_ch_disable();
