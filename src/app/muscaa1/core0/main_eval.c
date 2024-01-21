@@ -19,10 +19,11 @@
 #if defined (C0_DMA0) || defined (C0_DMA1)
 #include "dma_driver.h"
 #endif
+
 #ifdef TPA_PROF
 #define CM33                //TODO: this should be generated on compile-time of the library
 #define TOTAL_HW_BKPTS  8
-#include "profiler.h"
+#include "utpaprof.h"
 #include "code_mon.h"
 #elif TPA_MECH
 #define CM33                //TODO: this should be generated on compile-time of the library
