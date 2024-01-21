@@ -21,7 +21,15 @@
 #endif
 
 #ifdef TPA_PROF
-#include "profiler.h"
+#define CM33                //TODO: this should be generated on compile-time of the library
+#define TOTAL_HW_BKPTS  8
+#include "utpaprof.h"
+#include "code_mon.h"
+#elif TPA_MECH
+#define CM33                //TODO: this should be generated on compile-time of the library
+#define TOTAL_HW_BKPTS  8
+#include "utpamech.h"
+#include "code_mon.h"
 #endif
 
 #ifdef C0_STATS
@@ -51,6 +59,7 @@ int main(void)
 
     printf(RED "Ready to start running "TESTID" compiled at "__TIME__".\n");
     printf(YELLOW "\t- Workload: "BENCHAPP" benchmark\n");
+    printf(YELLOW "\t- VTOR: 0x%.8X\n", (unsigned int) SCB->VTOR);
     printf(YELLOW "\t- .text start: 0x%.8X\n", (unsigned int)&__text_start);
     printf(YELLOW "\t- .data start: 0x%.8X\n", (unsigned int)&__data_start__);
 
@@ -72,6 +81,8 @@ int main(void)
         #endif
         #ifdef TPA_PROF
         utpaprof_init();
+        #elif TPA_MECH
+        utpamech_init();
         #endif
 
         for(it = 0; it < N_SAMPLES; it++)
@@ -91,6 +102,8 @@ int main(void)
 
         #ifdef TPA_PROF
         utpaprof_dump();
+        #elif TPA_MECH
+        utpamech_dump();
         #endif
         #ifdef C0_DMA0
         dma0_ch_disable();
