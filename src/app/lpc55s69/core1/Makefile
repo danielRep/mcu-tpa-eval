@@ -10,7 +10,7 @@
 PROJ_NAME := $(notdir $(shell pwd))
 
 ################################################################################
-# Include Directories
+# Include Directories (generic)
 -include $(PLAT_DIR)/platform.mk
 
 ARCH_DIR  := $(ARCH_DIR)/$(ARCH)
@@ -21,9 +21,9 @@ LIBC_DIR  := $(LIB_DIR)/libc/newlib
 EMBE_DIR  := $(LIB_DIR)/embench
 MEM_DIR   := $(CFG_DIR)/$(PLATFORM)
 BENCH_DIR := $(CFG_DIR)/$(PLATFORM)/$(TESTID)
-TPA_DIR   := $(LIB_DIR)/tpa_mech/src
+TPA_DIR   := $(LIB_DIR)/tpa_mech
 
-SRC_DIRS  := $(CORE1_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR) $(TPA_DIR)
+SRC_DIRS  := $(CORE1_DIR) $(ARCH_DIR) $(PLAT_DIR) $(LIB_DIR) $(CMSIS_DIR) $(LIBC_DIR) $(EMBE_DIR)
 INC_DIRS  := $(addsuffix /inc, $(SRC_DIRS)) $(MEM_DIR) $(BENCH_DIR)
 
 # Source Files
@@ -88,6 +88,19 @@ endif
 # LD Flags
 LDFLAGS  += -T$(LDSCRIPT) -L$(BENCH_DIR)
 LDFLAGS  += -Xlinker -Map=$(basename $(TARGET)).map -Wl,--gc-sections
+
+# Library flags
+# warning: assumes that utpa library is already compiled by the core0
+ifeq ($(TPA), mech)
+CFLAGS += -I$(TPA_DIR)/src/arch/armv8-m.main/inc -I$(TPA_DIR)/src/core/inc -I$(TPA_DIR)/src/config
+CFLAGS += -I$(TPA_DIR)/src/plat/$(PLATFORM)/inc
+CFLAGS += -DTPA_MECH -DCONFIG_LOGL=$(CONFIG_LOGL)
+TPA_CONFIG += CONFIG_PLAT=$(PLATFORM) CONFIG_PROF=n CONFIG_FILE=$(BENCH_DIR)/ CONFIG_PERFLOG=$(CONFIG_PERFLOG)
+#TODO: utpa needs to be compiled per core
+TPA_CONFIG += FPU=auto ABI=soft
+LDFLAGS += -L $(TPA_DIR) -lutpamech
+endif
+
 ################################################################################
 # Default Makefile Rules
 EMPTYTARGETS := clean
@@ -97,7 +110,7 @@ EMPTYTARGETS := clean
 all: $(TARGET)
 
 # Rule to create final binaries
-$(TARGET): $(gens) $(objs-y)
+$(TARGET): $(gens) $(objs-y) libs
 	@echo "\nGenerating elf		$(patsubst $(CUR_DIR)/%, %, $@)"
 	@$(CC) $(CFLAGS) $(objs-y) $(LDFLAGS) -o $@
 	@echo "Generating hex		$(patsubst $(CUR_DIR)/%, %, $(basename $@).hex)"
@@ -124,6 +137,12 @@ $(BUILD_DIR)/%.d : $(SRC_DIR)/%.[c,S]
 #avoid including .d files during empty targets
 ifeq (,$(filter $(EMPTYTARGETS), $(MAKECMDGOALS)))
 -include $(deps)
+endif
+
+libs:
+ifeq ($(TPA), mech)
+	@echo "Generating tpa mechanism library $(TPA_DIR)/libutpamech.a"
+	@make -B -C $(TPA_DIR) $(TPA_CONFIG)
 endif
 
 # Rule to erase directories
