@@ -7,7 +7,7 @@
 
 ################################################################################
 # Makefile Arguments
-PLATFORM	:= muscaa1
+PLATFORM	:= lpc55s69
 TESTID		:= atf1
 
 ################################################################################
@@ -83,8 +83,8 @@ endif
 ifeq ($(C1_BOOTAGENT), y)
 	LD_VAR += -DC1_BOOTAGENT
 endif
-ifeq ($(TPA), mech)
-	LD_VAR += -DTPA_MECH
+ifneq ($(TPA), n)
+	LD_VAR += -DTPA
 endif
 
 ################################################################################
