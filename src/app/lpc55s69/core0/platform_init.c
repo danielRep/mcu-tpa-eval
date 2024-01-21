@@ -18,6 +18,7 @@
 #include "fsl_power.h"
 #include "pin_mux.h"
 #include "dma_driver.h"
+#include "config.h"
 
 usart_config_t usart_core0_cfg =
 {
@@ -169,6 +170,10 @@ int _write(int file, const uint8_t *ptr, int len)
     if (isatty(file)) {
         for (size_t i = 0; i < len; i++)
         {
+            if (ptr[i] == '\n') {
+                while (0U == (USART0->STAT & USART_STAT_TXIDLE_MASK));
+                USART_WriteBlocking(USART0, (const uint8_t *)"\r", 1);
+            }
             while (0U == (USART0->STAT & USART_STAT_TXIDLE_MASK));
             USART_WriteBlocking(USART0, &ptr[i], 1);
         }
@@ -178,6 +183,11 @@ int _write(int file, const uint8_t *ptr, int len)
     }
     return -1;
 }
+
+/*void cpu1_kickoff_workaround(void)
+{
+    __asm__ volatile ()
+}*/
 
 int platform_init(void)
 {
@@ -197,6 +207,31 @@ int platform_init(void)
     printf(RED "System clock configured: %ld.\n", SystemCoreClock);
 
 #ifdef MULTICORE
+    printf(RED "Initializing CPU1 workaround...\n");
+    /* TODO: Workaround: Initialization of CPU1 outside the bootagent
+     * For some reason realocaling the vector table (__Vectors) to any
+     * 128, 256, 512, 1024...,4096 bytes aligned address, gets the CPU0
+     * to jump to a wrong adress during an interrupt. This is a workaround
+     * to initialize the CPU1 outside the bootagent, keeping the vector
+     * table at the beginning of the flash.
+     */
+    uint32_t *mpu_type;
+
+    mpu_type = (uint32_t *)MPU_BASE;
+    *mpu_type &= MPU_TYPE_DREGION;
+
+    if(mpu_type) /* we are running CPU0, since it does have MPU */
+    {
+        /* Set vector table */
+        SYSCON->CPBOOT = CORE1_ROM_START;
+        /* Enable CPU1 */
+        SYSCON->CPUCFG |= SYSCON_CPUCFG_CPU1ENABLE_MASK;
+        /* Enable CPU1 clock and release from reset */
+        uint32_t temp = SYSCON->CPUCTRL;
+        temp |= 0xc0c48000U;
+        SYSCON->CPUCTRL = temp | SYSCON_CPUCTRL_CPU1RSTEN_MASK | SYSCON_CPUCTRL_CPU1CLKEN_MASK;
+        SYSCON->CPUCTRL = (temp | SYSCON_CPUCTRL_CPU1CLKEN_MASK) & (~SYSCON_CPUCTRL_CPU1RSTEN_MASK);
+    }
     printf(RED "Core1 setup and running "INTRFAPP" interf app.\n");
     printf(YELLOW "\t- VTOR: %.8X\n", (unsigned int)((SYSCON->CPBOOT)&SYSCON_CPBOOT_CPBOOT_MASK));
 #endif
