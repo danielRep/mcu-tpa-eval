@@ -72,7 +72,7 @@ __Vectors:
                 .long    Interrupt5_Handler                 /*   5 Interrupt 5 */
                 .long    Interrupt6_Handler                 /*   6 Interrupt 6 */
 #if defined (TPA_MECH)
-                .long    utpa_plat_ipi_handler              /*   7 MHU1 */
+                .long    utpa_plat_ipi_handler              /*   7 MHU1 (muscaa1) */
 #else
                 .long    Interrupt7_Handler                 /*   7 Interrupt 7 */
 #endif
@@ -100,6 +100,11 @@ __Vectors:
                 .long    Interrupt28_Handler                /*  28 Interrupt 28 */
                 .long    Interrupt29_Handler                /*  29 Interrupt 29 */
                 .long    Interrupt30_Handler                /*  30 Interrupt 30 */
+#if defined (TPA_MECH)
+                .long    utpa_plat_ipi_handler              /*  31 MAILBOX (lpc55s69) */
+#else
+                .long    Interrupt31_Handler                /*  31 Interrupt 31 */
+#endif
                 .long    Interrupt31_Handler                /*  31 Interrupt 31 */
                 .long    Interrupt32_Handler                /*  32 Interrupt 32 */
                 .long    Interrupt33_Handler                /*  33 Interrupt 33 */
