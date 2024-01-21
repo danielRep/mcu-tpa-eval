@@ -1,5 +1,5 @@
 #define IT 10
-#define N_INSTR 500
+#define N_INSTR 1000
 
 #define REPEAT_MOV_R0(count) \
     do { \
