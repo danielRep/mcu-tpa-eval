@@ -112,6 +112,10 @@ int _write(int file, const uint8_t *ptr, int len)
     if (isatty(file)) {
         for (size_t i = 0; i < len; i++)
         {
+            if (ptr[i] == '\n') {
+                while (0U == (USART2->STAT & USART_STAT_TXIDLE_MASK));
+                USART_WriteBlocking(USART2, (const uint8_t *)"\r", 1);
+            }
             while (0U == (USART2->STAT & USART_STAT_TXIDLE_MASK));
             USART_WriteBlocking(USART2, &ptr[i], 1);
         }
