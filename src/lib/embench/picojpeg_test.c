@@ -97,7 +97,7 @@ const unsigned char jpeg_data[] = {
 
 unsigned jpeg_off = 0;
 
-#define MIN(a,b) ((a)<(b)?(a):(b))
+#define MINIMAL(a,b) ((a)<(b)?(a):(b))
 
 unsigned char
 pjpeg_need_bytes_callback (unsigned char *pBuf,
@@ -105,7 +105,7 @@ pjpeg_need_bytes_callback (unsigned char *pBuf,
 			   unsigned char *pBytes_actually_read,
 			   void *pCallback_data)
 {
-  unsigned n = MIN (sizeof (jpeg_data) - jpeg_off, buf_size);
+  unsigned n = MINIMAL (sizeof (jpeg_data) - jpeg_off, buf_size);
 
   memcpy (pBuf, &jpeg_data[jpeg_off], n);
   *pBytes_actually_read = (unsigned char) n;
