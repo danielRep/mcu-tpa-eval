@@ -68,6 +68,8 @@ int main(void)
 
     dwt_unlock();
     initialise_benchmark ();
+    printf(GREEN "Warming up caches...\n");
+    warm_caches(WARMUP_HEAT);
 
     printf(GREEN "Sampling %dx. Running...\n", N_SAMPLES);
 
