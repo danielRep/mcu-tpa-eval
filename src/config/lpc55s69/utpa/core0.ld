@@ -33,8 +33,8 @@ INCLUDE gen_mem.ld
     <o1> Flash Size (in Bytes) <0x0-0xFFFFFFFF:8>
   </h>
   -----------------------------------------------------------------------------*/
-__ROM_BASE = __CORE1_ROM_START;
-__ROM_SIZE = __CORE1_ROM_LEN;
+__ROM_BASE = __CORE0_ROM_START;
+__ROM_SIZE = __CORE0_ROM_LEN;
 
 /*--------------------- Embedded RAM Configuration ----------------------------
   <h> RAM Configuration
@@ -42,8 +42,8 @@ __ROM_SIZE = __CORE1_ROM_LEN;
     <o1> RAM Size (in Bytes) <0x0-0xFFFFFFFF:8>
   </h>
  -----------------------------------------------------------------------------*/
-__RAM_BASE = __CORE1_RAM_START;
-__RAM_SIZE = __CORE1_RAM_LEN;
+__RAM_BASE = __CORE0_RAM_START;
+__RAM_SIZE = __CORE0_RAM_LEN;
 
 /*--------------------- Stack / Heap Configuration ----------------------------
   <h> Stack / Heap Configuration
@@ -51,8 +51,8 @@ __RAM_SIZE = __CORE1_RAM_LEN;
     <o1> Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
   </h>
   -----------------------------------------------------------------------------*/
-__STACK_SIZE = __CORE1_STACK_SIZE;
-__HEAP_SIZE  = __CORE1_HEAP_SIZE;
+__STACK_SIZE = __CORE0_STACK_SIZE;
+__HEAP_SIZE  = __CORE0_HEAP_SIZE;
 
 /*
  *-------------------- <<< end of configuration section >>> -------------------
@@ -63,11 +63,14 @@ __HEAP_SIZE  = __CORE1_HEAP_SIZE;
  */
 __STACKSEAL_SIZE = 0;
 
+__TPA_BASE = __CORE0_TPA_START;
+__TPA_SIZE = __CORE0_TPA_LEN;
 
 MEMORY
 {
     FLASH (rx)  : ORIGIN = __ROM_BASE, LENGTH = __ROM_SIZE
     RAM   (rwx) : ORIGIN = __RAM_BASE, LENGTH = __RAM_SIZE
+    TPA   (rwx) : ORIGIN = __TPA_BASE, LENGTH = __TPA_SIZE
 }
 
 /* Linker script to place sections and symbol values. Should be used together
@@ -108,12 +111,28 @@ GROUP(libc.a)
 
 SECTIONS
 {
+    .tpalib :
+    {
+        *libutpa*.a:utpa*.o (.text .text.*)
+        *libutpa*.a:(.text .text.*) /* Place .text section of libutpamech.a here */
+    } > TPA
+
     .text :
     {
         . = ALIGN(4);
         __text_start = .;
 
+        /*KEEP(*(.bootagent.vtb));  /*TODO: for some reason this is not working even though we've align
+        KEEP(*(.bootagent.boot));
+
+        . = ALIGN(4096); /* TODO: 128 byte alignment for boot agent*/
         KEEP(*(.vectors))
+
+        /* Place all object files from lib/embench here */
+        */embench/*.o (.text .text.*)
+
+
+
         *(.text*)
 
         KEEP(*(.init))
