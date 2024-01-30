@@ -7,6 +7,7 @@ mbb_t tmg[] =  // MBBs need to be declared in order
     {   /* Entry Point */
         .addr = 0x1a6c,
         .t_time = 0,    /* always zero */
+        .type = NORMAL,
         .edges = 1,
         .edge_mbbs =
         {
@@ -20,6 +21,7 @@ mbb_t tmg[] =  // MBBs need to be declared in order
     {   /* MBB 1 */
         .addr = 0x1a9a,
         .t_time = 178,
+        .type = NORMAL,
         .edges = 1,
         .edge_mbbs =
         {
@@ -33,6 +35,7 @@ mbb_t tmg[] =  // MBBs need to be declared in order
     {   /* MBB 2 */
         .addr = 0x1aa4,
         .t_time = 3832486,
+        .type = NORMAL,
         .edges = 1,
         .edge_mbbs =
         {
@@ -46,6 +49,7 @@ mbb_t tmg[] =  // MBBs need to be declared in order
     {   /* MBB 3 */
         .addr = 0x1aae,
         .t_time = 3832486,
+        .type = NORMAL,
         .edges = 1,
         .edge_mbbs =
         {
@@ -59,6 +63,8 @@ mbb_t tmg[] =  // MBBs need to be declared in order
     {   /* MBB 4 */
         .addr = 0x1ab6,
         .t_time = 3832541,
+        .type = LOOP_EXIT,
+        .dc_reload = 20,
         .edges = 2,
         .edge_mbbs =
         {
@@ -77,6 +83,7 @@ mbb_t tmg[] =  // MBBs need to be declared in order
     {   /* MBB 5 */
         .addr = 0x1ad0,
         .t_time = 4048243,
+        .type = NORMAL,
         .edges = 2,
         .edge_mbbs =
         {
@@ -95,6 +102,7 @@ mbb_t tmg[] =  // MBBs need to be declared in order
     {   /* MBB 6 */
         .addr = 0x1ad6,
         .t_time = 4048296,
+        .type = NORMAL,
         .edges = 2,
         .edge_mbbs =
         {
@@ -113,21 +121,23 @@ mbb_t tmg[] =  // MBBs need to be declared in order
     {   /* MBB 7 */
         .addr = 0x1ade,
         .t_time = 4048348,
+        .type = NORMAL,
         .edges = 1,
         .edge_mbbs =
         {
             {
                 .id = 8,
-                .edge_addr = 0x40001cc, //utpa_prof
+                .edge_addr = 0x4000318, //utpa_prof
                 //.edge_addr = 0x4000208,    //utpa_mech
                 .n_time = 96,
             }
         }
     },
     {   /* MBB 8 */
-        .addr = 0x40001cc,      //utpa_prof
+        .addr = 0x4000318,      //utpa_prof
         //.addr = 0x4000208,    //utpa_mech
         .t_time = 4048444,
+        .type = NORMAL,
         .edges = 0,
     }
 };
