@@ -8,7 +8,7 @@
 ################################################################################
 # Makefile Arguments
 PLATFORM	:= lpc55s69
-TESTID		:= atf1
+TESTID		:= utpa
 
 ################################################################################
 # Toolchain Macros
@@ -120,10 +120,12 @@ endif
 
 flash:
 	@echo "Loading the core0 app..."
-	@$(FLASHTOOL) flash $(CORE0_ELF) $(FLASHOPTS)
+	@until $(FLASHTOOL) flash $(CORE0_ELF) $(FLASHOPTS); do \
+    echo "make flash failed, retrying in 1 seconds..."; sleep 1; done
 ifeq ($(MULTICORE), y)
 	@echo "Loading the core1 app..."
-	@$(FLASHTOOL) flash $(CORE1_ELF) $(FLASHOPTS)
+	@until $(FLASHTOOL) flash $(CORE1_ELF) $(FLASHOPTS); do \
+    echo "make flash failed, retrying in 1 seconds..."; sleep 1; done
 endif
 
 erase:
