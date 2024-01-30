@@ -1,0 +1,147 @@
+utpa(profiler): [MBB] [  0][0xC38]      [t_time] = 0
+utpa(profiler):   [E] [  1]             [n_time] = 2519
+utpa(profiler): [MBB] [  1][0xC6A]      [t_time] = 2519
+utpa(profiler):   [E] [  2]             [n_time] = 45396
+utpa(profiler): [MBB] [  2][0xC86]      [t_time] = 47915
+utpa(profiler):   [E] [  3]             [n_time] = 32738
+utpa(profiler): [MBB] [  3][0xCC0]      [t_time] = 80653
+utpa(profiler):   [E] [  4]             [n_time] = 34998
+utpa(profiler): [MBB] [  4][0xCE8]      [t_time] = 115651
+utpa(profiler):   [E] [  5]             [n_time] = 34945
+utpa(profiler): [MBB] [  5][0xD10]      [t_time] = 518043
+utpa(profiler):   [E] [  6]             [n_time] = 46586
+utpa(profiler): [MBB] [  6][0xD50]      [t_time] = 842560
+utpa(profiler):   [E] [  7]             [n_time] = 46816
+utpa(profiler): [MBB] [  7][0xD78]      [t_time] = 888898
+utpa(profiler):   [E] [  8]             [n_time] = 307
+utpa(profiler): [MBB] [  8][0xD84]      [t_time] = 889205
+utpa(profiler):   [E] [  6]             [n_time] = 46853
+utpa(profiler):   [E] [  9]             [n_time] = 308
+utpa(profiler): [MBB] [  9][0xDA0]      [t_time] = 889513
+utpa(profiler):   [E] [  6]             [n_time] = 44474
+utpa(profiler):   [E] [ 10]             [n_time] = 290
+utpa(profiler): [MBB] [ 10][0xDB6]      [t_time] = 889803
+utpa(profiler):   [E] [  1]             [n_time] = 0
+utpa(profiler):   [E] [  5]             [n_time] = 101
+utpa(profiler):   [E] [ 11]             [n_time] = 67
+utpa(profiler): [MBB] [ 11][0xDCA]      [t_time] = 889870
+utpa(profiler):   [E] [ 12]             [n_time] = 123
+utpa(profiler): [MBB] [ 12][0x40001CC]  [t_time] = 889993
+utpa(profiler): N(end) = 898883
+utpa(proflog): [  1] mbb[  1] t[    2519]
+utpa(proflog): [  2] mbb[  2] t[   47915]
+utpa(proflog): [  3] mbb[  3] t[   80653]
+utpa(proflog): [  4] mbb[  4] t[  115651]
+utpa(proflog): [  5] mbb[  5] t[  150596]
+utpa(proflog): [  6] mbb[  6] t[  197182]
+utpa(proflog): [  7] mbb[  7] t[  243803]
+utpa(proflog): [  8] mbb[  8] t[  244103]
+utpa(proflog): [  9] mbb[  6] t[  290956]
+utpa(proflog): [ 10] mbb[  7] t[  337772]
+utpa(proflog): [ 11] mbb[  8] t[  338072]
+utpa(proflog): [ 12] mbb[  9] t[  338378]
+utpa(proflog): [ 13] mbb[  6] t[  382852]
+utpa(proflog): [ 14] mbb[  7] t[  427612]
+utpa(proflog): [ 15] mbb[  8] t[  427912]
+utpa(proflog): [ 16] mbb[  6] t[  472546]
+utpa(proflog): [ 17] mbb[  7] t[  517135]
+utpa(proflog): [ 18] mbb[  8] t[  517435]
+utpa(proflog): [ 19] mbb[  9] t[  517741]
+utpa(proflog): [ 20] mbb[ 10] t[  517942]
+utpa(proflog): [ 21] mbb[  5] t[  518043]
+utpa(proflog): [ 22] mbb[  6] t[  564517]
+utpa(proflog): [ 23] mbb[  7] t[  611128]
+utpa(proflog): [ 24] mbb[  8] t[  611425]
+utpa(proflog): [ 25] mbb[  6] t[  658168]
+utpa(proflog): [ 26] mbb[  7] t[  704785]
+utpa(proflog): [ 27] mbb[  8] t[  705082]
+utpa(proflog): [ 28] mbb[  9] t[  705367]
+utpa(proflog): [ 29] mbb[  6] t[  749789]
+utpa(proflog): [ 30] mbb[  7] t[  796271]
+utpa(proflog): [ 31] mbb[  8] t[  796578]
+utpa(proflog): [ 32] mbb[  6] t[  842560]
+utpa(proflog): [ 33] mbb[  7] t[  888898]
+utpa(proflog): [ 34] mbb[  8] t[  889205]
+utpa(proflog): [ 35] mbb[  9] t[  889513]
+utpa(proflog): [ 36] mbb[ 10] t[  889803]
+utpa(proflog): [ 37] mbb[ 11] t[  889870]
+utpa(proflog): [ 38] mbb[ 12] t[  889993]
+
+utpa(proflog): [  1] mbb[  1] t[   14157]
+utpa(proflog): [  2] mbb[  2] t[  120937]
+utpa(proflog): [  3] mbb[  3] t[  195579]
+utpa(proflog): [  4] mbb[  4] t[  276221]
+utpa(proflog): [  5] mbb[  5] t[  356391]
+utpa(proflog): [  6] mbb[  6] t[  465817]
+utpa(proflog): [  7] mbb[  7] t[  575345]
+utpa(proflog): [  8] mbb[  8] t[  575994]
+utpa(proflog): [  9] mbb[  6] t[  686368]
+utpa(proflog): [ 10] mbb[  7] t[  796957]
+utpa(proflog): [ 11] mbb[  8] t[  797590]
+utpa(proflog): [ 12] mbb[  9] t[  798229]
+utpa(proflog): [ 13] mbb[  6] t[  901847]
+utpa(proflog): [ 14] mbb[  7] t[ 1006495]
+utpa(proflog): [ 15] mbb[  8] t[ 1007136]
+utpa(proflog): [ 16] mbb[  6] t[ 1111103]
+utpa(proflog): [ 17] mbb[  7] t[ 1214846]
+utpa(proflog): [ 18] mbb[  8] t[ 1215479]
+utpa(proflog): [ 19] mbb[  9] t[ 1216118]
+utpa(proflog): [ 20] mbb[ 10] t[ 1216525]
+utpa(proflog): [ 21] mbb[  5] t[ 1216684]
+utpa(proflog): [ 22] mbb[  6] t[ 1324809]
+utpa(proflog): [ 23] mbb[  7] t[ 1433489]
+utpa(proflog): [ 24] mbb[  8] t[ 1434142]
+utpa(proflog): [ 25] mbb[  6] t[ 1543576]
+utpa(proflog): [ 26] mbb[  7] t[ 1652056]
+utpa(proflog): [ 27] mbb[  8] t[ 1652709]
+utpa(proflog): [ 28] mbb[  9] t[ 1653336]
+utpa(proflog): [ 29] mbb[  6] t[ 1756634]
+utpa(proflog): [ 30] mbb[  7] t[ 1864519]
+utpa(proflog): [ 31] mbb[  8] t[ 1865184]
+utpa(proflog): [ 32] mbb[  6] t[ 1972207]
+utpa(proflog): [ 33] mbb[  7] t[ 2080019]
+utpa(proflog): [ 34] mbb[  8] t[ 2080684]
+utpa(proflog): [ 35] mbb[  9] t[ 2081307]
+utpa(proflog): [ 36] mbb[ 10] t[ 2081889]
+utpa(proflog): [ 37] mbb[ 11] t[ 2081986]
+utpa(proflog): [ 38] mbb[ 12] t[ 2082171]
+
+utpa(mechlog): [  1] mbb[  1] t[   14235] slck[ -10960.30] [P]
+utpa(mechlog): [  2] mbb[  2] t[   59878] slck[   2411.50] [R]
+utpa(mechlog): [  3] mbb[  3] t[  134770] slck[ -29921.10] [P]
+utpa(mechlog): [  4] mbb[  4] t[  170024] slck[ -19677.71] [P]
+utpa(mechlog): [  5] mbb[  5] t[  205215] slck[  -9422.01] [P]
+utpa(mechlog): [  6] mbb[  6] t[  252047] slck[   4307.79] [R]
+utpa(mechlog): [  7] mbb[  7] t[  362119] slck[ -44903.41] [P]
+utpa(mechlog): [  8] mbb[  8] t[  362685] slck[ -45070.31] [P]
+utpa(mechlog): [  9] mbb[  6] t[  409792] slck[ -31268.41] [P]
+utpa(mechlog): [ 10] mbb[  7] t[  456854] slck[ -17469.62] [P]
+utpa(mechlog): [ 11] mbb[  8] t[  457400] slck[ -17616.52] [P]
+utpa(mechlog): [ 12] mbb[  9] t[  457960] slck[ -17776.12] [P]
+utpa(mechlog): [ 13] mbb[  6] t[  502702] slck[  -4701.92] [P]
+utpa(mechlog): [ 14] mbb[  7] t[  547708] slck[  11152.88] [R]
+utpa(mechlog): [ 15] mbb[  8] t[  548615] slck[  10644.98] [R]
+utpa(mechlog): [ 16] mbb[  6] t[  652746] slck[ -32577.12] [P]
+utpa(mechlog): [ 17] mbb[  7] t[  697591] slck[ -16561.32] [P]
+utpa(mechlog): [ 18] mbb[  8] t[  698137] slck[ -16708.22] [P]
+utpa(mechlog): [ 19] mbb[  9] t[  698697] slck[ -16867.82] [P]
+utpa(mechlog): [ 20] mbb[ 10] t[  699166] slck[ -16959.82] [P]
+utpa(mechlog): [ 21] mbb[  5] t[  699543] slck[ -26087.12] [P]
+utpa(mechlog): [ 22] mbb[  6] t[  746277] slck[  -3377.73] [P]
+utpa(mechlog): [ 23] mbb[  7] t[  793134] slck[  10626.07] [R]
+utpa(mechlog): [ 24] mbb[  8] t[  794041] slck[  10118.17] [R]
+utpa(mechlog): [ 25] mbb[  6] t[  903639] slck[ -38570.93] [P]
+utpa(mechlog): [ 26] mbb[  7] t[  950512] slck[ -24583.13] [P]
+utpa(mechlog): [ 27] mbb[  8] t[  951055] slck[ -24727.03] [P]
+utpa(mechlog): [ 28] mbb[  9] t[  951594] slck[ -24865.63] [P]
+utpa(mechlog): [ 29] mbb[  6] t[  996284] slck[ -11739.44] [P]
+utpa(mechlog): [ 30] mbb[  7] t[ 1043012] slck[   2393.36] [R]
+utpa(mechlog): [ 31] mbb[  8] t[ 1043934] slck[   1870.46] [R]
+utpa(mechlog): [ 32] mbb[  6] t[ 1151315] slck[ -55987.04] [P]
+utpa(mechlog): [ 33] mbb[  7] t[ 1197909] slck[ -42341.64] [P]
+utpa(mechlog): [ 34] mbb[  8] t[ 1198462] slck[ -42495.54] [P]
+utpa(mechlog): [ 35] mbb[  9] t[ 1199024] slck[ -42657.14] [P]
+utpa(mechlog): [ 36] mbb[ 10] t[ 1199582] slck[ -42838.14] [P]
+utpa(mechlog): [ 37] mbb[ 11] t[ 1199925] slck[ -43094.04] [P]
+utpa(mechlog): [ 38] mbb[ 12] t[ 1200322] slck[ -43331.14] [P]
+utpa(mechlog): Nr MBBs hit = 38 | Overhead(T) = 6349 | Overhead(avg) = 167

@@ -1,0 +1,80 @@
+utpa(profiler): application TMG (MBBs: 15)
+utpa(profiler): [MBB] [  0][0x24CC]     [t_time] = 0
+utpa(profiler):   [E] [  1]             [n_time] = 77
+utpa(profiler):   [E] [ 10]             [n_time] = 0
+utpa(profiler): [MBB] [  1][0x24D4]     [t_time] = 77
+utpa(profiler):   [E] [  2]             [n_time] = 81
+utpa(profiler): [MBB] [  2][0x24EA]     [t_time] = 158
+utpa(profiler):   [E] [  3]             [n_time] = 123
+utpa(profiler): [MBB] [  3][0x24FC]     [t_time] = 281
+utpa(profiler):   [E] [  4]             [n_time] = 642
+utpa(profiler): [MBB] [  4][0x2504]     [t_time] = 923
+utpa(profiler):   [E] [  5]             [n_time] = 252
+utpa(profiler): [MBB] [  5][0x2512]     [t_time] = 1175
+utpa(profiler):   [E] [  6]             [n_time] = 17120
+utpa(profiler): [MBB] [  6][0x2516]     [t_time] = 18295
+utpa(profiler):   [E] [  7]             [n_time] = 3744
+utpa(profiler): [MBB] [  7][0x1128]     [t_time] = 22039
+utpa(profiler):   [E] [  8]             [n_time] = 11740
+utpa(profiler): [MBB] [  8][0x12B8]     [t_time] = 33779
+utpa(profiler):   [E] [  9]             [n_time] = 882168
+utpa(profiler): [MBB] [  9][0x1682]     [t_time] = 915947
+utpa(profiler):   [E] [ 10]             [n_time] = 15671
+utpa(profiler): [MBB] [ 10][0x251A]     [t_time] = 931618
+utpa(profiler):   [E] [ 11]             [n_time] = 136
+utpa(profiler): [MBB] [ 11][0x251E]     [t_time] = 931754
+utpa(profiler):   [E] [ 12]             [n_time] = 112
+utpa(profiler): [MBB] [ 12][0x2522]     [t_time] = 931866
+utpa(profiler):   [E] [  2]             [n_time] = 0
+utpa(profiler):   [E] [ 13]             [n_time] = 51
+utpa(profiler): [MBB] [ 13][0x2526]     [t_time] = 931917
+utpa(profiler):   [E] [ 14]             [n_time] = 103
+utpa(profiler): [MBB] [ 14][0x40001CC]  [t_time] = 932020
+utpa(profiler): N(end) = 932020
+utpa(proflog): [  1] mbb[  1] t[      77]
+utpa(proflog): [  2] mbb[  2] t[     158]
+utpa(proflog): [  3] mbb[  3] t[     281]
+utpa(proflog): [  4] mbb[  4] t[     923]
+utpa(proflog): [  5] mbb[  5] t[    1175]
+utpa(proflog): [  6] mbb[  6] t[   18295]
+utpa(proflog): [  7] mbb[  7] t[   22039]
+utpa(proflog): [  8] mbb[  8] t[   33779]
+utpa(proflog): [  9] mbb[  9] t[  915947]
+utpa(proflog): [ 10] mbb[ 10] t[  931618]
+utpa(proflog): [ 11] mbb[ 11] t[  931754]
+utpa(proflog): [ 12] mbb[ 12] t[  931866]
+utpa(proflog): [ 13] mbb[ 13] t[  931917]
+utpa(proflog): [ 14] mbb[ 14] t[  932020]
+
+utpa(profiler): N(end) = 2980327
+utpa(proflog): [  1] mbb[  1] t[      99]
+utpa(proflog): [  2] mbb[  2] t[     301]
+utpa(proflog): [  3] mbb[  3] t[     576]
+utpa(proflog): [  4] mbb[  4] t[    2306]
+utpa(proflog): [  5] mbb[  5] t[    3319]
+utpa(proflog): [  6] mbb[  6] t[   54572]
+utpa(proflog): [  7] mbb[  7] t[   65433]
+utpa(proflog): [  8] mbb[  8] t[  102799]
+utpa(proflog): [  9] mbb[  9] t[ 2928295]
+utpa(proflog): [ 10] mbb[ 10] t[ 2979594]
+utpa(proflog): [ 11] mbb[ 11] t[ 2979888]
+utpa(proflog): [ 12] mbb[ 12] t[ 2980131]
+utpa(proflog): [ 13] mbb[ 13] t[ 2980184]
+utpa(proflog): [ 14] mbb[ 14] t[ 2980327]
+
+utpa(mech): alpha = 1.30 | beta = 0.05
+utpa(mechlog): [  1] mbb[  1] t[     105] slck[      -4.90] rt[      77] res[       5.00] [P]
+utpa(mechlog): [  2] mbb[  2] t[     432] slck[    -226.60] rt[     158] res[      10.27] [P]
+utpa(mechlog): [  3] mbb[  3] t[     786] slck[    -420.70] rt[     281] res[      18.26] [P]
+utpa(mechlog): [  4] mbb[  4] t[    1659] slck[    -459.10] rt[     923] res[      59.99] [P]
+utpa(mechlog): [  5] mbb[  5] t[    2153] slck[    -625.50] rt[    1175] res[      76.38] [P]
+utpa(mechlog): [  6] mbb[  6] t[   19462] slck[    4321.50] rt[   18295] res[    1189.17] [R]
+utpa(mechlog): [  7] mbb[  7] t[   30568] slck[   -1917.30] rt[   22039] res[    1432.53] [P]
+utpa(mechlog): [  8] mbb[  8] t[   42552] slck[    1360.70] rt[   33779] res[    2195.64] [P]
+utpa(mechlog): [  9] mbb[  9] t[  925059] slck[  265672.06] rt[  915947] res[   59536.55] [R]
+utpa(mechlog): [ 10] mbb[ 10] t[  976671] slck[  234432.36] rt[  931618] res[   60555.17] [R]
+utpa(mechlog): [ 11] mbb[ 11] t[  977203] slck[  234077.16] rt[  931754] res[   60564.01] [R]
+utpa(mechlog): [ 12] mbb[ 12] t[  977667] slck[  233758.75] rt[  931866] res[   60571.29] [R]
+utpa(mechlog): [ 13] mbb[ 13] t[  977956] slck[  233536.06] rt[  931917] res[   60574.60] [R]
+utpa(mechlog): [ 14] mbb[ 14] t[  978336] slck[  233289.95] rt[  932020] res[   60581.30] [R]
+utpa(mechlog): Nr MBBs hit = 14 | Overhead(T) = 2309 | Overhead(avg) = 164

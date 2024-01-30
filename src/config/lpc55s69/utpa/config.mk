@@ -7,15 +7,20 @@
 
 ################################################################################
 # TPA Mechanism Configuration
-#TPA				:= prof
+TPA				:= prof
+CONFIG_DEBUG	:= n
+CONFIG_LOGL		:= 0
+CONFIG_PERFLOG	:= y
+
+# Platform Configuration
 MULTICORE		:= n
-C0_BENCH_APP	:= picojpeg
+C0_BENCH_APP	:= wikisort
+C0_BOOTAGENT	:= n
+C0_CLK_MAX		:= y
+C0_STATS		:= n
+C0_FPM			:= y
 C1_INTRF_APP	:= ifi
 
-# System Configuration setup
+# Toolchain Configuration
 DEBUG			:= y
 OPTIM			:= O2
-C0_FPM			:= y
-C0_CLK_MAX		:= y
-BUS_PRIO		:= n
-
