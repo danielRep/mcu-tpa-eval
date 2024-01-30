@@ -11,8 +11,6 @@ TPA				:= mech
 CONFIG_DEBUG	:= y
 CONFIG_LOGL		:= 0
 CONFIG_PERFLOG	:= y
-CONFIG_FACTORA	:= def
-CONFIG_FACTORB	:= def
 
 # Platform Configuration
 MULTICORE		:= y
