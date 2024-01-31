@@ -7,13 +7,13 @@
 
 ################################################################################
 # TPA Mechanism Configuration
-TPA				:= prof
+TPA				:= mech
 CONFIG_DEBUG	:= n
 CONFIG_LOGL		:= 0
 CONFIG_PERFLOG	:= y
 
 # Platform Configuration
-MULTICORE		:= n
+MULTICORE		:= y
 C0_BENCH_APP	:= wikisort
 C0_BOOTAGENT	:= n
 C0_CLK_MAX		:= y
