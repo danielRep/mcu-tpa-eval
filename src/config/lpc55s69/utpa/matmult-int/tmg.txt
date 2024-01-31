@@ -1,0 +1,45 @@
+utpa(profiler): [MBB] [  0][0x8AC]              [t_time] = 0
+utpa(profiler):   [E] [  1]     it=[  0]        [n_time] = 89
+utpa(profiler): [MBB] [  1][0x8B2]              [t_time] = 89
+utpa(profiler):   [E] [  2]     it=[  0]        [n_time] = 68
+utpa(profiler): [MBB] [  2][0x8B8]              [t_time] = 157
+utpa(profiler):   [E] [  3]     it=[  0]        [n_time] = 8109
+utpa(profiler): [MBB] [  3][0x8C4]              [t_time] = 8266
+utpa(profiler):   [E] [  4]     it=[  0]        [n_time] = 8104
+utpa(profiler): [MBB] [  4][0x8D0]              [t_time] = 16370
+utpa(profiler):   [E] [  5]     it=[  0]        [n_time] = 74674
+utpa(profiler): [MBB] [  5][0x8DC]              [t_time] = 91044
+utpa(profiler):   [E] [  2]     it=[  0]        [n_time] = 0
+utpa(profiler):   [E] [  6]     it=[  0]        [n_time] = 63
+utpa(profiler): [MBB] [  6][0x8E0]              [t_time] = 91107
+utpa(profiler):   [E] [  7]     it=[  0]        [n_time] = 94
+utpa(profiler): [MBB] [  7][0x40001E8]          [t_time] = 91201
+utpa(profiler): N(end) = 91201
+utpa(proflog): [  1] mbb[  1] t[      89]
+utpa(proflog): [  2] mbb[  2] t[     157]
+utpa(proflog): [  3] mbb[  3] t[    8266]
+utpa(proflog): [  4] mbb[  4] t[   16370]
+utpa(proflog): [  5] mbb[  5] t[   91044]
+utpa(proflog): [  6] mbb[  6] t[   91107]
+utpa(proflog): [  7] mbb[  7] t[   91201]
+
+utpa(proflog): [  1] mbb[  1] t[     118]
+utpa(proflog): [  2] mbb[  2] t[     213]
+utpa(proflog): [  3] mbb[  3] t[   38624]
+utpa(proflog): [  4] mbb[  4] t[   76928]
+utpa(proflog): [  5] mbb[  5] t[  279469]
+utpa(proflog): [  6] mbb[  6] t[  279547]
+utpa(proflog): [  7] mbb[  7] t[  279670]
+
+utpa(mech): alpha = 1.30 | beta = 0.05
+utpa(mechlog): [  1] mbb[  1] t[     101] slck[      14.70] rt[      89] res[       5.78] [R]
+utpa(mechlog): [  2] mbb[  2] t[     428] slck[    -223.90] rt[     157] res[      10.20] [P]
+utpa(mechlog): [  3] mbb[  3] t[    8794] slck[    1951.80] rt[    8266] res[     537.29] [R]
+utpa(mechlog): [  4] mbb[  4] t[   47534] slck[  -26253.00] rt[   16370] res[    1064.05] [P]
+utpa(mechlog): [  5] mbb[  5] t[  122475] slck[   -4117.80] rt[   91044] res[    5917.86] [P]
+utpa(mechlog): [  6] mbb[  6] t[  122785] slck[   -4345.90] rt[   91107] res[    5921.95] [P]
+utpa(mechlog): [  7] mbb[  7] t[  123133] slck[   -4571.70] rt[   91201] res[    5928.06] [P]
+utpa(mechlog): Nr MBBs hit = 7 | Overhead(T) = 1256 | Overhead(avg) = 179
+
+
+
